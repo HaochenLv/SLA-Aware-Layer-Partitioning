@@ -1,0 +1,7 @@
+seed,decode_best_shifts,decode_uniform_safe_lambda,decode_best_safe_lambda,decode_gain_over_uniform_pct,prefill_best_shifts,prefill_uniform_safe_lambda,prefill_best_safe_lambda,prefill_gain_over_uniform_pct,decode_prefers_more_t4x4_layers,prefill_prefers_more_l4x2_layers,direction_flip,all_sampled_monotonic
+0,-2,0.0011,0.00175,59.091,2,0.0082,0.0086,4.878,True,True,True,True
+1,-2,0.0011,0.0018,63.636,2,0.0095,0.012,26.316,True,True,True,True
+2,-2,0.0011,0.00175,59.091,2,0.0068,0.0077,13.235,True,True,True,True
+3,"-2,-1",0.0011,0.0017,54.545,2,0.0076,0.009,18.421,True,True,True,True
+7,-2,0.00165,0.00235,42.424,2,0.0079,0.0092,16.456,True,True,True,True
+19,-2,0.0011,0.00175,59.091,2,0.0084,0.0099,17.857,True,True,True,True

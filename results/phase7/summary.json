@@ -1,0 +1,170 @@
+{
+  "conclusion": {
+    "all_sampled_monotonic": true,
+    "answer": "yes",
+    "decode_direction_count": 6,
+    "direction_flip_count": 6,
+    "median_decode_gain_over_uniform_pct": 59.091,
+    "median_prefill_gain_over_uniform_pct": 17.157,
+    "minimum_required": 5,
+    "prefill_direction_count": 6,
+    "question": "Does the HELIX-derived SLA-dependent partition-direction flip persist across the six fixed workload seeds?",
+    "seeds_tested": 6
+  },
+  "experiment_id": "phase7-helix-phase-specific-six-seed-v1",
+  "profile_factors": {
+    "a100": {
+      "decode_ratio_samples": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "decode_speed": 1.0,
+      "prefill_ratio_samples": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "prefill_speed": 1.0
+    },
+    "l4x2": {
+      "decode_ratio_samples": [
+        0.38888888888888884,
+        0.37837837837837834,
+        0.37837837837837834,
+        0.3684210526315789,
+        0.38461538461538464,
+        0.35714285714285715,
+        0.3691588785046729
+      ],
+      "decode_speed": 0.37837837837837834,
+      "prefill_ratio_samples": [
+        0.25221674876847294,
+        0.304635761589404,
+        0.32814526588845655,
+        0.2943165011620537,
+        0.28281299776999047
+      ],
+      "prefill_speed": 0.2943165011620537
+    },
+    "t4x4": {
+      "decode_ratio_samples": [
+        0.7,
+        0.6666666666666666,
+        0.6086956521739131,
+        0.5833333333333334,
+        0.6,
+        0.5172413793103449,
+        0.5302013422818792
+      ],
+      "decode_speed": 0.6,
+      "prefill_ratio_samples": [
+        0.25147347740667975,
+        0.2814238042269188,
+        0.2814238042269188,
+        0.25322668605708054,
+        0.24141681963423756
+      ],
+      "prefill_speed": 0.25322668605708054
+    }
+  },
+  "seed_results": [
+    {
+      "all_sampled_monotonic": true,
+      "decode_best_safe_lambda": 0.00175,
+      "decode_best_shifts": "-2",
+      "decode_gain_over_uniform_pct": 59.091,
+      "decode_prefers_more_t4x4_layers": true,
+      "decode_uniform_safe_lambda": 0.0011,
+      "direction_flip": true,
+      "prefill_best_safe_lambda": 0.0086,
+      "prefill_best_shifts": "2",
+      "prefill_gain_over_uniform_pct": 4.878,
+      "prefill_prefers_more_l4x2_layers": true,
+      "prefill_uniform_safe_lambda": 0.0082,
+      "seed": 0
+    },
+    {
+      "all_sampled_monotonic": true,
+      "decode_best_safe_lambda": 0.0018,
+      "decode_best_shifts": "-2",
+      "decode_gain_over_uniform_pct": 63.636,
+      "decode_prefers_more_t4x4_layers": true,
+      "decode_uniform_safe_lambda": 0.0011,
+      "direction_flip": true,
+      "prefill_best_safe_lambda": 0.012,
+      "prefill_best_shifts": "2",
+      "prefill_gain_over_uniform_pct": 26.316,
+      "prefill_prefers_more_l4x2_layers": true,
+      "prefill_uniform_safe_lambda": 0.0095,
+      "seed": 1
+    },
+    {
+      "all_sampled_monotonic": true,
+      "decode_best_safe_lambda": 0.00175,
+      "decode_best_shifts": "-2",
+      "decode_gain_over_uniform_pct": 59.091,
+      "decode_prefers_more_t4x4_layers": true,
+      "decode_uniform_safe_lambda": 0.0011,
+      "direction_flip": true,
+      "prefill_best_safe_lambda": 0.0077,
+      "prefill_best_shifts": "2",
+      "prefill_gain_over_uniform_pct": 13.235,
+      "prefill_prefers_more_l4x2_layers": true,
+      "prefill_uniform_safe_lambda": 0.0068,
+      "seed": 2
+    },
+    {
+      "all_sampled_monotonic": true,
+      "decode_best_safe_lambda": 0.0017,
+      "decode_best_shifts": "-2,-1",
+      "decode_gain_over_uniform_pct": 54.545,
+      "decode_prefers_more_t4x4_layers": true,
+      "decode_uniform_safe_lambda": 0.0011,
+      "direction_flip": true,
+      "prefill_best_safe_lambda": 0.009,
+      "prefill_best_shifts": "2",
+      "prefill_gain_over_uniform_pct": 18.421,
+      "prefill_prefers_more_l4x2_layers": true,
+      "prefill_uniform_safe_lambda": 0.0076,
+      "seed": 3
+    },
+    {
+      "all_sampled_monotonic": true,
+      "decode_best_safe_lambda": 0.00235,
+      "decode_best_shifts": "-2",
+      "decode_gain_over_uniform_pct": 42.424,
+      "decode_prefers_more_t4x4_layers": true,
+      "decode_uniform_safe_lambda": 0.00165,
+      "direction_flip": true,
+      "prefill_best_safe_lambda": 0.0092,
+      "prefill_best_shifts": "2",
+      "prefill_gain_over_uniform_pct": 16.456,
+      "prefill_prefers_more_l4x2_layers": true,
+      "prefill_uniform_safe_lambda": 0.0079,
+      "seed": 7
+    },
+    {
+      "all_sampled_monotonic": true,
+      "decode_best_safe_lambda": 0.00175,
+      "decode_best_shifts": "-2",
+      "decode_gain_over_uniform_pct": 59.091,
+      "decode_prefers_more_t4x4_layers": true,
+      "decode_uniform_safe_lambda": 0.0011,
+      "direction_flip": true,
+      "prefill_best_safe_lambda": 0.0099,
+      "prefill_best_shifts": "2",
+      "prefill_gain_over_uniform_pct": 17.857,
+      "prefill_prefers_more_l4x2_layers": true,
+      "prefill_uniform_safe_lambda": 0.0084,
+      "seed": 19
+    }
+  ],
+  "semantics": "Same Phase-6 pinned HELIX profile-derived Prefill/Decode speed vectors and controlled TTFT/TPOT regimes; only workload length-sampling seed changes across [0,1,2,3,7,19]."
+}
