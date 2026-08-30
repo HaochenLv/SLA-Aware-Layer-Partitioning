@@ -40,28 +40,16 @@
     "output_token_choices": [64, 96, 128, 192]
   },
   "partitions": {
-    "min_layers_per_stage": 5,
-    "max_layers_per_stage": 15
+    "min_layers_per_stage": 8,
+    "max_layers_per_stage": 12
   },
   "phase6": {
+    "profile_root": "data/helix_profiles/llama2_70b",
     "reference_machine": "a100",
+    "machines": ["a100", "l4x2", "t4x4"],
     "stage_machines": ["l4x2", "t4x4", "l4x2", "t4x4", "l4x2", "t4x4", "l4x2", "t4x4"],
     "prefill_profile_points": [256, 512, 1024, 1536, 2051],
-    "decode_profile_points": [2, 4, 8, 12, 16, 20, 24],
-    "profile_csvs": {
-      "a100": {
-        "prefill": "data/helix_profiles/llama2_70b/a100/prompt_bs2time.csv",
-        "decode": "data/helix_profiles/llama2_70b/a100/decode_bs2time.csv"
-      },
-      "l4x2": {
-        "prefill": "data/helix_profiles/llama2_70b/l4x2/prompt_bs2time.csv",
-        "decode": "data/helix_profiles/llama2_70b/l4x2/decode_bs2time.csv"
-      },
-      "t4x4": {
-        "prefill": "data/helix_profiles/llama2_70b/t4x4/prompt_bs2time.csv",
-        "decode": "data/helix_profiles/llama2_70b/t4x4/decode_bs2time.csv"
-      }
-    }
+    "decode_profile_points": [2, 4, 8, 12, 16, 20, 24]
   },
   "phase8": {
     "boundary_shifts": [-2, -1, 0, 1, 2],
