@@ -1,0 +1,31 @@
+name: phase1-placement-sensitivity
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  experiment:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Run validation suite
+        run: PYTHONPATH=src python -m unittest discover -s tests -v
+      - name: Run phase-1 experiment
+        run: PYTHONPATH=src python -m sla_partition_sensitivity.experiment --config config/phase1.json --output results/phase1
+      - name: Show experiment conclusion
+        run: python -c "import json; print(json.dumps(json.load(open('results/phase1/summary.json'))['conclusion'], indent=2))"
+      - name: Upload complete experiment record
+        uses: actions/upload-artifact@v4
+        with:
+          name: phase1-placement-sensitivity-results
+          path: results/phase1/
+          if-no-files-found: error
