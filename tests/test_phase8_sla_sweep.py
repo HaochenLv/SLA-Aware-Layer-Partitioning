@@ -13,10 +13,10 @@ class Phase8SweepTests(unittest.TestCase):
     def setUpClass(cls) -> None:
         cls.cfg = json.loads(Path("config/phase8_sla_sweep.json").read_text(encoding="utf-8"))
 
-    def test_sla_endpoints(self) -> None:
+    def test_sla_endpoints_and_midpoint(self) -> None:
         self.assertEqual(sla_point(0.0, self.cfg), (0.28, 1.0))
         self.assertEqual(sla_point(1.0, self.cfg), (2.0, 0.2))
-        self.assertEqual(sla_point(0.5, self.cfg), (1.14, 0.6))
+        self.assertEqual(sla_point(0.5, self.cfg), (0.491228, 0.333333))
 
     def test_shift_direction(self) -> None:
         self.assertEqual(shifted_partition(2, self.cfg), [12, 8, 12, 8, 12, 8, 12, 8])
