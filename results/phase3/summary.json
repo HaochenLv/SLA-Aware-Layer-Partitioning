@@ -2,7 +2,7 @@
   "conclusion": {
     "answer": "yes",
     "homogeneous_control_unchanged": true,
-    "question": "Can a lightweight adjacent-boundary search recover higher sampled SLA-safe capacity than uniform partitioning without changing evaluator semantics?",
+    "question": "Can a lightweight adjacent-boundary search, guided only by the uniform partition's first-unsafe SLA stress probe, recover higher sampled SLA-safe capacity?",
     "target_scenarios": [
       "graded",
       "shuffled_severe",
@@ -13,7 +13,7 @@
     "target_scenarios_matching_or_beating_equal_budget_random": 3,
     "target_scenarios_tested": 3
   },
-  "experiment_id": "phase3-sla-first-boundary-search-v1",
+  "experiment_id": "phase3-sla-first-boundary-search-v2",
   "scenario_summaries": {
     "graded": {
       "checks": {
@@ -42,7 +42,7 @@
       },
       "reference_lambda": 0.0065,
       "search_iterations": 40,
-      "search_partition_evaluations": 378,
+      "search_partition_probes": 378,
       "sla_boundary_search": {
         "first_violation_at_reference": null,
         "minimum_link_headroom_mb_s_at_reference": 303.255249,
@@ -89,7 +89,7 @@
       },
       "reference_lambda": 0.0095,
       "search_iterations": 0,
-      "search_partition_evaluations": 15,
+      "search_partition_probes": 15,
       "sla_boundary_search": {
         "first_violation_at_reference": "network",
         "minimum_link_headroom_mb_s_at_reference": -134.718641,
@@ -136,7 +136,7 @@
       },
       "reference_lambda": 0.0095,
       "search_iterations": 19,
-      "search_partition_evaluations": 201,
+      "search_partition_probes": 201,
       "sla_boundary_search": {
         "first_violation_at_reference": null,
         "minimum_link_headroom_mb_s_at_reference": 189.478938,
@@ -183,7 +183,7 @@
       },
       "reference_lambda": 0.0065,
       "search_iterations": 15,
-      "search_partition_evaluations": 166,
+      "search_partition_probes": 166,
       "sla_boundary_search": {
         "first_violation_at_reference": null,
         "minimum_link_headroom_mb_s_at_reference": 353.089521,
@@ -230,7 +230,7 @@
       },
       "reference_lambda": 0.007,
       "search_iterations": 5,
-      "search_partition_evaluations": 77,
+      "search_partition_probes": 77,
       "sla_boundary_search": {
         "first_violation_at_reference": null,
         "minimum_link_headroom_mb_s_at_reference": 37.832979,
@@ -251,6 +251,6 @@
       }
     }
   },
-  "search_rule": "capacity first; at the uniform first-unsafe workload, prefer survival and then larger minimum network headroom; move one layer across one adjacent boundary per accepted step",
+  "search_rule": "find the uniform partition's first sampled unsafe intensity once; during search evaluate each candidate only at that stress workload; prefer safe candidates and then larger minimum network headroom; accept one-layer adjacent-boundary moves",
   "semantics": "same synthetic event-driven evaluator as phases 1-2; search changes only contiguous layer boundaries; no routing, replication, migration, or scheduling optimization"
 }

@@ -1,4 +1,4 @@
-scenario,method,reference_lambda,partition_evaluation_budget,partition,weighted_layers,safe_lambda,unsafe_lambda,safe_at_reference,first_violation_at_reference,minimum_link_headroom_mb_s_at_reference
+scenario,method,reference_lambda,partition_probe_budget,partition,weighted_layers,safe_lambda,unsafe_lambda,safe_at_reference,first_violation_at_reference,minimum_link_headroom_mb_s_at_reference
 homogeneous_control,uniform,0.0095,1,10-10-10-10-10-10-10-10,80.0,0.009,0.0095,False,network,-134.718641
 homogeneous_control,compute_balanced,0.0095,1,10-10-10-10-10-10-10-10,80.0,0.009,0.0095,False,network,-134.718641
 homogeneous_control,equal_budget_random,0.0095,15,10-10-10-10-10-10-10-10,80.0,0.009,0.0095,False,network,-134.718641
