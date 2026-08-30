@@ -1,0 +1,587 @@
+{
+  "conclusion": {
+    "all_sampled_monotonic": true,
+    "answer": "yes",
+    "max_probe_count": 4,
+    "median_gain_over_uniform_pct": 34.37,
+    "minimum_oracle_matches": 10,
+    "minimum_uniform_improvements": 10,
+    "not_worse_than_phase_agnostic_joint_compute": 12,
+    "oracle_matches": 11,
+    "question": "Can a four-probe SLA-stress boundary search adapt to HELIX-derived phase-specific heterogeneity and recover near-oracle sampled SLA-safe capacity across both TTFT- and TPOT-sensitive regimes?",
+    "trials": 12,
+    "uniform_improvements": 11
+  },
+  "experiment_id": "phase10-helix-sla-aware-method-comparison-v1",
+  "provenance": {
+    "helix_commit": "8639497a4aaf1eb3b7594614cb0bbd376c1342b3",
+    "stage_machines": [
+      "l4x2",
+      "t4x4",
+      "l4x2",
+      "t4x4",
+      "l4x2",
+      "t4x4",
+      "l4x2",
+      "t4x4"
+    ],
+    "workload_seeds": [
+      0,
+      1,
+      2,
+      3,
+      7,
+      19
+    ]
+  },
+  "semantics": "The event-driven evaluator and HELIX-derived phase-specific speed vectors are unchanged. Static compute baselines ignore SLA. The proposed search starts at uniform, probes shifts -1/0/+1 only at the uniform partition's first sampled unsafe workload, then probes one extreme shift in the improving direction. Full capacity is used only for final evaluation, not during the search.",
+  "static_baseline_shifts": {
+    "decode_balanced": -2,
+    "phase_agnostic_joint_compute": -1,
+    "prefill_balanced": 2,
+    "uniform": 0
+  },
+  "trial_summaries": [
+    {
+      "all_sampled_monotonic": true,
+      "gain_over_joint_compute_pct": 2.941,
+      "gain_over_uniform_pct": 59.091,
+      "improves_uniform": true,
+      "joint_compute_safe_lambda": 0.0017,
+      "matches_oracle": true,
+      "not_worse_than_joint_compute": true,
+      "oracle_safe_lambda": 0.00175,
+      "oracle_shifts": [
+        -2
+      ],
+      "probe_count": 4,
+      "probe_trace": [
+        {
+          "first_violation": null,
+          "headroom": 730.9659702253866,
+          "safe": true,
+          "shift": -1
+        },
+        {
+          "first_violation": "network",
+          "headroom": -36.99484918619578,
+          "safe": false,
+          "shift": 0
+        },
+        {
+          "first_violation": "network",
+          "headroom": -69.84931061452494,
+          "safe": false,
+          "shift": 1
+        },
+        {
+          "first_violation": null,
+          "headroom": 794.4869766202762,
+          "safe": true,
+          "shift": -2
+        }
+      ],
+      "proposed_safe_lambda": 0.00175,
+      "proposed_shift": -2,
+      "regime": "decode_constrained",
+      "seed": 0,
+      "uniform_safe_lambda": 0.0011
+    },
+    {
+      "all_sampled_monotonic": true,
+      "gain_over_joint_compute_pct": 0.0,
+      "gain_over_uniform_pct": -15.854,
+      "improves_uniform": false,
+      "joint_compute_safe_lambda": 0.0069,
+      "matches_oracle": false,
+      "not_worse_than_joint_compute": true,
+      "oracle_safe_lambda": 0.0086,
+      "oracle_shifts": [
+        2
+      ],
+      "probe_count": 4,
+      "probe_trace": [
+        {
+          "first_violation": "network",
+          "headroom": -1.698911015293561,
+          "safe": false,
+          "shift": -1
+        },
+        {
+          "first_violation": "network",
+          "headroom": -40.57170735638624,
+          "safe": false,
+          "shift": 0
+        },
+        {
+          "first_violation": "network",
+          "headroom": -78.96583421080663,
+          "safe": false,
+          "shift": 1
+        },
+        {
+          "first_violation": "network",
+          "headroom": -98.73097734935277,
+          "safe": false,
+          "shift": -2
+        }
+      ],
+      "proposed_safe_lambda": 0.0069,
+      "proposed_shift": -1,
+      "regime": "prefill_constrained",
+      "seed": 0,
+      "uniform_safe_lambda": 0.0082
+    },
+    {
+      "all_sampled_monotonic": true,
+      "gain_over_joint_compute_pct": 2.857,
+      "gain_over_uniform_pct": 63.636,
+      "improves_uniform": true,
+      "joint_compute_safe_lambda": 0.00175,
+      "matches_oracle": true,
+      "not_worse_than_joint_compute": true,
+      "oracle_safe_lambda": 0.0018,
+      "oracle_shifts": [
+        -2
+      ],
+      "probe_count": 4,
+      "probe_trace": [
+        {
+          "first_violation": null,
+          "headroom": 732.3783459787835,
+          "safe": true,
+          "shift": -1
+        },
+        {
+          "first_violation": "network",
+          "headroom": -34.60293227831585,
+          "safe": false,
+          "shift": 0
+        },
+        {
+          "first_violation": "network",
+          "headroom": -223.4125525156876,
+          "safe": false,
+          "shift": 1
+        },
+        {
+          "first_violation": null,
+          "headroom": 820.5657701237058,
+          "safe": true,
+          "shift": -2
+        }
+      ],
+      "proposed_safe_lambda": 0.0018,
+      "proposed_shift": -2,
+      "regime": "decode_constrained",
+      "seed": 1,
+      "uniform_safe_lambda": 0.0011
+    },
+    {
+      "all_sampled_monotonic": true,
+      "gain_over_joint_compute_pct": 50.0,
+      "gain_over_uniform_pct": 26.316,
+      "improves_uniform": true,
+      "joint_compute_safe_lambda": 0.008,
+      "matches_oracle": true,
+      "not_worse_than_joint_compute": true,
+      "oracle_safe_lambda": 0.012,
+      "oracle_shifts": [
+        2
+      ],
+      "probe_count": 4,
+      "probe_trace": [
+        {
+          "first_violation": "network",
+          "headroom": -1.7238500317851049,
+          "safe": false,
+          "shift": -1
+        },
+        {
+          "first_violation": "network",
+          "headroom": -40.682448776914725,
+          "safe": false,
+          "shift": 0
+        },
+        {
+          "first_violation": null,
+          "headroom": 44.90961745131699,
+          "safe": true,
+          "shift": 1
+        },
+        {
+          "first_violation": null,
+          "headroom": 118.19905683335924,
+          "safe": true,
+          "shift": 2
+        }
+      ],
+      "proposed_safe_lambda": 0.012,
+      "proposed_shift": 2,
+      "regime": "prefill_constrained",
+      "seed": 1,
+      "uniform_safe_lambda": 0.0095
+    },
+    {
+      "all_sampled_monotonic": true,
+      "gain_over_joint_compute_pct": 2.941,
+      "gain_over_uniform_pct": 59.091,
+      "improves_uniform": true,
+      "joint_compute_safe_lambda": 0.0017,
+      "matches_oracle": true,
+      "not_worse_than_joint_compute": true,
+      "oracle_safe_lambda": 0.00175,
+      "oracle_shifts": [
+        -2
+      ],
+      "probe_count": 4,
+      "probe_trace": [
+        {
+          "first_violation": null,
+          "headroom": 730.6927636901667,
+          "safe": true,
+          "shift": -1
+        },
+        {
+          "first_violation": "network",
+          "headroom": -35.130701032738216,
+          "safe": false,
+          "shift": 0
+        },
+        {
+          "first_violation": "network",
+          "headroom": -313.92304206454287,
+          "safe": false,
+          "shift": 1
+        },
+        {
+          "first_violation": null,
+          "headroom": 794.2124837811139,
+          "safe": true,
+          "shift": -2
+        }
+      ],
+      "proposed_safe_lambda": 0.00175,
+      "proposed_shift": -2,
+      "regime": "decode_constrained",
+      "seed": 2,
+      "uniform_safe_lambda": 0.0011
+    },
+    {
+      "all_sampled_monotonic": true,
+      "gain_over_joint_compute_pct": 26.23,
+      "gain_over_uniform_pct": 13.235,
+      "improves_uniform": true,
+      "joint_compute_safe_lambda": 0.0061,
+      "matches_oracle": true,
+      "not_worse_than_joint_compute": true,
+      "oracle_safe_lambda": 0.0077,
+      "oracle_shifts": [
+        2
+      ],
+      "probe_count": 4,
+      "probe_trace": [
+        {
+          "first_violation": "network",
+          "headroom": -1.4968098451536207,
+          "safe": false,
+          "shift": -1
+        },
+        {
+          "first_violation": "network",
+          "headroom": -40.55628869392467,
+          "safe": false,
+          "shift": 0
+        },
+        {
+          "first_violation": null,
+          "headroom": 45.20501267932627,
+          "safe": true,
+          "shift": 1
+        },
+        {
+          "first_violation": null,
+          "headroom": 118.50256613221882,
+          "safe": true,
+          "shift": 2
+        }
+      ],
+      "proposed_safe_lambda": 0.0077,
+      "proposed_shift": 2,
+      "regime": "prefill_constrained",
+      "seed": 2,
+      "uniform_safe_lambda": 0.0068
+    },
+    {
+      "all_sampled_monotonic": true,
+      "gain_over_joint_compute_pct": 0.0,
+      "gain_over_uniform_pct": 54.545,
+      "improves_uniform": true,
+      "joint_compute_safe_lambda": 0.0017,
+      "matches_oracle": true,
+      "not_worse_than_joint_compute": true,
+      "oracle_safe_lambda": 0.0017,
+      "oracle_shifts": [
+        -2,
+        -1
+      ],
+      "probe_count": 4,
+      "probe_trace": [
+        {
+          "first_violation": null,
+          "headroom": 156.36395933994822,
+          "safe": true,
+          "shift": -1
+        },
+        {
+          "first_violation": "network",
+          "headroom": -36.50266641275243,
+          "safe": false,
+          "shift": 0
+        },
+        {
+          "first_violation": "network",
+          "headroom": -317.20391800049265,
+          "safe": false,
+          "shift": 1
+        },
+        {
+          "first_violation": null,
+          "headroom": 794.4869766202762,
+          "safe": true,
+          "shift": -2
+        }
+      ],
+      "proposed_safe_lambda": 0.0017,
+      "proposed_shift": -2,
+      "regime": "decode_constrained",
+      "seed": 3,
+      "uniform_safe_lambda": 0.0011
+    },
+    {
+      "all_sampled_monotonic": true,
+      "gain_over_joint_compute_pct": 21.622,
+      "gain_over_uniform_pct": 18.421,
+      "improves_uniform": true,
+      "joint_compute_safe_lambda": 0.0074,
+      "matches_oracle": true,
+      "not_worse_than_joint_compute": true,
+      "oracle_safe_lambda": 0.009,
+      "oracle_shifts": [
+        2
+      ],
+      "probe_count": 4,
+      "probe_trace": [
+        {
+          "first_violation": "network",
+          "headroom": -1.4424661535442738,
+          "safe": false,
+          "shift": -1
+        },
+        {
+          "first_violation": "network",
+          "headroom": -40.447804836207524,
+          "safe": false,
+          "shift": 0
+        },
+        {
+          "first_violation": null,
+          "headroom": 45.367287130465684,
+          "safe": true,
+          "shift": 1
+        },
+        {
+          "first_violation": null,
+          "headroom": 118.66857974733762,
+          "safe": true,
+          "shift": 2
+        }
+      ],
+      "proposed_safe_lambda": 0.009,
+      "proposed_shift": 2,
+      "regime": "prefill_constrained",
+      "seed": 3,
+      "uniform_safe_lambda": 0.0076
+    },
+    {
+      "all_sampled_monotonic": true,
+      "gain_over_joint_compute_pct": 2.174,
+      "gain_over_uniform_pct": 42.424,
+      "improves_uniform": true,
+      "joint_compute_safe_lambda": 0.0023,
+      "matches_oracle": true,
+      "not_worse_than_joint_compute": true,
+      "oracle_safe_lambda": 0.00235,
+      "oracle_shifts": [
+        -2
+      ],
+      "probe_count": 4,
+      "probe_trace": [
+        {
+          "first_violation": null,
+          "headroom": 244.82702301096185,
+          "safe": true,
+          "shift": -1
+        },
+        {
+          "first_violation": "network",
+          "headroom": -83.45423366266573,
+          "safe": false,
+          "shift": 0
+        },
+        {
+          "first_violation": "network",
+          "headroom": -55.71150520281731,
+          "safe": false,
+          "shift": 1
+        },
+        {
+          "first_violation": null,
+          "headroom": 367.54470355812214,
+          "safe": true,
+          "shift": -2
+        }
+      ],
+      "proposed_safe_lambda": 0.00235,
+      "proposed_shift": -2,
+      "regime": "decode_constrained",
+      "seed": 7,
+      "uniform_safe_lambda": 0.00165
+    },
+    {
+      "all_sampled_monotonic": true,
+      "gain_over_joint_compute_pct": 19.481,
+      "gain_over_uniform_pct": 16.456,
+      "improves_uniform": true,
+      "joint_compute_safe_lambda": 0.0077,
+      "matches_oracle": true,
+      "not_worse_than_joint_compute": true,
+      "oracle_safe_lambda": 0.0092,
+      "oracle_shifts": [
+        2
+      ],
+      "probe_count": 4,
+      "probe_trace": [
+        {
+          "first_violation": "network",
+          "headroom": -1.5521022591690325,
+          "safe": false,
+          "shift": -1
+        },
+        {
+          "first_violation": "network",
+          "headroom": -40.500030431532196,
+          "safe": false,
+          "shift": 0
+        },
+        {
+          "first_violation": null,
+          "headroom": 45.313274294775965,
+          "safe": true,
+          "shift": 1
+        },
+        {
+          "first_violation": null,
+          "headroom": 118.61442115470618,
+          "safe": true,
+          "shift": 2
+        }
+      ],
+      "proposed_safe_lambda": 0.0092,
+      "proposed_shift": 2,
+      "regime": "prefill_constrained",
+      "seed": 7,
+      "uniform_safe_lambda": 0.0079
+    },
+    {
+      "all_sampled_monotonic": true,
+      "gain_over_joint_compute_pct": 2.941,
+      "gain_over_uniform_pct": 59.091,
+      "improves_uniform": true,
+      "joint_compute_safe_lambda": 0.0017,
+      "matches_oracle": true,
+      "not_worse_than_joint_compute": true,
+      "oracle_safe_lambda": 0.00175,
+      "oracle_shifts": [
+        -2
+      ],
+      "probe_count": 4,
+      "probe_trace": [
+        {
+          "first_violation": null,
+          "headroom": 730.6927636901667,
+          "safe": true,
+          "shift": -1
+        },
+        {
+          "first_violation": "network",
+          "headroom": -36.740697502492594,
+          "safe": false,
+          "shift": 0
+        },
+        {
+          "first_violation": "network",
+          "headroom": -317.44095071026254,
+          "safe": false,
+          "shift": 1
+        },
+        {
+          "first_violation": null,
+          "headroom": 794.2124837811139,
+          "safe": true,
+          "shift": -2
+        }
+      ],
+      "proposed_safe_lambda": 0.00175,
+      "proposed_shift": -2,
+      "regime": "decode_constrained",
+      "seed": 19,
+      "uniform_safe_lambda": 0.0011
+    },
+    {
+      "all_sampled_monotonic": true,
+      "gain_over_joint_compute_pct": 19.277,
+      "gain_over_uniform_pct": 17.857,
+      "improves_uniform": true,
+      "joint_compute_safe_lambda": 0.0083,
+      "matches_oracle": true,
+      "not_worse_than_joint_compute": true,
+      "oracle_safe_lambda": 0.0099,
+      "oracle_shifts": [
+        2
+      ],
+      "probe_count": 4,
+      "probe_trace": [
+        {
+          "first_violation": "network",
+          "headroom": -1.086717899667974,
+          "safe": false,
+          "shift": -1
+        },
+        {
+          "first_violation": "network",
+          "headroom": -40.16837084134909,
+          "safe": false,
+          "shift": 0
+        },
+        {
+          "first_violation": null,
+          "headroom": 45.65608284402242,
+          "safe": true,
+          "shift": 1
+        },
+        {
+          "first_violation": null,
+          "headroom": 118.96857305843264,
+          "safe": true,
+          "shift": 2
+        }
+      ],
+      "proposed_safe_lambda": 0.0099,
+      "proposed_shift": 2,
+      "regime": "prefill_constrained",
+      "seed": 19,
+      "uniform_safe_lambda": 0.0084
+    }
+  ]
+}
