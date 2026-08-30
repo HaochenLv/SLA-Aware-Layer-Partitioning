@@ -1,0 +1,9 @@
+{
+  "source_repository": "Thesys-lab/Helix-ASPLOS25",
+  "commit": "8639497a4aaf1eb3b7594614cb0bbd376c1342b3",
+  "model": "llama2_70b",
+  "machines": ["a100", "l4x2", "t4x4"],
+  "files": ["prompt_bs2time.csv", "decode_bs2time.csv"],
+  "time_unit": "milliseconds per model layer",
+  "notes": "Vendored unchanged from the pinned HELIX artifact. Phase 6 uses these tables only to derive phase-specific relative compute-speed factors; it does not replay HELIX scheduling or claim full hardware execution fidelity."
+}
