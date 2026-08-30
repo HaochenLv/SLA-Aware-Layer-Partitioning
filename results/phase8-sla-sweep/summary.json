@@ -1,0 +1,174 @@
+{
+  "conclusion": {
+    "all_sampled_monotonic": true,
+    "answer": "not_yet",
+    "end_prefers_more_t4x4_layers": true,
+    "negative_best_shift_points": 8,
+    "neutral_best_shift_points": 6,
+    "positive_best_shift_points": 7,
+    "question": "As the SLA moves continuously from TTFT-tight to TPOT-tight, does the preferred layer-boundary direction move from L4x2-heavy toward T4x4-heavy rather than remaining a single static compute-balanced choice?",
+    "representative_best_shift_nonincreasing": false,
+    "start_prefers_more_l4x2_layers": true
+  },
+  "experiment_id": "phase8-helix-sla-continuation-sweep-v1",
+  "provenance": {
+    "helix_commit": "8639497a4aaf1eb3b7594614cb0bbd376c1342b3",
+    "reference_machine": "a100",
+    "stage_machines": [
+      "l4x2",
+      "t4x4",
+      "l4x2",
+      "t4x4",
+      "l4x2",
+      "t4x4",
+      "l4x2",
+      "t4x4"
+    ],
+    "workload_seed": 7
+  },
+  "semantics": "Phase-8 preserves the Phase-6/7 profiled evaluator and the same five contiguous boundary shifts. Only the TTFT/TPOT pair changes along a linear interpolation between the validated TTFT-tight and TPOT-tight endpoints. This is a controlled SLA sensitivity sweep, not online adaptation or scheduler replay.",
+  "sla_points": [
+    {
+      "all_sampled_monotonic": true,
+      "alpha": 0.0,
+      "best_gain_over_uniform_pct": 16.456,
+      "best_safe_lambda": 0.0092,
+      "best_shifts": [
+        2
+      ],
+      "tpot_s": 1.0,
+      "ttft_s": 0.28,
+      "uniform_first_violation": "network",
+      "uniform_safe_lambda": 0.0079
+    },
+    {
+      "all_sampled_monotonic": true,
+      "alpha": 0.125,
+      "best_gain_over_uniform_pct": 0.0,
+      "best_safe_lambda": 0.014,
+      "best_shifts": [
+        -2,
+        -1,
+        0,
+        1,
+        2
+      ],
+      "tpot_s": 0.9,
+      "ttft_s": 0.495,
+      "uniform_first_violation": null,
+      "uniform_safe_lambda": 0.014
+    },
+    {
+      "all_sampled_monotonic": true,
+      "alpha": 0.25,
+      "best_gain_over_uniform_pct": 0.0,
+      "best_safe_lambda": 0.014,
+      "best_shifts": [
+        -2,
+        -1,
+        0,
+        1,
+        2
+      ],
+      "tpot_s": 0.8,
+      "ttft_s": 0.71,
+      "uniform_first_violation": null,
+      "uniform_safe_lambda": 0.014
+    },
+    {
+      "all_sampled_monotonic": true,
+      "alpha": 0.375,
+      "best_gain_over_uniform_pct": 0.0,
+      "best_safe_lambda": 0.014,
+      "best_shifts": [
+        -2,
+        -1,
+        0,
+        1,
+        2
+      ],
+      "tpot_s": 0.7,
+      "ttft_s": 0.925,
+      "uniform_first_violation": null,
+      "uniform_safe_lambda": 0.014
+    },
+    {
+      "all_sampled_monotonic": true,
+      "alpha": 0.5,
+      "best_gain_over_uniform_pct": 0.0,
+      "best_safe_lambda": 0.014,
+      "best_shifts": [
+        -2,
+        -1,
+        0,
+        1,
+        2
+      ],
+      "tpot_s": 0.6,
+      "ttft_s": 1.14,
+      "uniform_first_violation": null,
+      "uniform_safe_lambda": 0.014
+    },
+    {
+      "all_sampled_monotonic": true,
+      "alpha": 0.625,
+      "best_gain_over_uniform_pct": 0.0,
+      "best_safe_lambda": 0.014,
+      "best_shifts": [
+        -2,
+        -1,
+        0,
+        1,
+        2
+      ],
+      "tpot_s": 0.5,
+      "ttft_s": 1.355,
+      "uniform_first_violation": null,
+      "uniform_safe_lambda": 0.014
+    },
+    {
+      "all_sampled_monotonic": true,
+      "alpha": 0.75,
+      "best_gain_over_uniform_pct": 0.0,
+      "best_safe_lambda": 0.014,
+      "best_shifts": [
+        -2,
+        -1,
+        0,
+        1,
+        2
+      ],
+      "tpot_s": 0.4,
+      "ttft_s": 1.57,
+      "uniform_first_violation": null,
+      "uniform_safe_lambda": 0.014
+    },
+    {
+      "all_sampled_monotonic": true,
+      "alpha": 0.875,
+      "best_gain_over_uniform_pct": 11.842,
+      "best_safe_lambda": 0.0085,
+      "best_shifts": [
+        -2
+      ],
+      "tpot_s": 0.3,
+      "ttft_s": 1.785,
+      "uniform_first_violation": "network",
+      "uniform_safe_lambda": 0.0076
+    },
+    {
+      "all_sampled_monotonic": true,
+      "alpha": 1.0,
+      "best_gain_over_uniform_pct": 43.75,
+      "best_safe_lambda": 0.0023,
+      "best_shifts": [
+        -2,
+        -1
+      ],
+      "tpot_s": 0.2,
+      "ttft_s": 2.0,
+      "uniform_first_violation": "network",
+      "uniform_safe_lambda": 0.0016
+    }
+  ]
+}
