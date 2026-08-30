@@ -44,6 +44,9 @@
     "decode_profile_points": [2, 4, 8, 12, 16, 20, 24],
     "stage_machines": ["l4x2", "t4x4", "l4x2", "t4x4", "l4x2", "t4x4", "l4x2", "t4x4"]
   },
+  "phase10": {
+    "candidate_shifts": [-2, -1, 0, 1, 2]
+  },
   "phase11": {
     "runtime_trace_root": "data/runtime_helix_trace",
     "workload_seeds": [0, 1, 2, 3, 7, 19],
