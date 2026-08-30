@@ -1,0 +1,177 @@
+{
+  "conclusion": {
+    "answer": "not_yet",
+    "heterogeneous_scenarios_supporting_mechanism": 1,
+    "heterogeneous_scenarios_tested": 4,
+    "question": "Does improved layer allocation raise SLA-safe capacity through lower compute cost, larger residual SLA budget, and lower network commitment?"
+  },
+  "experiment_id": "phase2-bottleneck-mechanism-v1",
+  "scenario_summaries": {
+    "graded": {
+      "best": {
+        "maximum_decode_compute_s": 0.049474309646499744,
+        "minimum_residual_s": 0.055946242636300464,
+        "normalized_link_commitment": 1.1788410604102233,
+        "partition": "14-13-12-11-9-8-7-6",
+        "safe_lambda": 0.0085,
+        "unsafe_lambda": 0.009,
+        "violation": "network",
+        "weighted_layers": 83.511655
+      },
+      "mechanism_supported": false,
+      "uniform": {
+        "maximum_decode_compute_s": 0.052420228844743316,
+        "minimum_residual_s": 0.050643588079462024,
+        "normalized_link_commitment": 1.0762079558348234,
+        "partition": "10-10-10-10-10-10-10-10",
+        "safe_lambda": 0.006,
+        "unsafe_lambda": 0.0065,
+        "violation": "network",
+        "weighted_layers": 89.680042
+      },
+      "worst": {
+        "maximum_decode_compute_s": 0.052420228844743316,
+        "minimum_residual_s": 0.050643588079462024,
+        "normalized_link_commitment": 1.0762079558348234,
+        "partition": "10-10-10-10-10-10-10-10",
+        "safe_lambda": 0.006,
+        "unsafe_lambda": 0.0065,
+        "violation": "network",
+        "weighted_layers": 89.680042
+      }
+    },
+    "homogeneous_control": {
+      "best": {
+        "maximum_decode_compute_s": 0.0473939208984375,
+        "minimum_residual_s": 0.05969094238281251,
+        "normalized_link_commitment": 1.1077749128790355,
+        "partition": "10-10-10-10-10-10-10-10",
+        "safe_lambda": 0.009,
+        "unsafe_lambda": 0.0095,
+        "violation": "network",
+        "weighted_layers": 80.0
+      },
+      "mechanism_supported": true,
+      "uniform": {
+        "maximum_decode_compute_s": 0.0473939208984375,
+        "minimum_residual_s": 0.05969094238281251,
+        "normalized_link_commitment": 1.1077749128790355,
+        "partition": "10-10-10-10-10-10-10-10",
+        "safe_lambda": 0.009,
+        "unsafe_lambda": 0.0095,
+        "violation": "network",
+        "weighted_layers": 80.0
+      },
+      "worst": {
+        "maximum_decode_compute_s": 0.0473939208984375,
+        "minimum_residual_s": 0.05969094238281251,
+        "normalized_link_commitment": 1.1077749128790355,
+        "partition": "10-10-10-10-10-10-10-10",
+        "safe_lambda": 0.009,
+        "unsafe_lambda": 0.0095,
+        "violation": "network",
+        "weighted_layers": 80.0
+      }
+    },
+    "mild_alternating": {
+      "best": {
+        "maximum_decode_compute_s": 0.048484829563618936,
+        "minimum_residual_s": 0.05772730678548591,
+        "normalized_link_commitment": 1.1438756625924582,
+        "partition": "10-10-10-10-10-10-10-10",
+        "safe_lambda": 0.009,
+        "unsafe_lambda": 0.0095,
+        "violation": "network",
+        "weighted_layers": 81.841432
+      },
+      "mechanism_supported": true,
+      "uniform": {
+        "maximum_decode_compute_s": 0.048484829563618936,
+        "minimum_residual_s": 0.05772730678548591,
+        "normalized_link_commitment": 1.1438756625924582,
+        "partition": "10-10-10-10-10-10-10-10",
+        "safe_lambda": 0.009,
+        "unsafe_lambda": 0.0095,
+        "violation": "network",
+        "weighted_layers": 81.841432
+      },
+      "worst": {
+        "maximum_decode_compute_s": 0.0486666476744825,
+        "minimum_residual_s": 0.05740003418593149,
+        "normalized_link_commitment": 1.150226397431528,
+        "partition": "8-12-8-9-10-9-13-11",
+        "safe_lambda": 0.0085,
+        "unsafe_lambda": 0.009,
+        "violation": "network",
+        "weighted_layers": 82.148338
+      }
+    },
+    "shuffled_severe": {
+      "best": {
+        "maximum_decode_compute_s": 0.04928574611197769,
+        "minimum_residual_s": 0.056285656998440146,
+        "normalized_link_commitment": 1.17203292555939,
+        "partition": "6-14-8-12-7-11-9-13",
+        "safe_lambda": 0.0085,
+        "unsafe_lambda": 0.009,
+        "violation": "network",
+        "weighted_layers": 83.193363
+      },
+      "mechanism_supported": false,
+      "uniform": {
+        "maximum_decode_compute_s": 0.05276266067420775,
+        "minimum_residual_s": 0.050027210786426045,
+        "normalized_link_commitment": 1.0887491717962652,
+        "partition": "10-10-10-10-10-10-10-10",
+        "safe_lambda": 0.006,
+        "unsafe_lambda": 0.0065,
+        "violation": "network",
+        "weighted_layers": 90.265871
+      },
+      "worst": {
+        "maximum_decode_compute_s": 0.05276266067420775,
+        "minimum_residual_s": 0.050027210786426045,
+        "normalized_link_commitment": 1.0887491717962652,
+        "partition": "10-10-10-10-10-10-10-10",
+        "safe_lambda": 0.006,
+        "unsafe_lambda": 0.0065,
+        "violation": "network",
+        "weighted_layers": 90.265871
+      }
+    },
+    "single_slow_stage": {
+      "best": {
+        "maximum_decode_compute_s": 0.05030218422629616,
+        "minimum_residual_s": 0.0544560683926669,
+        "normalized_link_commitment": 1.2095820429735653,
+        "partition": "11-11-11-6-11-10-10-10",
+        "safe_lambda": 0.0085,
+        "unsafe_lambda": 0.009,
+        "violation": "network",
+        "weighted_layers": 84.909091
+      },
+      "mechanism_supported": false,
+      "uniform": {
+        "maximum_decode_compute_s": 0.0515444794256037,
+        "minimum_residual_s": 0.05221993703391334,
+        "normalized_link_commitment": 1.045298517284136,
+        "partition": "10-10-10-10-10-10-10-10",
+        "safe_lambda": 0.0065,
+        "unsafe_lambda": 0.007,
+        "violation": "network",
+        "weighted_layers": 88.181818
+      },
+      "worst": {
+        "maximum_decode_compute_s": 0.05202272717285156,
+        "minimum_residual_s": 0.051359091088867194,
+        "normalized_link_commitment": 1.0620101008960365,
+        "partition": "8-13-10-11-12-10-6-10",
+        "safe_lambda": 0.006,
+        "unsafe_lambda": 0.0065,
+        "violation": "network",
+        "weighted_layers": 89.0
+      }
+    }
+  },
+  "semantics": "same phase-1 synthetic event-driven evaluator; diagnostics only, no search heuristic"
+}

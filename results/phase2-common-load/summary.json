@@ -1,0 +1,297 @@
+{
+  "conclusion": {
+    "answer": "yes",
+    "comparison_rule": "worst, uniform, and best are compared at the uniform partition's first sampled unsafe intensity; unsafe runs use their first violation snapshot and safe runs use their tightest network snapshot",
+    "homogeneous_control_consistent": true,
+    "mechanism_chain_supported_scenarios": [
+      "single_slow_stage",
+      "graded",
+      "shuffled_severe"
+    ],
+    "phase1_significant_heterogeneous_scenarios": [
+      "single_slow_stage",
+      "graded",
+      "shuffled_severe"
+    ],
+    "question": "At the same workload intensity, is the phase-1 capacity gain explained by lower Decode compute cost -> larger residual TPOT budget -> lower network commitment?",
+    "supported_count": 3,
+    "tested_significant_count": 3
+  },
+  "experiment_id": "phase2-bottleneck-mechanism-v1:common-load-v3",
+  "representative_selection": {
+    "best": "maximum sampled safe lambda; ties choose minimum weighted compute cost then lexicographic partition",
+    "uniform": "10 layers per stage",
+    "worst": "minimum sampled safe lambda; ties choose maximum weighted compute cost then lexicographic partition"
+  },
+  "scenario_summaries": {
+    "graded": {
+      "best": {
+        "active_decode": 4,
+        "active_prefill": 1,
+        "first_violation_at_reference": null,
+        "max_decode_compute_s": 0.048137134,
+        "min_decode_residual_s": 0.058353158,
+        "minimum_link_headroom_mb_s_at_reference": 305.410455,
+        "network_utilization": 0.755671636,
+        "partition": "14-13-12-11-9-8-7-6",
+        "safe_at_reference": true,
+        "safe_lambda": 0.0085,
+        "unsafe_lambda": 0.009,
+        "weighted_layers": 83.511655
+      },
+      "chain_checks": {
+        "best_survives_uniform_first_unsafe": true,
+        "capacity_higher": true,
+        "decode_compute_lower": true,
+        "decode_residual_higher": true,
+        "network_utilization_lower": true
+      },
+      "mechanism_supported": true,
+      "phase1_significant": true,
+      "reference_lambda": 0.0065,
+      "uniform": {
+        "active_decode": 5,
+        "active_prefill": 1,
+        "first_violation_at_reference": "network",
+        "max_decode_compute_s": 0.052420229,
+        "min_decode_residual_s": 0.050643588,
+        "minimum_link_headroom_mb_s_at_reference": -95.259945,
+        "network_utilization": 1.076207956,
+        "partition": "10-10-10-10-10-10-10-10",
+        "safe_at_reference": false,
+        "safe_lambda": 0.006,
+        "unsafe_lambda": 0.0065,
+        "weighted_layers": 89.680042
+      },
+      "worst": {
+        "active_decode": 5,
+        "active_prefill": 1,
+        "first_violation_at_reference": "network",
+        "max_decode_compute_s": 0.053780325,
+        "min_decode_residual_s": 0.048195415,
+        "minimum_link_headroom_mb_s_at_reference": -159.593373,
+        "network_utilization": 1.127674699,
+        "partition": "10-5-14-10-7-10-12-12",
+        "safe_at_reference": false,
+        "safe_lambda": 0.006,
+        "unsafe_lambda": 0.0065,
+        "weighted_layers": 92.006882
+      }
+    },
+    "homogeneous_control": {
+      "best": {
+        "active_decode": 6,
+        "active_prefill": 1,
+        "first_violation_at_reference": "network",
+        "max_decode_compute_s": 0.047393921,
+        "min_decode_residual_s": 0.059690942,
+        "minimum_link_headroom_mb_s_at_reference": -134.718641,
+        "network_utilization": 1.107774913,
+        "partition": "6-13-6-10-11-12-7-15",
+        "safe_at_reference": false,
+        "safe_lambda": 0.009,
+        "unsafe_lambda": 0.0095,
+        "weighted_layers": 80.0
+      },
+      "chain_checks": {
+        "capacity_equal": true,
+        "network_utilization_equal": true,
+        "weighted_compute_equal": true
+      },
+      "mechanism_supported": true,
+      "phase1_significant": false,
+      "reference_lambda": 0.0095,
+      "uniform": {
+        "active_decode": 6,
+        "active_prefill": 1,
+        "first_violation_at_reference": "network",
+        "max_decode_compute_s": 0.047393921,
+        "min_decode_residual_s": 0.059690942,
+        "minimum_link_headroom_mb_s_at_reference": -134.718641,
+        "network_utilization": 1.107774913,
+        "partition": "10-10-10-10-10-10-10-10",
+        "safe_at_reference": false,
+        "safe_lambda": 0.009,
+        "unsafe_lambda": 0.0095,
+        "weighted_layers": 80.0
+      },
+      "worst": {
+        "active_decode": 6,
+        "active_prefill": 1,
+        "first_violation_at_reference": "network",
+        "max_decode_compute_s": 0.047393921,
+        "min_decode_residual_s": 0.059690942,
+        "minimum_link_headroom_mb_s_at_reference": -134.718641,
+        "network_utilization": 1.107774913,
+        "partition": "14-11-13-11-8-8-6-9",
+        "safe_at_reference": false,
+        "safe_lambda": 0.009,
+        "unsafe_lambda": 0.0095,
+        "weighted_layers": 80.0
+      }
+    },
+    "mild_alternating": {
+      "best": {
+        "active_decode": 6,
+        "active_prefill": 1,
+        "first_violation_at_reference": "network",
+        "max_decode_compute_s": 0.047212103,
+        "min_decode_residual_s": 0.060018215,
+        "minimum_link_headroom_mb_s_at_reference": -127.474946,
+        "network_utilization": 1.101979957,
+        "partition": "10-9-12-7-14-6-11-11",
+        "safe_at_reference": false,
+        "safe_lambda": 0.009,
+        "unsafe_lambda": 0.0095,
+        "weighted_layers": 79.693095
+      },
+      "chain_checks": {
+        "best_survives_uniform_first_unsafe": false,
+        "capacity_higher": false,
+        "decode_compute_lower": true,
+        "decode_residual_higher": true,
+        "network_utilization_lower": true
+      },
+      "mechanism_supported": false,
+      "phase1_significant": false,
+      "reference_lambda": 0.0095,
+      "uniform": {
+        "active_decode": 6,
+        "active_prefill": 1,
+        "first_violation_at_reference": "network",
+        "max_decode_compute_s": 0.04848483,
+        "min_decode_residual_s": 0.057727307,
+        "minimum_link_headroom_mb_s_at_reference": -179.844578,
+        "network_utilization": 1.143875663,
+        "partition": "10-10-10-10-10-10-10-10",
+        "safe_at_reference": false,
+        "safe_lambda": 0.009,
+        "unsafe_lambda": 0.0095,
+        "weighted_layers": 81.841432
+      },
+      "worst": {
+        "active_decode": 6,
+        "active_prefill": 1,
+        "first_violation_at_reference": "network",
+        "max_decode_compute_s": 0.049739102,
+        "min_decode_residual_s": 0.055469617,
+        "minimum_link_headroom_mb_s_at_reference": -200.251676,
+        "network_utilization": 1.160201341,
+        "partition": "7-15-8-10-10-10-8-12",
+        "safe_at_reference": false,
+        "safe_lambda": 0.0085,
+        "unsafe_lambda": 0.009,
+        "weighted_layers": 83.98977
+      }
+    },
+    "shuffled_severe": {
+      "best": {
+        "active_decode": 4,
+        "active_prefill": 1,
+        "first_violation_at_reference": null,
+        "max_decode_compute_s": 0.047953667,
+        "min_decode_residual_s": 0.058683399,
+        "minimum_link_headroom_mb_s_at_reference": 310.485878,
+        "network_utilization": 0.751611298,
+        "partition": "6-14-8-12-7-11-9-13",
+        "safe_at_reference": true,
+        "safe_lambda": 0.0085,
+        "unsafe_lambda": 0.009,
+        "weighted_layers": 83.193363
+      },
+      "chain_checks": {
+        "best_survives_uniform_first_unsafe": true,
+        "capacity_higher": true,
+        "decode_compute_lower": true,
+        "decode_residual_higher": true,
+        "network_utilization_lower": true
+      },
+      "mechanism_supported": true,
+      "phase1_significant": true,
+      "reference_lambda": 0.0065,
+      "uniform": {
+        "active_decode": 5,
+        "active_prefill": 1,
+        "first_violation_at_reference": "network",
+        "max_decode_compute_s": 0.052762661,
+        "min_decode_residual_s": 0.050027211,
+        "minimum_link_headroom_mb_s_at_reference": -110.936465,
+        "network_utilization": 1.088749172,
+        "partition": "10-10-10-10-10-10-10-10",
+        "safe_at_reference": false,
+        "safe_lambda": 0.006,
+        "unsafe_lambda": 0.0065,
+        "weighted_layers": 90.265871
+      },
+      "worst": {
+        "active_decode": 5,
+        "active_prefill": 1,
+        "first_violation_at_reference": "network",
+        "max_decode_compute_s": 0.055373259,
+        "min_decode_residual_s": 0.045328135,
+        "minimum_link_headroom_mb_s_at_reference": -243.534964,
+        "network_utilization": 1.194827971,
+        "partition": "10-8-13-7-14-13-9-6",
+        "safe_at_reference": false,
+        "safe_lambda": 0.006,
+        "unsafe_lambda": 0.0065,
+        "weighted_layers": 94.732058
+      }
+    },
+    "single_slow_stage": {
+      "best": {
+        "active_decode": 5,
+        "active_prefill": 1,
+        "first_violation_at_reference": null,
+        "max_decode_compute_s": 0.049631488,
+        "min_decode_residual_s": 0.055663321,
+        "minimum_link_headroom_mb_s_at_reference": 20.162701,
+        "network_utilization": 0.98386984,
+        "partition": "11-11-11-6-11-10-10-10",
+        "safe_at_reference": true,
+        "safe_lambda": 0.0085,
+        "unsafe_lambda": 0.009,
+        "weighted_layers": 84.909091
+      },
+      "chain_checks": {
+        "best_survives_uniform_first_unsafe": true,
+        "capacity_higher": true,
+        "decode_compute_lower": true,
+        "decode_residual_higher": true,
+        "network_utilization_lower": true
+      },
+      "mechanism_supported": true,
+      "phase1_significant": true,
+      "reference_lambda": 0.007,
+      "uniform": {
+        "active_decode": 5,
+        "active_prefill": 1,
+        "first_violation_at_reference": "network",
+        "max_decode_compute_s": 0.051544479,
+        "min_decode_residual_s": 0.052219937,
+        "minimum_link_headroom_mb_s_at_reference": -56.623147,
+        "network_utilization": 1.045298517,
+        "partition": "10-10-10-10-10-10-10-10",
+        "safe_at_reference": false,
+        "safe_lambda": 0.0065,
+        "unsafe_lambda": 0.007,
+        "weighted_layers": 88.181818
+      },
+      "worst": {
+        "active_decode": 5,
+        "active_prefill": 1,
+        "first_violation_at_reference": "network",
+        "max_decode_compute_s": 0.053915714,
+        "min_decode_residual_s": 0.047951715,
+        "minimum_link_headroom_mb_s_at_reference": -166.941068,
+        "network_utilization": 1.133552855,
+        "partition": "12-10-8-15-9-10-5-11",
+        "safe_at_reference": false,
+        "safe_lambda": 0.006,
+        "unsafe_lambda": 0.0065,
+        "weighted_layers": 92.272727
+      }
+    }
+  },
+  "semantics": "phase-1 synthetic evaluator with diagnostic-only replay; no search heuristic and no change to phase-1 verdict semantics"
+}
