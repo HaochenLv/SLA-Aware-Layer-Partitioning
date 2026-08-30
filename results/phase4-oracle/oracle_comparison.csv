@@ -1,0 +1,17 @@
+scenario,role,partition,safe_lambda,unsafe_lambda,reference_lambda,headroom_at_reference_mb_s,weighted_layers,search_partition_probes
+homogeneous_control,uniform,6-6-6-6,0.009,0.0095,0.0095,-134.718641,24.0,
+homogeneous_control,compute_balanced,6-6-6-6,0.009,0.0095,0.0095,-134.718641,24.0,
+homogeneous_control,sla_boundary_search,6-6-6-6,0.009,0.0095,0.0095,-134.718641,24.0,7
+homogeneous_control,exhaustive_oracle,9-9-3-3,0.009,0.0095,0.0095,-134.718641,24.0,
+single_slow_stage,uniform,6-6-6-6,,0.006,0.006,-299.022805,28.909091,
+single_slow_stage,compute_balanced,7-3-7-7,0.0065,0.007,0.006,223.866264,26.454545,
+single_slow_stage,sla_boundary_search,9-3-6-6,0.0065,0.007,0.006,223.866264,26.454545,20
+single_slow_stage,exhaustive_oracle,9-3-9-3,0.0065,0.007,0.006,223.866264,26.454545,
+graded,uniform,6-6-6-6,0.006,0.0065,0.0065,-181.992572,27.82967,
+graded,compute_balanced,8-7-5-4,0.0085,0.009,0.0065,267.387691,25.737179,
+graded,sla_boundary_search,9-9-3-3,0.009,0.0095,0.0065,346.625982,24.244505,41
+graded,exhaustive_oracle,9-9-3-3,0.009,0.0095,0.0065,346.625982,24.244505,
+shuffled_severe,uniform,6-6-6-6,0.006,0.0065,0.0065,-160.884758,27.615385,
+shuffled_severe,compute_balanced,4-8-5-7,0.0085,0.009,0.0065,290.919376,25.320513,
+shuffled_severe,sla_boundary_search,3-9-3-9,0.009,0.0095,0.0065,385.025096,23.423077,27
+shuffled_severe,exhaustive_oracle,3-9-3-9,0.009,0.0095,0.0065,385.025096,23.423077,
