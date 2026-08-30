@@ -1,0 +1,35 @@
+name: phase2-bottleneck-mechanism
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'src/sla_partition_sensitivity/phase2.py'
+      - 'src/sla_partition_sensitivity/model.py'
+      - 'src/sla_partition_sensitivity/experiment.py'
+      - 'config/phase1.json'
+      - '.github/workflows/phase2.yml'
+  workflow_dispatch:
+
+jobs:
+  experiment:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install package
+        run: python -m pip install -e .
+      - name: Run validation suite
+        run: python -m unittest discover -s tests -v
+      - name: Run phase-2 mechanism diagnostics
+        run: python -m sla_partition_sensitivity.phase2 --config config/phase1.json --output results/phase2
+      - name: Show phase-2 summary
+        run: cat results/phase2/summary.json
+      - name: Upload complete phase-2 record
+        uses: actions/upload-artifact@v4
+        with:
+          name: phase2-bottleneck-mechanism-results
+          path: results/phase2/
+          if-no-files-found: error
