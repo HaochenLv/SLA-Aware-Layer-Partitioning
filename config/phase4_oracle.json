@@ -1,0 +1,68 @@
+{
+  "experiment_id": "phase4-reduced-exhaustive-oracle-v1",
+  "model": {
+    "name": "scaled-24-layer-4-stage-abstraction",
+    "layers": 24,
+    "stages": 4,
+    "memory_gb_per_stage": 40.0,
+    "weight_gb_per_layer": 1.65,
+    "workspace_gb": 2.0,
+    "reserve_gb": 4.0
+  },
+  "sla": {
+    "ttft_s": 2.0,
+    "tpot_s": 0.15,
+    "fixed_overhead_s": 0.005,
+    "intrinsic_prefill_us_per_token": 59.3772
+  },
+  "profile": {
+    "prefill_fixed_s_per_layer": 0.00008333333333333333,
+    "prefill_s_per_input_token_layer": 0.00000066666666666667,
+    "decode_s_per_token_layer": 0.0016666666666666668,
+    "decode_context_growth_at_8192": 0.20,
+    "decode_concurrency_penalty": 0.015,
+    "prefill_interference_penalty": 0.050,
+    "decode_block_tokens": 16
+  },
+  "network": {
+    "link_capacity_mb_s": 1250.0,
+    "activation_mb": 4.666666666666667
+  },
+  "memory": {
+    "kv_gb_per_token_layer": 0.00003,
+    "activation_gb_per_prefill_layer": 0.05
+  },
+  "workload": {
+    "request_count": 24,
+    "seed": 7,
+    "normalized_source_rate_rps": 100.0,
+    "input_token_choices": [256, 512, 1024, 1536, 2051],
+    "output_token_choices": [64, 96, 128, 192]
+  },
+  "sampling": {
+    "lambda_start": 0.006,
+    "lambda_stop": 0.022,
+    "lambda_step": 0.0005,
+    "significant_relative_gap_pct": 10.0,
+    "significant_absolute_gap": 0.001
+  },
+  "partitions": {
+    "count_per_scenario": 20,
+    "seed": 20260830,
+    "min_layers_per_stage": 3,
+    "max_layers_per_stage": 9
+  },
+  "scenarios": {
+    "homogeneous_control": [1.0, 1.0, 1.0, 1.0],
+    "single_slow_stage": [1.0, 0.55, 1.0, 1.0],
+    "graded": [1.30, 1.05, 0.80, 0.60],
+    "shuffled_severe": [0.60, 1.30, 0.75, 1.20]
+  },
+  "phase3": {
+    "max_iterations": 30,
+    "target_scenarios": ["single_slow_stage", "graded", "shuffled_severe"]
+  },
+  "phase4": {
+    "expected_partition_count": 231
+  }
+}
