@@ -38,7 +38,7 @@ jobs:
           curl -fL "$BASE/arrival_rate/azure_conv_arrive_time.pkl" -o data/runtime_helix_trace/azure_conv_arrive_time.pkl
           curl -fL "$BASE/length_data/azure_conv_input.pkl" -o data/runtime_helix_trace/azure_conv_input.pkl
           curl -fL "$BASE/length_data/azure_conv_output.pkl" -o data/runtime_helix_trace/azure_conv_output.pkl
-          echo "1ae6dec376d39a7ed8239cf5b10b5349b540697c94df8d1d1055b35f2a3  data/runtime_helix_trace/azure_conv_arrive_time.pkl" | sha256sum -c -
+          echo "1ae6dec376d39a7c9fa7ed8239cf5b10b5349b540697c94df8d1d1055b35f2a3  data/runtime_helix_trace/azure_conv_arrive_time.pkl" | sha256sum -c -
           echo "090770d895fe96d733f4c1d2e0068b5d391f565f25d05841077063c0c344c92f  data/runtime_helix_trace/azure_conv_input.pkl" | sha256sum -c -
           echo "4d42ec92d42a36cdf647af81fc5f7f8627ff4c21bddee24902f25d013dbadd82  data/runtime_helix_trace/azure_conv_output.pkl" | sha256sum -c -
       - name: Run phase-12 focused tests
