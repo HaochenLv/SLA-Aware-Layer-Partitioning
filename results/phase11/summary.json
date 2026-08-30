@@ -2,20 +2,20 @@
   "conclusion": {
     "all_sampled_monotonic": true,
     "answer": "not_yet",
-    "direction_flip_count": 0,
+    "direction_flip_count": 2,
     "max_probe_count": 4,
-    "median_gain_over_uniform_pct": 0.0,
+    "median_gain_over_uniform_pct": 2.021,
     "minimum_direction_flips": 5,
     "minimum_oracle_matches": 10,
-    "no_right_censoring": false,
-    "oracle_matches": 11,
+    "no_right_censoring": true,
+    "oracle_matches": 5,
     "question": "Do the HELIX-derived SLA-dependent partition direction and low-probe search remain effective when the simplified synthetic workload is replaced by a deterministic 30-second Azure Conversation workload generated from pinned HELIX interval counts and paired lengths?",
     "same_arrival_schedule_across_seeds": true,
     "seeds_tested": 6,
     "trials": 12,
-    "uniform_improvements": 5
+    "uniform_improvements": 8
   },
-  "experiment_id": "phase11-helix-azure-workload-validation-v1",
+  "experiment_id": "phase11-helix-azure-workload-validation-v2",
   "provenance": {
     "artifact_sha256": {
       "azure_conv_arrive_time.pkl": "1ae6dec376d39a7c9fa7ed8239cf5b10b5349b540697c94df8d1d1055b35f2a3",
@@ -31,37 +31,37 @@
     {
       "decode_direction": "t4x4_heavy",
       "direction_flip": false,
-      "prefill_direction": "tie_or_mixed",
+      "prefill_direction": "t4x4_heavy",
       "seed": 0
     },
     {
-      "decode_direction": "t4x4_heavy",
+      "decode_direction": "tie_or_mixed",
       "direction_flip": false,
-      "prefill_direction": "tie_or_mixed",
+      "prefill_direction": "t4x4_heavy",
       "seed": 1
     },
     {
-      "decode_direction": "t4x4_heavy",
+      "decode_direction": "tie_or_mixed",
       "direction_flip": false,
-      "prefill_direction": "tie_or_mixed",
+      "prefill_direction": "l4x2_heavy",
       "seed": 2
     },
     {
       "decode_direction": "t4x4_heavy",
-      "direction_flip": false,
-      "prefill_direction": "tie_or_mixed",
+      "direction_flip": true,
+      "prefill_direction": "l4x2_heavy",
       "seed": 3
     },
     {
-      "decode_direction": "t4x4_heavy",
+      "decode_direction": "tie_or_mixed",
       "direction_flip": false,
-      "prefill_direction": "tie_or_mixed",
+      "prefill_direction": "t4x4_heavy",
       "seed": 7
     },
     {
       "decode_direction": "t4x4_heavy",
-      "direction_flip": false,
-      "prefill_direction": "tie_or_mixed",
+      "direction_flip": true,
+      "prefill_direction": "l4x2_heavy",
       "seed": 19
     }
   ],
@@ -75,391 +75,12 @@
   "trial_summaries": [
     {
       "all_sampled_monotonic": true,
-      "gain_over_uniform_pct": 4.763,
-      "improves_uniform": true,
-      "matches_oracle": true,
-      "no_right_censoring": true,
-      "oracle_direction": "t4x4_heavy",
-      "oracle_safe_intensity": 0.085938,
-      "oracle_shifts": [
-        -2,
-        -1
-      ],
-      "probe_count": 4,
-      "probe_trace": [
-        {
-          "first_violation": null,
-          "minimum_link_headroom_mb_s": 253.586775,
-          "safe": true,
-          "shift": -1
-        },
-        {
-          "first_violation": "network",
-          "minimum_link_headroom_mb_s": -600.171969,
-          "safe": false,
-          "shift": 0
-        },
-        {
-          "first_violation": "network",
-          "minimum_link_headroom_mb_s": -111.618058,
-          "safe": false,
-          "shift": 1
-        },
-        {
-          "first_violation": null,
-          "minimum_link_headroom_mb_s": 371.936512,
-          "safe": true,
-          "shift": -2
-        }
-      ],
-      "proposed_safe_intensity": 0.085938,
-      "proposed_shift": -2,
-      "regime": "decode_constrained",
-      "request_count": 17,
-      "seed": 0,
-      "uniform_safe_intensity": 0.082031
-    },
-    {
-      "all_sampled_monotonic": true,
-      "gain_over_uniform_pct": 0.0,
-      "improves_uniform": false,
-      "matches_oracle": true,
-      "no_right_censoring": false,
-      "oracle_direction": "tie_or_mixed",
-      "oracle_safe_intensity": 16.0,
-      "oracle_shifts": [
-        -2,
-        -1,
-        0,
-        1,
-        2
-      ],
-      "probe_count": 4,
-      "probe_trace": [
-        {
-          "first_violation": null,
-          "minimum_link_headroom_mb_s": 767.216102,
-          "safe": true,
-          "shift": -1
-        },
-        {
-          "first_violation": null,
-          "minimum_link_headroom_mb_s": 766.548909,
-          "safe": true,
-          "shift": 0
-        },
-        {
-          "first_violation": null,
-          "minimum_link_headroom_mb_s": 765.82247,
-          "safe": true,
-          "shift": 1
-        },
-        {
-          "first_violation": null,
-          "minimum_link_headroom_mb_s": 767.821927,
-          "safe": true,
-          "shift": -2
-        }
-      ],
-      "proposed_safe_intensity": 16.0,
-      "proposed_shift": -2,
-      "regime": "prefill_constrained",
-      "request_count": 17,
-      "seed": 0,
-      "uniform_safe_intensity": 16.0
-    },
-    {
-      "all_sampled_monotonic": true,
-      "gain_over_uniform_pct": 3.847,
-      "improves_uniform": true,
-      "matches_oracle": true,
-      "no_right_censoring": true,
-      "oracle_direction": "t4x4_heavy",
-      "oracle_safe_intensity": 0.105469,
-      "oracle_shifts": [
-        -2,
-        -1
-      ],
-      "probe_count": 4,
-      "probe_trace": [
-        {
-          "first_violation": null,
-          "minimum_link_headroom_mb_s": 237.665564,
-          "safe": true,
-          "shift": -1
-        },
-        {
-          "first_violation": "network",
-          "minimum_link_headroom_mb_s": -580.096352,
-          "safe": false,
-          "shift": 0
-        },
-        {
-          "first_violation": "network",
-          "minimum_link_headroom_mb_s": -147.660426,
-          "safe": false,
-          "shift": 1
-        },
-        {
-          "first_violation": null,
-          "minimum_link_headroom_mb_s": 359.540121,
-          "safe": true,
-          "shift": -2
-        }
-      ],
-      "proposed_safe_intensity": 0.105469,
-      "proposed_shift": -2,
-      "regime": "decode_constrained",
-      "request_count": 17,
-      "seed": 1,
-      "uniform_safe_intensity": 0.101562
-    },
-    {
-      "all_sampled_monotonic": true,
-      "gain_over_uniform_pct": 0.0,
-      "improves_uniform": false,
-      "matches_oracle": true,
-      "no_right_censoring": false,
-      "oracle_direction": "tie_or_mixed",
-      "oracle_safe_intensity": 16.0,
-      "oracle_shifts": [
-        -2,
-        -1,
-        0,
-        1,
-        2
-      ],
-      "probe_count": 4,
-      "probe_trace": [
-        {
-          "first_violation": null,
-          "minimum_link_headroom_mb_s": 728.323501,
-          "safe": true,
-          "shift": -1
-        },
-        {
-          "first_violation": null,
-          "minimum_link_headroom_mb_s": 733.959704,
-          "safe": true,
-          "shift": 0
-        },
-        {
-          "first_violation": null,
-          "minimum_link_headroom_mb_s": 739.362561,
-          "safe": true,
-          "shift": 1
-        },
-        {
-          "first_violation": null,
-          "minimum_link_headroom_mb_s": 744.543469,
-          "safe": true,
-          "shift": 2
-        }
-      ],
-      "proposed_safe_intensity": 16.0,
-      "proposed_shift": 2,
-      "regime": "prefill_constrained",
-      "request_count": 17,
-      "seed": 1,
-      "uniform_safe_intensity": 16.0
-    },
-    {
-      "all_sampled_monotonic": true,
-      "gain_over_uniform_pct": 9.09,
-      "improves_uniform": true,
-      "matches_oracle": true,
-      "no_right_censoring": true,
-      "oracle_direction": "t4x4_heavy",
-      "oracle_safe_intensity": 0.09375,
-      "oracle_shifts": [
-        -2
-      ],
-      "probe_count": 4,
-      "probe_trace": [
-        {
-          "first_violation": null,
-          "minimum_link_headroom_mb_s": 235.220624,
-          "safe": true,
-          "shift": -1
-        },
-        {
-          "first_violation": "network",
-          "minimum_link_headroom_mb_s": -579.934657,
-          "safe": false,
-          "shift": 0
-        },
-        {
-          "first_violation": "network",
-          "minimum_link_headroom_mb_s": -138.099936,
-          "safe": false,
-          "shift": 1
-        },
-        {
-          "first_violation": null,
-          "minimum_link_headroom_mb_s": 356.844035,
-          "safe": true,
-          "shift": -2
-        }
-      ],
-      "proposed_safe_intensity": 0.09375,
-      "proposed_shift": -2,
-      "regime": "decode_constrained",
-      "request_count": 17,
-      "seed": 2,
-      "uniform_safe_intensity": 0.085938
-    },
-    {
-      "all_sampled_monotonic": true,
-      "gain_over_uniform_pct": 0.0,
-      "improves_uniform": false,
-      "matches_oracle": true,
-      "no_right_censoring": false,
-      "oracle_direction": "tie_or_mixed",
-      "oracle_safe_intensity": 16.0,
-      "oracle_shifts": [
-        -2,
-        -1,
-        0,
-        1,
-        2
-      ],
-      "probe_count": 4,
-      "probe_trace": [
-        {
-          "first_violation": null,
-          "minimum_link_headroom_mb_s": 800.227743,
-          "safe": true,
-          "shift": -1
-        },
-        {
-          "first_violation": null,
-          "minimum_link_headroom_mb_s": 798.165212,
-          "safe": true,
-          "shift": 0
-        },
-        {
-          "first_violation": null,
-          "minimum_link_headroom_mb_s": 796.047051,
-          "safe": true,
-          "shift": 1
-        },
-        {
-          "first_violation": null,
-          "minimum_link_headroom_mb_s": 802.236004,
-          "safe": true,
-          "shift": -2
-        }
-      ],
-      "proposed_safe_intensity": 16.0,
-      "proposed_shift": -2,
-      "regime": "prefill_constrained",
-      "request_count": 17,
-      "seed": 2,
-      "uniform_safe_intensity": 16.0
-    },
-    {
-      "all_sampled_monotonic": true,
-      "gain_over_uniform_pct": 4.545,
-      "improves_uniform": true,
-      "matches_oracle": true,
-      "no_right_censoring": true,
-      "oracle_direction": "t4x4_heavy",
-      "oracle_safe_intensity": 0.089844,
-      "oracle_shifts": [
-        -2,
-        -1
-      ],
-      "probe_count": 4,
-      "probe_trace": [
-        {
-          "first_violation": null,
-          "minimum_link_headroom_mb_s": 230.274309,
-          "safe": true,
-          "shift": -1
-        },
-        {
-          "first_violation": "network",
-          "minimum_link_headroom_mb_s": -714.200837,
-          "safe": false,
-          "shift": 0
-        },
-        {
-          "first_violation": "network",
-          "minimum_link_headroom_mb_s": -162.108982,
-          "safe": false,
-          "shift": 1
-        },
-        {
-          "first_violation": null,
-          "minimum_link_headroom_mb_s": 353.049669,
-          "safe": true,
-          "shift": -2
-        }
-      ],
-      "proposed_safe_intensity": 0.089844,
-      "proposed_shift": -2,
-      "regime": "decode_constrained",
-      "request_count": 17,
-      "seed": 3,
-      "uniform_safe_intensity": 0.085938
-    },
-    {
-      "all_sampled_monotonic": true,
-      "gain_over_uniform_pct": 0.0,
-      "improves_uniform": false,
-      "matches_oracle": true,
-      "no_right_censoring": false,
-      "oracle_direction": "tie_or_mixed",
-      "oracle_safe_intensity": 16.0,
-      "oracle_shifts": [
-        -2,
-        -1,
-        0,
-        1,
-        2
-      ],
-      "probe_count": 4,
-      "probe_trace": [
-        {
-          "first_violation": null,
-          "minimum_link_headroom_mb_s": 729.600838,
-          "safe": true,
-          "shift": -1
-        },
-        {
-          "first_violation": null,
-          "minimum_link_headroom_mb_s": 727.772496,
-          "safe": true,
-          "shift": 0
-        },
-        {
-          "first_violation": null,
-          "minimum_link_headroom_mb_s": 725.87608,
-          "safe": true,
-          "shift": 1
-        },
-        {
-          "first_violation": null,
-          "minimum_link_headroom_mb_s": 731.362597,
-          "safe": true,
-          "shift": -2
-        }
-      ],
-      "proposed_safe_intensity": 16.0,
-      "proposed_shift": -2,
-      "regime": "prefill_constrained",
-      "request_count": 17,
-      "seed": 3,
-      "uniform_safe_intensity": 16.0
-    },
-    {
-      "all_sampled_monotonic": true,
-      "gain_over_uniform_pct": -61.905,
+      "gain_over_uniform_pct": -50.0,
       "improves_uniform": false,
       "matches_oracle": false,
       "no_right_censoring": true,
       "oracle_direction": "t4x4_heavy",
-      "oracle_safe_intensity": 0.085938,
+      "oracle_safe_intensity": 0.027344,
       "oracle_shifts": [
         -2
       ],
@@ -467,263 +88,624 @@
       "probe_trace": [
         {
           "first_violation": "network",
-          "minimum_link_headroom_mb_s": -341.791474,
+          "minimum_link_headroom_mb_s": -306.27317,
           "safe": false,
           "shift": -1
         },
         {
           "first_violation": "network",
-          "minimum_link_headroom_mb_s": -614.857188,
+          "minimum_link_headroom_mb_s": -565.17657,
           "safe": false,
           "shift": 0
         },
         {
           "first_violation": "network",
-          "minimum_link_headroom_mb_s": -113.908353,
+          "minimum_link_headroom_mb_s": -1.431386,
           "safe": false,
           "shift": 1
         },
         {
           "first_violation": "network",
-          "minimum_link_headroom_mb_s": -557.897759,
+          "minimum_link_headroom_mb_s": -259.409848,
           "safe": false,
           "shift": 2
         }
       ],
-      "proposed_safe_intensity": 0.03125,
+      "proposed_safe_intensity": 0.011719,
       "proposed_shift": 1,
       "regime": "decode_constrained",
-      "request_count": 17,
-      "seed": 7,
-      "uniform_safe_intensity": 0.082031
+      "request_count": 133,
+      "seed": 0,
+      "uniform_safe_intensity": 0.023438
     },
     {
       "all_sampled_monotonic": true,
-      "gain_over_uniform_pct": 0.0,
-      "improves_uniform": false,
-      "matches_oracle": true,
-      "no_right_censoring": false,
-      "oracle_direction": "tie_or_mixed",
-      "oracle_safe_intensity": 16.0,
+      "gain_over_uniform_pct": 2.239,
+      "improves_uniform": true,
+      "matches_oracle": false,
+      "no_right_censoring": true,
+      "oracle_direction": "t4x4_heavy",
+      "oracle_safe_intensity": 0.539062,
       "oracle_shifts": [
-        -2,
-        -1,
-        0,
-        1,
-        2
+        -2
       ],
       "probe_count": 4,
       "probe_trace": [
         {
           "first_violation": null,
-          "minimum_link_headroom_mb_s": 551.880325,
+          "minimum_link_headroom_mb_s": 134.725988,
           "safe": true,
           "shift": -1
         },
         {
-          "first_violation": null,
-          "minimum_link_headroom_mb_s": 549.189331,
-          "safe": true,
+          "first_violation": "network",
+          "minimum_link_headroom_mb_s": -112.914611,
+          "safe": false,
           "shift": 0
         },
         {
-          "first_violation": null,
-          "minimum_link_headroom_mb_s": 546.312363,
-          "safe": true,
+          "first_violation": "network",
+          "minimum_link_headroom_mb_s": -287.550297,
+          "safe": false,
           "shift": 1
         },
         {
           "first_violation": null,
-          "minimum_link_headroom_mb_s": 554.391694,
+          "minimum_link_headroom_mb_s": 69.738655,
           "safe": true,
           "shift": -2
         }
       ],
-      "proposed_safe_intensity": 16.0,
-      "proposed_shift": -2,
+      "proposed_safe_intensity": 0.535156,
+      "proposed_shift": -1,
       "regime": "prefill_constrained",
-      "request_count": 17,
-      "seed": 7,
-      "uniform_safe_intensity": 16.0
+      "request_count": 133,
+      "seed": 0,
+      "uniform_safe_intensity": 0.523438
     },
     {
       "all_sampled_monotonic": true,
-      "gain_over_uniform_pct": 4.651,
+      "gain_over_uniform_pct": -50.0,
+      "improves_uniform": false,
+      "matches_oracle": false,
+      "no_right_censoring": true,
+      "oracle_direction": "tie_or_mixed",
+      "oracle_safe_intensity": 0.023438,
+      "oracle_shifts": [
+        -2,
+        -1,
+        0
+      ],
+      "probe_count": 4,
+      "probe_trace": [
+        {
+          "first_violation": "network",
+          "minimum_link_headroom_mb_s": -397.186556,
+          "safe": false,
+          "shift": -1
+        },
+        {
+          "first_violation": "network",
+          "minimum_link_headroom_mb_s": -692.288495,
+          "safe": false,
+          "shift": 0
+        },
+        {
+          "first_violation": "network",
+          "minimum_link_headroom_mb_s": -130.378084,
+          "safe": false,
+          "shift": 1
+        },
+        {
+          "first_violation": "network",
+          "minimum_link_headroom_mb_s": -448.190697,
+          "safe": false,
+          "shift": 2
+        }
+      ],
+      "proposed_safe_intensity": 0.011719,
+      "proposed_shift": 1,
+      "regime": "decode_constrained",
+      "request_count": 133,
+      "seed": 1,
+      "uniform_safe_intensity": 0.023438
+    },
+    {
+      "all_sampled_monotonic": true,
+      "gain_over_uniform_pct": 1.807,
+      "improves_uniform": true,
+      "matches_oracle": false,
+      "no_right_censoring": true,
+      "oracle_direction": "t4x4_heavy",
+      "oracle_safe_intensity": 0.667969,
+      "oracle_shifts": [
+        -2
+      ],
+      "probe_count": 4,
+      "probe_trace": [
+        {
+          "first_violation": null,
+          "minimum_link_headroom_mb_s": 116.281378,
+          "safe": true,
+          "shift": -1
+        },
+        {
+          "first_violation": "network",
+          "minimum_link_headroom_mb_s": -54.591341,
+          "safe": false,
+          "shift": 0
+        },
+        {
+          "first_violation": "network",
+          "minimum_link_headroom_mb_s": -4.19882,
+          "safe": false,
+          "shift": 1
+        },
+        {
+          "first_violation": null,
+          "minimum_link_headroom_mb_s": 74.064734,
+          "safe": true,
+          "shift": -2
+        }
+      ],
+      "proposed_safe_intensity": 0.660156,
+      "proposed_shift": -1,
+      "regime": "prefill_constrained",
+      "request_count": 133,
+      "seed": 1,
+      "uniform_safe_intensity": 0.648438
+    },
+    {
+      "all_sampled_monotonic": true,
+      "gain_over_uniform_pct": -42.858,
+      "improves_uniform": false,
+      "matches_oracle": false,
+      "no_right_censoring": true,
+      "oracle_direction": "tie_or_mixed",
+      "oracle_safe_intensity": 0.027344,
+      "oracle_shifts": [
+        -2,
+        -1,
+        0
+      ],
+      "probe_count": 4,
+      "probe_trace": [
+        {
+          "first_violation": "network",
+          "minimum_link_headroom_mb_s": -403.246885,
+          "safe": false,
+          "shift": -1
+        },
+        {
+          "first_violation": "network",
+          "minimum_link_headroom_mb_s": -699.33163,
+          "safe": false,
+          "shift": 0
+        },
+        {
+          "first_violation": "network",
+          "minimum_link_headroom_mb_s": -91.239519,
+          "safe": false,
+          "shift": 1
+        },
+        {
+          "first_violation": "network",
+          "minimum_link_headroom_mb_s": -474.425981,
+          "safe": false,
+          "shift": 2
+        }
+      ],
+      "proposed_safe_intensity": 0.015625,
+      "proposed_shift": 1,
+      "regime": "decode_constrained",
+      "request_count": 133,
+      "seed": 2,
+      "uniform_safe_intensity": 0.027344
+    },
+    {
+      "all_sampled_monotonic": true,
+      "gain_over_uniform_pct": 2.0,
+      "improves_uniform": true,
+      "matches_oracle": true,
+      "no_right_censoring": true,
+      "oracle_direction": "l4x2_heavy",
+      "oracle_safe_intensity": 0.398438,
+      "oracle_shifts": [
+        1
+      ],
+      "probe_count": 4,
+      "probe_trace": [
+        {
+          "first_violation": "network",
+          "minimum_link_headroom_mb_s": -41.556733,
+          "safe": false,
+          "shift": -1
+        },
+        {
+          "first_violation": "network",
+          "minimum_link_headroom_mb_s": -78.010171,
+          "safe": false,
+          "shift": 0
+        },
+        {
+          "first_violation": null,
+          "minimum_link_headroom_mb_s": 5.953359,
+          "safe": true,
+          "shift": 1
+        },
+        {
+          "first_violation": "network",
+          "minimum_link_headroom_mb_s": -26.748466,
+          "safe": false,
+          "shift": 2
+        }
+      ],
+      "proposed_safe_intensity": 0.398438,
+      "proposed_shift": 1,
+      "regime": "prefill_constrained",
+      "request_count": 133,
+      "seed": 2,
+      "uniform_safe_intensity": 0.390625
+    },
+    {
+      "all_sampled_monotonic": true,
+      "gain_over_uniform_pct": 14.285,
       "improves_uniform": true,
       "matches_oracle": true,
       "no_right_censoring": true,
       "oracle_direction": "t4x4_heavy",
-      "oracle_safe_intensity": 0.175781,
+      "oracle_safe_intensity": 0.03125,
       "oracle_shifts": [
-        -2
+        -2,
+        -1
       ],
       "probe_count": 4,
       "probe_trace": [
         {
           "first_violation": null,
-          "minimum_link_headroom_mb_s": 194.508911,
+          "minimum_link_headroom_mb_s": 240.262478,
           "safe": true,
           "shift": -1
         },
         {
           "first_violation": "network",
-          "minimum_link_headroom_mb_s": -458.465136,
+          "minimum_link_headroom_mb_s": -694.501865,
           "safe": false,
           "shift": 0
         },
         {
           "first_violation": "network",
-          "minimum_link_headroom_mb_s": -197.303174,
+          "minimum_link_headroom_mb_s": -122.924484,
           "safe": false,
           "shift": 1
         },
         {
           "first_violation": null,
-          "minimum_link_headroom_mb_s": 326.426033,
+          "minimum_link_headroom_mb_s": 362.347916,
           "safe": true,
           "shift": -2
         }
       ],
-      "proposed_safe_intensity": 0.175781,
+      "proposed_safe_intensity": 0.03125,
       "proposed_shift": -2,
       "regime": "decode_constrained",
-      "request_count": 17,
-      "seed": 19,
-      "uniform_safe_intensity": 0.167969
+      "request_count": 133,
+      "seed": 3,
+      "uniform_safe_intensity": 0.027344
     },
     {
       "all_sampled_monotonic": true,
-      "gain_over_uniform_pct": 0.0,
-      "improves_uniform": false,
+      "gain_over_uniform_pct": 4.959,
+      "improves_uniform": true,
       "matches_oracle": true,
-      "no_right_censoring": false,
-      "oracle_direction": "tie_or_mixed",
-      "oracle_safe_intensity": 16.0,
+      "no_right_censoring": true,
+      "oracle_direction": "l4x2_heavy",
+      "oracle_safe_intensity": 0.496094,
       "oracle_shifts": [
-        -2,
-        -1,
-        0,
         1,
         2
       ],
       "probe_count": 4,
       "probe_trace": [
         {
-          "first_violation": null,
-          "minimum_link_headroom_mb_s": 235.200746,
-          "safe": true,
+          "first_violation": "network",
+          "minimum_link_headroom_mb_s": -8.055915,
+          "safe": false,
           "shift": -1
         },
         {
-          "first_violation": null,
-          "minimum_link_headroom_mb_s": 258.475851,
-          "safe": true,
+          "first_violation": "network",
+          "minimum_link_headroom_mb_s": -41.095359,
+          "safe": false,
           "shift": 0
         },
         {
           "first_violation": null,
-          "minimum_link_headroom_mb_s": 279.607546,
+          "minimum_link_headroom_mb_s": 32.381282,
           "safe": true,
           "shift": 1
         },
         {
           "first_violation": null,
-          "minimum_link_headroom_mb_s": 298.83825,
+          "minimum_link_headroom_mb_s": 95.631088,
           "safe": true,
           "shift": 2
         }
       ],
-      "proposed_safe_intensity": 16.0,
+      "proposed_safe_intensity": 0.496094,
       "proposed_shift": 2,
       "regime": "prefill_constrained",
-      "request_count": 17,
+      "request_count": 133,
+      "seed": 3,
+      "uniform_safe_intensity": 0.472656
+    },
+    {
+      "all_sampled_monotonic": true,
+      "gain_over_uniform_pct": -50.0,
+      "improves_uniform": false,
+      "matches_oracle": false,
+      "no_right_censoring": true,
+      "oracle_direction": "tie_or_mixed",
+      "oracle_safe_intensity": 0.03125,
+      "oracle_shifts": [
+        -2,
+        -1,
+        0
+      ],
+      "probe_count": 4,
+      "probe_trace": [
+        {
+          "first_violation": "network",
+          "minimum_link_headroom_mb_s": -330.457835,
+          "safe": false,
+          "shift": -1
+        },
+        {
+          "first_violation": "network",
+          "minimum_link_headroom_mb_s": -600.856084,
+          "safe": false,
+          "shift": 0
+        },
+        {
+          "first_violation": "network",
+          "minimum_link_headroom_mb_s": -201.843768,
+          "safe": false,
+          "shift": 1
+        },
+        {
+          "first_violation": "network",
+          "minimum_link_headroom_mb_s": -565.916176,
+          "safe": false,
+          "shift": 2
+        }
+      ],
+      "proposed_safe_intensity": 0.015625,
+      "proposed_shift": 1,
+      "regime": "decode_constrained",
+      "request_count": 133,
+      "seed": 7,
+      "uniform_safe_intensity": 0.03125
+    },
+    {
+      "all_sampled_monotonic": true,
+      "gain_over_uniform_pct": 2.239,
+      "improves_uniform": true,
+      "matches_oracle": true,
+      "no_right_censoring": true,
+      "oracle_direction": "t4x4_heavy",
+      "oracle_safe_intensity": 0.535156,
+      "oracle_shifts": [
+        -1
+      ],
+      "probe_count": 4,
+      "probe_trace": [
+        {
+          "first_violation": null,
+          "minimum_link_headroom_mb_s": 27.404429,
+          "safe": true,
+          "shift": -1
+        },
+        {
+          "first_violation": "network",
+          "minimum_link_headroom_mb_s": -5.7894,
+          "safe": false,
+          "shift": 0
+        },
+        {
+          "first_violation": "network",
+          "minimum_link_headroom_mb_s": -158.608339,
+          "safe": false,
+          "shift": 1
+        },
+        {
+          "first_violation": "network",
+          "minimum_link_headroom_mb_s": -52.522723,
+          "safe": false,
+          "shift": -2
+        }
+      ],
+      "proposed_safe_intensity": 0.535156,
+      "proposed_shift": -1,
+      "regime": "prefill_constrained",
+      "request_count": 133,
+      "seed": 7,
+      "uniform_safe_intensity": 0.523438
+    },
+    {
+      "all_sampled_monotonic": true,
+      "gain_over_uniform_pct": 20.004,
+      "improves_uniform": true,
+      "matches_oracle": true,
+      "no_right_censoring": true,
+      "oracle_direction": "t4x4_heavy",
+      "oracle_safe_intensity": 0.023438,
+      "oracle_shifts": [
+        -2,
+        -1
+      ],
+      "probe_count": 4,
+      "probe_trace": [
+        {
+          "first_violation": null,
+          "minimum_link_headroom_mb_s": 237.208377,
+          "safe": true,
+          "shift": -1
+        },
+        {
+          "first_violation": "network",
+          "minimum_link_headroom_mb_s": -670.242734,
+          "safe": false,
+          "shift": 0
+        },
+        {
+          "first_violation": "network",
+          "minimum_link_headroom_mb_s": -93.692228,
+          "safe": false,
+          "shift": 1
+        },
+        {
+          "first_violation": null,
+          "minimum_link_headroom_mb_s": 358.353027,
+          "safe": true,
+          "shift": -2
+        }
+      ],
+      "proposed_safe_intensity": 0.023438,
+      "proposed_shift": -2,
+      "regime": "decode_constrained",
+      "request_count": 133,
       "seed": 19,
-      "uniform_safe_intensity": 16.0
+      "uniform_safe_intensity": 0.019531
+    },
+    {
+      "all_sampled_monotonic": true,
+      "gain_over_uniform_pct": 2.041,
+      "improves_uniform": true,
+      "matches_oracle": false,
+      "no_right_censoring": true,
+      "oracle_direction": "l4x2_heavy",
+      "oracle_safe_intensity": 0.597656,
+      "oracle_shifts": [
+        1
+      ],
+      "probe_count": 4,
+      "probe_trace": [
+        {
+          "first_violation": null,
+          "minimum_link_headroom_mb_s": 10.568183,
+          "safe": true,
+          "shift": -1
+        },
+        {
+          "first_violation": "network",
+          "minimum_link_headroom_mb_s": -15.327587,
+          "safe": false,
+          "shift": 0
+        },
+        {
+          "first_violation": null,
+          "minimum_link_headroom_mb_s": 27.909935,
+          "safe": true,
+          "shift": 1
+        },
+        {
+          "first_violation": null,
+          "minimum_link_headroom_mb_s": 65.953954,
+          "safe": true,
+          "shift": 2
+        }
+      ],
+      "proposed_safe_intensity": 0.585938,
+      "proposed_shift": 2,
+      "regime": "prefill_constrained",
+      "request_count": 133,
+      "seed": 19,
+      "uniform_safe_intensity": 0.574219
     }
   ],
   "workload_summaries": [
     {
       "first_arrival_s": 4.5,
-      "input_max": 1344,
-      "input_mean": 658.353,
-      "input_median": 420,
-      "input_min": 120,
-      "last_arrival_s": 29.25,
-      "output_max": 429,
-      "output_mean": 207.824,
-      "output_median": 124,
+      "input_max": 1999,
+      "input_mean": 709.459,
+      "input_median": 422,
+      "input_min": 17,
+      "last_arrival_s": 119.4,
+      "output_max": 720,
+      "output_mean": 218.481,
+      "output_median": 143,
       "output_min": 12,
-      "request_count": 17,
+      "request_count": 133,
       "seed": 0
     },
     {
       "first_arrival_s": 4.5,
-      "input_max": 1784,
-      "input_mean": 852.706,
-      "input_median": 1072,
-      "input_min": 200,
-      "last_arrival_s": 29.25,
-      "output_max": 455,
-      "output_mean": 212.941,
-      "output_median": 139,
-      "output_min": 51,
-      "request_count": 17,
+      "input_max": 1877,
+      "input_mean": 802.511,
+      "input_median": 997,
+      "input_min": 18,
+      "last_arrival_s": 119.4,
+      "output_max": 564,
+      "output_mean": 230.459,
+      "output_median": 158,
+      "output_min": 12,
+      "request_count": 133,
       "seed": 1
     },
     {
       "first_arrival_s": 4.5,
-      "input_max": 1233,
-      "input_mean": 648.529,
-      "input_median": 631,
+      "input_max": 2019,
+      "input_mean": 727.226,
+      "input_median": 798,
       "input_min": 8,
-      "last_arrival_s": 29.25,
+      "last_arrival_s": 119.4,
       "output_max": 619,
-      "output_mean": 276.235,
-      "output_median": 179,
-      "output_min": 78,
-      "request_count": 17,
+      "output_mean": 229.301,
+      "output_median": 146,
+      "output_min": 12,
+      "request_count": 133,
       "seed": 2
     },
     {
       "first_arrival_s": 4.5,
-      "input_max": 1459,
-      "input_mean": 834.647,
-      "input_median": 1058,
-      "input_min": 376,
-      "last_arrival_s": 29.25,
-      "output_max": 496,
-      "output_mean": 260.824,
-      "output_median": 365,
-      "output_min": 42,
-      "request_count": 17,
+      "input_max": 1992,
+      "input_mean": 816.684,
+      "input_median": 1005,
+      "input_min": 26,
+      "last_arrival_s": 119.4,
+      "output_max": 1000,
+      "output_mean": 245.639,
+      "output_median": 181,
+      "output_min": 18,
+      "request_count": 133,
       "seed": 3
     },
     {
       "first_arrival_s": 4.5,
-      "input_max": 1709,
-      "input_mean": 862.824,
-      "input_median": 1030,
-      "input_min": 204,
-      "last_arrival_s": 29.25,
-      "output_max": 480,
-      "output_mean": 223.588,
-      "output_median": 133,
-      "output_min": 14,
-      "request_count": 17,
+      "input_max": 2000,
+      "input_mean": 823.323,
+      "input_median": 1009,
+      "input_min": 28,
+      "last_arrival_s": 119.4,
+      "output_max": 626,
+      "output_mean": 222.88,
+      "output_median": 150,
+      "output_min": 12,
+      "request_count": 133,
       "seed": 7
     },
     {
       "first_arrival_s": 4.5,
       "input_max": 1918,
-      "input_mean": 688.529,
-      "input_median": 402,
-      "input_min": 42,
-      "last_arrival_s": 29.25,
-      "output_max": 428,
-      "output_mean": 181.824,
-      "output_median": 101,
-      "output_min": 49,
-      "request_count": 17,
+      "input_mean": 740.211,
+      "input_median": 827,
+      "input_min": 9,
+      "last_arrival_s": 119.4,
+      "output_max": 518,
+      "output_mean": 232.075,
+      "output_median": 164,
+      "output_min": 12,
+      "request_count": 133,
       "seed": 19
     }
   ]
