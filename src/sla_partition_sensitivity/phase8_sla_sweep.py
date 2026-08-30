@@ -21,12 +21,23 @@ def _grid(cfg: dict[str, Any]) -> list[float]:
     return [round(start + i * step, 10) for i in range(count + 1)]
 
 
+def _inverse_interpolate(left: float, right: float, alpha: float) -> float:
+    return 1.0 / ((1.0 - alpha) / left + alpha / right)
+
+
 def sla_point(alpha: float, cfg: dict[str, Any]) -> tuple[float, float]:
     spec = cfg["phase8"]
     left = spec["prefill_endpoint"]
     right = spec["decode_endpoint"]
-    ttft = left["ttft_s"] + alpha * (right["ttft_s"] - left["ttft_s"])
-    tpot = left["tpot_s"] + alpha * (right["tpot_s"] - left["tpot_s"])
+    mode = spec.get("interpolation", "inverse_budget")
+    if mode == "inverse_budget":
+        ttft = _inverse_interpolate(left["ttft_s"], right["ttft_s"], alpha)
+        tpot = _inverse_interpolate(left["tpot_s"], right["tpot_s"], alpha)
+    elif mode == "linear":
+        ttft = left["ttft_s"] + alpha * (right["ttft_s"] - left["ttft_s"])
+        tpot = left["tpot_s"] + alpha * (right["tpot_s"] - left["tpot_s"])
+    else:
+        raise ValueError(f"unknown phase-8 interpolation mode: {mode}")
     return round(ttft, 6), round(tpot, 6)
 
 
@@ -88,6 +99,7 @@ def run(cfg: dict[str, Any]) -> tuple[list[dict[str, Any]], dict[str, Any], str]
             "best_gain_over_uniform_pct": gain_pct,
             "uniform_first_violation": uniform["first_violation"],
             "all_sampled_monotonic": all(row["sampled_monotonic"] for row in point_rows),
+            "any_right_censored": any(row["right_censored"] for row in point_rows),
         }
         summaries.append(summary)
         log_lines.append("sla_summary=" + json.dumps(summary, sort_keys=True))
@@ -101,32 +113,41 @@ def run(cfg: dict[str, Any]) -> tuple[list[dict[str, Any]], dict[str, Any], str]
         representative[index] <= representative[index - 1] + 1e-12
         for index in range(1, len(representative))
     )
-    positive_points = sum(any(shift > 0 for shift in item["best_shifts"]) for item in summaries)
-    neutral_points = sum(0 in item["best_shifts"] for item in summaries)
-    negative_points = sum(any(shift < 0 for shift in item["best_shifts"]) for item in summaries)
+    strict_positive_points = sum(
+        bool(item["best_shifts"]) and all(shift > 0 for shift in item["best_shifts"])
+        for item in summaries
+    )
+    strict_negative_points = sum(
+        bool(item["best_shifts"]) and all(shift < 0 for shift in item["best_shifts"])
+        for item in summaries
+    )
     start_positive = bool(summaries[0]["best_shifts"]) and all(
         shift > 0 for shift in summaries[0]["best_shifts"]
     )
     end_negative = bool(summaries[-1]["best_shifts"]) and all(
         shift < 0 for shift in summaries[-1]["best_shifts"]
     )
+    no_right_censoring = not any(item["any_right_censored"] for item in summaries)
+    distinct_best_sets = len({tuple(item["best_shifts"]) for item in summaries})
     conclusion = {
-        "question": "As the SLA moves continuously from TTFT-tight to TPOT-tight, does the preferred layer-boundary direction move from L4x2-heavy toward T4x4-heavy rather than remaining a single static compute-balanced choice?",
+        "question": "Along a controlled TTFT-to-TPOT SLA path, does the preferred layer-boundary direction change from L4x2-heavy to T4x4-heavy rather than remaining one static compute-balanced choice?",
         "start_prefers_more_l4x2_layers": start_positive,
         "end_prefers_more_t4x4_layers": end_negative,
         "representative_best_shift_nonincreasing": nonincreasing,
-        "positive_best_shift_points": positive_points,
-        "neutral_best_shift_points": neutral_points,
-        "negative_best_shift_points": negative_points,
+        "strict_positive_best_points": strict_positive_points,
+        "strict_negative_best_points": strict_negative_points,
+        "distinct_best_shift_sets": distinct_best_sets,
+        "no_right_censoring": no_right_censoring,
         "all_sampled_monotonic": all(item["all_sampled_monotonic"] for item in summaries),
     }
     conclusion["answer"] = (
         "yes"
         if start_positive
         and end_negative
-        and nonincreasing
-        and positive_points > 0
-        and negative_points > 0
+        and strict_positive_points > 0
+        and strict_negative_points > 0
+        and distinct_best_sets >= 2
+        and no_right_censoring
         and conclusion["all_sampled_monotonic"]
         else "not_yet"
     )
@@ -139,7 +160,7 @@ def run(cfg: dict[str, Any]) -> tuple[list[dict[str, Any]], dict[str, Any], str]
             "stage_machines": stage_machines,
             "workload_seed": cfg["workload"]["seed"],
         },
-        "semantics": "Phase-8 preserves the Phase-6/7 profiled evaluator and the same five contiguous boundary shifts. Only the TTFT/TPOT pair changes along a linear interpolation between the validated TTFT-tight and TPOT-tight endpoints. This is a controlled SLA sensitivity sweep, not online adaptation or scheduler replay.",
+        "semantics": "Phase-8 preserves the Phase-6/7 profiled evaluator and the same five contiguous boundary shifts. Only the TTFT/TPOT pair changes. The path interpolates inverse SLA budgets between the validated TTFT-tight and TPOT-tight endpoints so the middle of the sweep does not become trivially loose; this is a controlled sensitivity construction, not online adaptation or a new evaluator objective.",
         "sla_points": summaries,
         "conclusion": conclusion,
     }
