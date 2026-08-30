@@ -1,5 +1,5 @@
 {
-  "experiment_id": "phase11-helix-azure-workload-validation-v1",
+  "experiment_id": "phase11-helix-azure-workload-validation-v2",
   "model": {
     "name": "LLaMA-2-70B-shape",
     "layers": 80,
@@ -50,7 +50,7 @@
   "phase11": {
     "runtime_trace_root": "data/runtime_helix_trace",
     "workload_seeds": [0, 1, 2, 3, 7, 19],
-    "duration_s": 30,
+    "duration_s": 120,
     "target_request_rate": 1.5,
     "interval_offset": 0,
     "candidate_shifts": [-2, -1, 0, 1, 2],
