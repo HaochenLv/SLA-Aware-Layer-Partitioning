@@ -1,0 +1,11 @@
+regime,ttft_s,tpot_s,shift,partition,l4x2_layers_per_stage,t4x4_layers_per_stage,weighted_prefill_layers,weighted_decode_layers,safe_lambda,unsafe_lambda,right_censored,sampled_monotonic,first_violation,peak_decode_at_first_unsafe
+decode_constrained,2.0,0.2,-2,8-12-8-12-8-12-8-12,8,12,298.279971,164.571429,0.00235,0.0024,False,True,network,3
+decode_constrained,2.0,0.2,-1,9-11-9-11-9-11-9-11,9,11,296.074659,168.47619,0.0023,0.00235,False,True,network,3
+decode_constrained,2.0,0.2,0,10-10-10-10-10-10-10-10,10,10,293.869347,172.380952,0.00165,0.0017,False,True,network,3
+decode_constrained,2.0,0.2,1,11-9-11-9-11-9-11-9,11,9,291.664034,176.285714,0.00115,0.0012,False,True,network,2
+decode_constrained,2.0,0.2,2,12-8-12-8-12-8-12-8,12,8,289.458722,180.190476,0.0011,0.00115,False,True,network,2
+prefill_constrained,0.28,1.0,-2,8-12-8-12-8-12-8-12,8,12,298.279971,164.571429,0.0079,0.008,False,True,network,10
+prefill_constrained,0.28,1.0,-1,9-11-9-11-9-11-9-11,9,11,296.074659,168.47619,0.0077,0.0078,False,True,network,10
+prefill_constrained,0.28,1.0,0,10-10-10-10-10-10-10-10,10,10,293.869347,172.380952,0.0079,0.008,False,True,network,11
+prefill_constrained,0.28,1.0,1,11-9-11-9-11-9-11-9,11,9,291.664034,176.285714,0.0084,0.0085,False,True,network,11
+prefill_constrained,0.28,1.0,2,12-8-12-8-12-8-12-8,12,8,289.458722,180.190476,0.0092,0.0093,False,True,network,12

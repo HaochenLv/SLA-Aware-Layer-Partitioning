@@ -1,0 +1,130 @@
+{
+  "conclusion": {
+    "answer": "yes",
+    "decode_constrained_prefers_more_t4x4_layers": true,
+    "direction_flip": true,
+    "prefill_constrained_prefers_more_l4x2_layers": true,
+    "question": "Do HELIX-derived phase-specific machine profiles make the preferred layer-boundary direction depend on whether TPOT or TTFT is the active SLA constraint?"
+  },
+  "experiment_id": "phase6-helix-phase-specific-heterogeneity-v1",
+  "profile_factors": {
+    "a100": {
+      "decode_ratio_samples": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "decode_speed": 1.0,
+      "prefill_ratio_samples": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "prefill_speed": 1.0
+    },
+    "l4x2": {
+      "decode_ratio_samples": [
+        0.38888888888888884,
+        0.37837837837837834,
+        0.37837837837837834,
+        0.3684210526315789,
+        0.38461538461538464,
+        0.35714285714285715,
+        0.3691588785046729
+      ],
+      "decode_speed": 0.37837837837837834,
+      "prefill_ratio_samples": [
+        0.25221674876847294,
+        0.304635761589404,
+        0.32814526588845655,
+        0.2943165011620537,
+        0.28281299776999047
+      ],
+      "prefill_speed": 0.2943165011620537
+    },
+    "t4x4": {
+      "decode_ratio_samples": [
+        0.7,
+        0.6666666666666666,
+        0.6086956521739131,
+        0.5833333333333334,
+        0.6,
+        0.5172413793103449,
+        0.5302013422818792
+      ],
+      "decode_speed": 0.6,
+      "prefill_ratio_samples": [
+        0.25147347740667975,
+        0.2814238042269188,
+        0.2814238042269188,
+        0.25322668605708054,
+        0.24141681963423756
+      ],
+      "prefill_speed": 0.25322668605708054
+    }
+  },
+  "provenance": {
+    "helix_commit": "8639497a4aaf1eb3b7594614cb0bbd376c1342b3",
+    "profile_points": {
+      "decode": [
+        2,
+        4,
+        8,
+        12,
+        16,
+        20,
+        24
+      ],
+      "prefill": [
+        256,
+        512,
+        1024,
+        1536,
+        2051
+      ]
+    },
+    "reference_machine": "a100",
+    "stage_machines": [
+      "l4x2",
+      "t4x4",
+      "l4x2",
+      "t4x4",
+      "l4x2",
+      "t4x4",
+      "l4x2",
+      "t4x4"
+    ]
+  },
+  "regime_summaries": {
+    "decode_constrained": {
+      "best_gain_over_uniform_pct": 42.424,
+      "best_safe_lambda": 0.00235,
+      "best_shifts": [
+        -2
+      ],
+      "first_violation_at_uniform": "network",
+      "tpot_s": 0.2,
+      "ttft_s": 2.0,
+      "uniform_safe_lambda": 0.00165
+    },
+    "prefill_constrained": {
+      "best_gain_over_uniform_pct": 16.456,
+      "best_safe_lambda": 0.0092,
+      "best_shifts": [
+        2
+      ],
+      "first_violation_at_uniform": "network",
+      "tpot_s": 1.0,
+      "ttft_s": 0.28,
+      "uniform_safe_lambda": 0.0079
+    }
+  },
+  "semantics": "The phase-1-to-5 event-driven evaluator and resource equations are preserved. Only the single scalar stage-speed assumption is replaced by separate Prefill and Decode speed vectors. Those vectors are median A100/machine per-layer time ratios from pinned HELIX tables at workload-relevant profile points. This is a profile-derived heterogeneity sensitivity experiment, not a HELIX scheduler replay or direct hardware execution result.",
+  "shift_convention": "positive shift moves one or two layers from each T4x4 stage to the adjacent L4x2 stage; negative shift moves layers toward T4x4"
+}
