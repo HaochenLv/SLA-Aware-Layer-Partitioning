@@ -1,0 +1,53 @@
+{
+  "conclusion": {
+    "answer": "yes",
+    "cases_improving_uniform": 18,
+    "cases_matching_or_beating_compute_balanced": 17,
+    "cases_tested": 18,
+    "heterogeneous_scenarios": [
+      "single_slow_stage",
+      "graded",
+      "shuffled_severe"
+    ],
+    "question": "Does the lightweight stress-probe boundary search remain beneficial across the six fixed workload seeds used by the evaluator study?",
+    "workload_seeds": [
+      0,
+      1,
+      2,
+      3,
+      7,
+      19
+    ]
+  },
+  "experiment_id": "phase5-six-seed-robustness-v1",
+  "scenario_summaries": {
+    "graded": {
+      "cases": 6,
+      "distinct_search_partitions": 2,
+      "improves_uniform": 6,
+      "matches_or_beats_compute_balanced": 5,
+      "max_relative_capacity_gain_pct": 41.666667,
+      "median_relative_capacity_gain_pct": 33.333333,
+      "min_relative_capacity_gain_pct": 8.333333
+    },
+    "shuffled_severe": {
+      "cases": 6,
+      "distinct_search_partitions": 1,
+      "improves_uniform": 6,
+      "matches_or_beats_compute_balanced": 6,
+      "max_relative_capacity_gain_pct": 50.0,
+      "median_relative_capacity_gain_pct": 41.666667,
+      "min_relative_capacity_gain_pct": 33.333333
+    },
+    "single_slow_stage": {
+      "cases": 6,
+      "distinct_search_partitions": 1,
+      "improves_uniform": 6,
+      "matches_or_beats_compute_balanced": 6,
+      "max_relative_capacity_gain_pct": 33.333333,
+      "median_relative_capacity_gain_pct": 30.769231,
+      "min_relative_capacity_gain_pct": 25.0
+    }
+  },
+  "semantics": "same 8-stage synthetic evaluator and heterogeneity scenarios as phase 3; workload seed changes only sampled input/output lengths while the finite evenly spaced arrival schedule remains fixed for a given intensity"
+}
