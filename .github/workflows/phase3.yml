@@ -1,0 +1,51 @@
+name: phase3-sla-boundary-search
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'src/sla_partition_sensitivity/phase3.py'
+      - 'src/sla_partition_sensitivity/model.py'
+      - 'src/sla_partition_sensitivity/experiment.py'
+      - 'config/phase3.json'
+      - 'tests/test_phase3.py'
+      - '.github/workflows/phase3.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  experiment:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install package
+        run: python -m pip install -e .
+      - name: Run validation suite
+        run: python -m unittest discover -s tests -v
+      - name: Run phase-3 boundary search
+        run: python -m sla_partition_sensitivity.phase3 --config config/phase3.json --output results/phase3
+      - name: Show phase-3 conclusion
+        run: cat results/phase3/summary.json
+      - name: Upload complete phase-3 record
+        uses: actions/upload-artifact@v4
+        with:
+          name: phase3-sla-boundary-search-results
+          path: results/phase3/
+          if-no-files-found: error
+      - name: Record deterministic phase-3 results
+        run: |
+          if [ -n "$(git status --porcelain results/phase3)" ]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add results/phase3
+            git commit -m "Record phase-3 SLA boundary search results [skip ci]"
+            git push
+          else
+            echo "No phase-3 result changes to commit."
+          fi
