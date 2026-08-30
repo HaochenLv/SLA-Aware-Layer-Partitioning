@@ -13,9 +13,9 @@ class Phase11TraceValidationTests(unittest.TestCase):
     def setUpClass(cls) -> None:
         cls.cfg = load_config(Path("config/phase11_trace.json"))
 
-    def test_declares_first_paper_fixed_seeds(self) -> None:
+    def test_declares_fixed_seeds_and_full_helix_window(self) -> None:
         self.assertEqual(self.cfg["phase11"]["workload_seeds"], [0, 1, 2, 3, 7, 19])
-        self.assertEqual(self.cfg["phase11"]["duration_s"], 30)
+        self.assertEqual(self.cfg["phase11"]["duration_s"], 120)
         self.assertEqual(self.cfg["phase11"]["interval_offset"], 0)
 
     def test_intensity_scaling_preserves_lengths_and_order(self) -> None:
