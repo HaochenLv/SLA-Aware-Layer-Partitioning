@@ -1,0 +1,51 @@
+name: phase5-six-seed-robustness
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'src/sla_partition_sensitivity/phase5_multiseed.py'
+      - 'src/sla_partition_sensitivity/phase3.py'
+      - 'src/sla_partition_sensitivity/model.py'
+      - 'config/phase5.json'
+      - 'tests/test_phase5_multiseed.py'
+      - '.github/workflows/phase5-multiseed.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  experiment:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install package
+        run: python -m pip install -e .
+      - name: Run validation suite
+        run: python -m unittest discover -s tests -v
+      - name: Run six-seed robustness experiment
+        run: python -m sla_partition_sensitivity.phase5_multiseed --config config/phase5.json --output results/phase5-multiseed
+      - name: Show robustness conclusion
+        run: cat results/phase5-multiseed/summary.json
+      - name: Upload complete phase-5 record
+        uses: actions/upload-artifact@v4
+        with:
+          name: phase5-six-seed-robustness-results
+          path: results/phase5-multiseed/
+          if-no-files-found: error
+      - name: Record deterministic phase-5 results
+        run: |
+          if [ -n "$(git status --porcelain results/phase5-multiseed)" ]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add results/phase5-multiseed
+            git commit -m "Record phase-5 six-seed robustness results [skip ci]"
+            git push
+          else
+            echo "No phase-5 result changes to commit."
+          fi
