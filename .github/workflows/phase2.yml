@@ -6,15 +6,21 @@ on:
     paths:
       - 'src/sla_partition_sensitivity/phase2.py'
       - 'src/sla_partition_sensitivity/phase2_common_load.py'
+      - 'src/sla_partition_sensitivity/diagnostics.py'
       - 'src/sla_partition_sensitivity/model.py'
       - 'src/sla_partition_sensitivity/experiment.py'
-      - 'config/phase1.json'
+      - 'config/phase2.json'
+      - 'tests/test_phase2.py'
       - '.github/workflows/phase2.yml'
   workflow_dispatch:
+
+permissions:
+  contents: write
 
 jobs:
   experiment:
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -25,9 +31,9 @@ jobs:
       - name: Run validation suite
         run: python -m unittest discover -s tests -v
       - name: Run phase-2 first-unsafe diagnostics
-        run: python -m sla_partition_sensitivity.phase2 --config config/phase1.json --output results/phase2-first-unsafe
+        run: python -m sla_partition_sensitivity.phase2 --config config/phase2.json --output results/phase2-first-unsafe
       - name: Run phase-2 common-load diagnostics
-        run: python -m sla_partition_sensitivity.phase2_common_load --config config/phase1.json --output results/phase2-common-load
+        run: python -m sla_partition_sensitivity.phase2_common_load --config config/phase2.json --output results/phase2-common-load
       - name: Show common-load conclusion
         run: cat results/phase2-common-load/summary.json
       - name: Upload complete phase-2 record
@@ -38,3 +44,14 @@ jobs:
             results/phase2-first-unsafe/
             results/phase2-common-load/
           if-no-files-found: error
+      - name: Record deterministic phase-2 results
+        run: |
+          if [ -n "$(git status --porcelain results/phase2-first-unsafe results/phase2-common-load)" ]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add results/phase2-first-unsafe results/phase2-common-load
+            git commit -m "Record phase-2 bottleneck mechanism results [skip ci]"
+            git push
+          else
+            echo "No phase-2 result changes to commit."
+          fi
