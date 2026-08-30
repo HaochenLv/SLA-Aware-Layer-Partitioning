@@ -32,10 +32,10 @@ class Phase3Tests(unittest.TestCase):
         cfg = copy.deepcopy(CFG)
         cfg["sampling"]["lambda_stop"] = 0.010
         cfg["phase3"]["max_iterations"] = 4
-        result, history, _, _ = boundary_local_search(
+        partition, history, _, _ = boundary_local_search(
             cfg["scenarios"]["homogeneous_control"], cfg
         )
-        self.assertEqual(result["partition"], uniform_partition(cfg))
+        self.assertEqual(partition, uniform_partition(cfg))
         self.assertEqual(len(history), 1)
 
     def test_search_is_deterministic_on_small_grid(self):
@@ -45,7 +45,7 @@ class Phase3Tests(unittest.TestCase):
         speeds = cfg["scenarios"]["single_slow_stage"]
         a = boundary_local_search(speeds, cfg)
         b = boundary_local_search(speeds, cfg)
-        self.assertEqual(a[0]["partition"], b[0]["partition"])
+        self.assertEqual(a[0], b[0])
         self.assertEqual(a[1], b[1])
         self.assertEqual(a[2:], b[2:])
 
