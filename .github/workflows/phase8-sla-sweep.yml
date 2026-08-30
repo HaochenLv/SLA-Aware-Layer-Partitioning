@@ -1,0 +1,52 @@
+name: phase8-helix-sla-sweep
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'src/sla_partition_sensitivity/phase8_sla_sweep.py'
+      - 'src/sla_partition_sensitivity/phase6_profiled.py'
+      - 'src/sla_partition_sensitivity/helix_profile.py'
+      - 'src/sla_partition_sensitivity/profiled_model.py'
+      - 'config/phase8_sla_sweep.json'
+      - 'tests/test_phase8_sla_sweep.py'
+      - '.github/workflows/phase8-sla-sweep.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  experiment:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install package
+        run: python -m pip install -e .
+      - name: Run phase-8 focused tests
+        run: python -m unittest tests.test_phase8_sla_sweep -v
+      - name: Run continuous SLA sweep
+        run: python -m sla_partition_sensitivity.phase8_sla_sweep --config config/phase8_sla_sweep.json --output results/phase8-sla-sweep
+      - name: Show phase-8 conclusion
+        run: cat results/phase8-sla-sweep/summary.json
+      - name: Upload complete phase-8 record
+        uses: actions/upload-artifact@v4
+        with:
+          name: phase8-helix-sla-sweep-results
+          path: results/phase8-sla-sweep/
+          if-no-files-found: error
+      - name: Record deterministic phase-8 results
+        run: |
+          if [ -n "$(git status --porcelain results/phase8-sla-sweep)" ]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add results/phase8-sla-sweep
+            git commit -m "Record phase-8 SLA sweep results [skip ci]"
+            git push
+          else
+            echo "No phase-8 result changes to commit."
+          fi
