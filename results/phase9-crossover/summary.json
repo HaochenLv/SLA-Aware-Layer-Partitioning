@@ -1,0 +1,313 @@
+{
+  "conclusion": {
+    "all_sampled_monotonic": true,
+    "answer": "not_yet",
+    "crossover_bracket": [
+      0.05,
+      0.25
+    ],
+    "end_direction": "t4x4_heavy",
+    "first_t4x4_heavy_alpha": 0.25,
+    "last_l4x2_heavy_alpha": 0.05,
+    "max_gain_over_uniform_pct": 42.424,
+    "no_right_censoring": false,
+    "question": "Can the SLA-dependent partition preference crossover be localized without capacity right-censoring?",
+    "start_direction": "l4x2_heavy"
+  },
+  "experiment_id": "phase9-helix-sla-crossover-localization-v1",
+  "points": [
+    {
+      "all_sampled_monotonic": true,
+      "alpha": 0.0,
+      "any_right_censored": false,
+      "best_gain_over_uniform_pct": 15.723,
+      "best_safe_lambda": 0.0092,
+      "best_shifts": [
+        2
+      ],
+      "direction": "l4x2_heavy",
+      "total_evaluations": 121,
+      "tpot_s": 1.0,
+      "ttft_s": 0.28,
+      "uniform_safe_lambda": 0.00795
+    },
+    {
+      "all_sampled_monotonic": true,
+      "alpha": 0.025,
+      "any_right_censored": false,
+      "best_gain_over_uniform_pct": 5.449,
+      "best_safe_lambda": 0.01645,
+      "best_shifts": [
+        1
+      ],
+      "direction": "l4x2_heavy",
+      "total_evaluations": 171,
+      "tpot_s": 0.909091,
+      "ttft_s": 0.286152,
+      "uniform_safe_lambda": 0.0156
+    },
+    {
+      "all_sampled_monotonic": true,
+      "alpha": 0.05,
+      "any_right_censored": false,
+      "best_gain_over_uniform_pct": 9.211,
+      "best_safe_lambda": 0.0249,
+      "best_shifts": [
+        2
+      ],
+      "direction": "l4x2_heavy",
+      "total_evaluations": 251,
+      "tpot_s": 0.833333,
+      "ttft_s": 0.292581,
+      "uniform_safe_lambda": 0.0228
+    },
+    {
+      "all_sampled_monotonic": true,
+      "alpha": 0.075,
+      "any_right_censored": false,
+      "best_gain_over_uniform_pct": 0.0,
+      "best_safe_lambda": 0.0308,
+      "best_shifts": [
+        0
+      ],
+      "direction": "uniform",
+      "total_evaluations": 327,
+      "tpot_s": 0.769231,
+      "ttft_s": 0.299305,
+      "uniform_safe_lambda": 0.0308
+    },
+    {
+      "all_sampled_monotonic": true,
+      "alpha": 0.1,
+      "any_right_censored": true,
+      "best_gain_over_uniform_pct": 0.0,
+      "best_safe_lambda": 0.05,
+      "best_shifts": [
+        -1,
+        0,
+        1,
+        2
+      ],
+      "direction": "tie_or_mixed",
+      "total_evaluations": 476,
+      "tpot_s": 0.714286,
+      "ttft_s": 0.306346,
+      "uniform_safe_lambda": 0.05
+    },
+    {
+      "all_sampled_monotonic": true,
+      "alpha": 0.125,
+      "any_right_censored": true,
+      "best_gain_over_uniform_pct": 0.0,
+      "best_safe_lambda": 0.05,
+      "best_shifts": [
+        -2,
+        -1,
+        0,
+        1,
+        2
+      ],
+      "direction": "tie_or_mixed",
+      "total_evaluations": 500,
+      "tpot_s": 0.666667,
+      "ttft_s": 0.313725,
+      "uniform_safe_lambda": 0.05
+    },
+    {
+      "all_sampled_monotonic": true,
+      "alpha": 0.15,
+      "any_right_censored": true,
+      "best_gain_over_uniform_pct": 0.0,
+      "best_safe_lambda": 0.05,
+      "best_shifts": [
+        -2,
+        -1,
+        0,
+        1,
+        2
+      ],
+      "direction": "tie_or_mixed",
+      "total_evaluations": 500,
+      "tpot_s": 0.625,
+      "ttft_s": 0.32147,
+      "uniform_safe_lambda": 0.05
+    },
+    {
+      "all_sampled_monotonic": true,
+      "alpha": 0.175,
+      "any_right_censored": true,
+      "best_gain_over_uniform_pct": 0.0,
+      "best_safe_lambda": 0.05,
+      "best_shifts": [
+        -2,
+        -1,
+        0,
+        1,
+        2
+      ],
+      "direction": "tie_or_mixed",
+      "total_evaluations": 500,
+      "tpot_s": 0.588235,
+      "ttft_s": 0.329606,
+      "uniform_safe_lambda": 0.05
+    },
+    {
+      "all_sampled_monotonic": true,
+      "alpha": 0.2,
+      "any_right_censored": true,
+      "best_gain_over_uniform_pct": 0.0,
+      "best_safe_lambda": 0.05,
+      "best_shifts": [
+        -2,
+        -1,
+        0,
+        1,
+        2
+      ],
+      "direction": "tie_or_mixed",
+      "total_evaluations": 500,
+      "tpot_s": 0.555556,
+      "ttft_s": 0.338164,
+      "uniform_safe_lambda": 0.05
+    },
+    {
+      "all_sampled_monotonic": true,
+      "alpha": 0.225,
+      "any_right_censored": true,
+      "best_gain_over_uniform_pct": 0.0,
+      "best_safe_lambda": 0.05,
+      "best_shifts": [
+        -2,
+        -1,
+        0,
+        1
+      ],
+      "direction": "tie_or_mixed",
+      "total_evaluations": 465,
+      "tpot_s": 0.526316,
+      "ttft_s": 0.347179,
+      "uniform_safe_lambda": 0.05
+    },
+    {
+      "all_sampled_monotonic": true,
+      "alpha": 0.25,
+      "any_right_censored": false,
+      "best_gain_over_uniform_pct": 4.695,
+      "best_safe_lambda": 0.03345,
+      "best_shifts": [
+        -2
+      ],
+      "direction": "t4x4_heavy",
+      "total_evaluations": 352,
+      "tpot_s": 0.5,
+      "ttft_s": 0.356688,
+      "uniform_safe_lambda": 0.03195
+    },
+    {
+      "all_sampled_monotonic": true,
+      "alpha": 0.3,
+      "any_right_censored": false,
+      "best_gain_over_uniform_pct": 16.123,
+      "best_safe_lambda": 0.03025,
+      "best_shifts": [
+        -2
+      ],
+      "direction": "t4x4_heavy",
+      "total_evaluations": 303,
+      "tpot_s": 0.454545,
+      "ttft_s": 0.377358,
+      "uniform_safe_lambda": 0.02605
+    },
+    {
+      "all_sampled_monotonic": true,
+      "alpha": 0.35,
+      "any_right_censored": false,
+      "best_gain_over_uniform_pct": 12.121,
+      "best_safe_lambda": 0.0222,
+      "best_shifts": [
+        -2
+      ],
+      "direction": "t4x4_heavy",
+      "total_evaluations": 226,
+      "tpot_s": 0.416667,
+      "ttft_s": 0.400572,
+      "uniform_safe_lambda": 0.0198
+    },
+    {
+      "all_sampled_monotonic": true,
+      "alpha": 0.4,
+      "any_right_censored": false,
+      "best_gain_over_uniform_pct": 13.095,
+      "best_safe_lambda": 0.019,
+      "best_shifts": [
+        -2
+      ],
+      "direction": "t4x4_heavy",
+      "total_evaluations": 194,
+      "tpot_s": 0.384615,
+      "ttft_s": 0.426829,
+      "uniform_safe_lambda": 0.0168
+    },
+    {
+      "all_sampled_monotonic": true,
+      "alpha": 0.5,
+      "any_right_censored": false,
+      "best_gain_over_uniform_pct": 18.135,
+      "best_safe_lambda": 0.0114,
+      "best_shifts": [
+        -2
+      ],
+      "direction": "t4x4_heavy",
+      "total_evaluations": 134,
+      "tpot_s": 0.333333,
+      "ttft_s": 0.491228,
+      "uniform_safe_lambda": 0.00965
+    },
+    {
+      "all_sampled_monotonic": true,
+      "alpha": 0.75,
+      "any_right_censored": false,
+      "best_gain_over_uniform_pct": 29.412,
+      "best_safe_lambda": 0.0055,
+      "best_shifts": [
+        -2
+      ],
+      "direction": "t4x4_heavy",
+      "total_evaluations": 68,
+      "tpot_s": 0.25,
+      "ttft_s": 0.788732,
+      "uniform_safe_lambda": 0.00425
+    },
+    {
+      "all_sampled_monotonic": true,
+      "alpha": 1.0,
+      "any_right_censored": false,
+      "best_gain_over_uniform_pct": 42.424,
+      "best_safe_lambda": 0.00235,
+      "best_shifts": [
+        -2
+      ],
+      "direction": "t4x4_heavy",
+      "total_evaluations": 46,
+      "tpot_s": 0.2,
+      "ttft_s": 2.0,
+      "uniform_safe_lambda": 0.00165
+    }
+  ],
+  "provenance": {
+    "helix_commit": "8639497a4aaf1eb3b7594614cb0bbd376c1342b3",
+    "reference_machine": "a100",
+    "stage_machines": [
+      "l4x2",
+      "t4x4",
+      "l4x2",
+      "t4x4",
+      "l4x2",
+      "t4x4",
+      "l4x2",
+      "t4x4"
+    ],
+    "workload_seed": 7
+  },
+  "semantics": "Phase-9 keeps the Phase-6/7 evaluator and HELIX-derived Prefill/Decode speed vectors unchanged. It refines only the sampled-capacity search: a coarse grid brackets the first unsafe load and a fine grid refines that bracket. The SLA path uses inverse-budget interpolation solely to localize the preference crossover under nontrivial load."
+}
