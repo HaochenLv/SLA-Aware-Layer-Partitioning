@@ -1,0 +1,81 @@
+{
+  "experiment_id": "phase7-helix-phase-specific-six-seed-v1",
+  "model": {
+    "name": "LLaMA-2-70B-shape",
+    "layers": 80,
+    "stages": 8,
+    "memory_gb_per_stage": 40.0,
+    "weight_gb_per_layer": 1.65,
+    "workspace_gb": 2.0,
+    "reserve_gb": 4.0
+  },
+  "sla": {
+    "ttft_s": 2.0,
+    "tpot_s": 0.2,
+    "fixed_overhead_s": 0.005,
+    "intrinsic_prefill_us_per_token": 59.3772
+  },
+  "profile": {
+    "prefill_fixed_s_per_layer": 0.000025,
+    "prefill_s_per_input_token_layer": 0.00000020,
+    "decode_s_per_token_layer": 0.00050,
+    "decode_context_growth_at_8192": 0.20,
+    "decode_concurrency_penalty": 0.015,
+    "prefill_interference_penalty": 0.050,
+    "decode_block_tokens": 16
+  },
+  "network": {
+    "link_capacity_mb_s": 1250.0,
+    "activation_mb": 2.0
+  },
+  "memory": {
+    "kv_gb_per_token_layer": 0.00003,
+    "activation_gb_per_prefill_layer": 0.05
+  },
+  "workload": {
+    "request_count": 24,
+    "seed": 7,
+    "normalized_source_rate_rps": 100.0,
+    "input_token_choices": [256, 512, 1024, 1536, 2051],
+    "output_token_choices": [64, 96, 128, 192]
+  },
+  "sampling": {
+    "lambda_start": 0.00025,
+    "lambda_stop": 0.02,
+    "lambda_step": 0.00025
+  },
+  "partitions": {
+    "seed": 20260830,
+    "min_layers_per_stage": 8,
+    "max_layers_per_stage": 12
+  },
+  "phase6": {
+    "profile_root": "data/helix_profiles/llama2_70b",
+    "reference_machine": "a100",
+    "machines": ["a100", "l4x2", "t4x4"],
+    "prefill_profile_points": [256, 512, 1024, 1536, 2051],
+    "decode_profile_points": [2, 4, 8, 12, 16, 20, 24],
+    "stage_machines": ["l4x2", "t4x4", "l4x2", "t4x4", "l4x2", "t4x4", "l4x2", "t4x4"],
+    "boundary_shifts": [-2, -1, 0, 1, 2],
+    "regimes": {
+      "decode_constrained": {
+        "ttft_s": 2.0,
+        "tpot_s": 0.20,
+        "lambda_start": 0.00025,
+        "lambda_stop": 0.006,
+        "lambda_step": 0.00005
+      },
+      "prefill_constrained": {
+        "ttft_s": 0.28,
+        "tpot_s": 1.0,
+        "lambda_start": 0.003,
+        "lambda_stop": 0.012,
+        "lambda_step": 0.0001
+      }
+    }
+  },
+  "phase7": {
+    "workload_seeds": [0, 1, 2, 3, 7, 19],
+    "minimum_direction_flips_for_robustness": 5
+  }
+}
