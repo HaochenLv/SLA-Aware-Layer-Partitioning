@@ -1,0 +1,79 @@
+{
+  "experiment_id": "phase13-helix-azure-evaluator-guided-local-search-v1",
+  "model": {
+    "name": "LLaMA-2-70B-shape",
+    "layers": 80,
+    "stages": 8,
+    "memory_gb_per_stage": 40.0,
+    "weight_gb_per_layer": 1.65,
+    "workspace_gb": 2.0,
+    "reserve_gb": 4.0
+  },
+  "sla": {
+    "ttft_s": 2.0,
+    "tpot_s": 0.2,
+    "fixed_overhead_s": 0.005,
+    "intrinsic_prefill_us_per_token": 59.3772
+  },
+  "profile": {
+    "prefill_fixed_s_per_layer": 0.000025,
+    "prefill_s_per_input_token_layer": 0.00000020,
+    "decode_s_per_token_layer": 0.00050,
+    "decode_context_growth_at_8192": 0.20,
+    "decode_concurrency_penalty": 0.015,
+    "prefill_interference_penalty": 0.050,
+    "decode_block_tokens": 16
+  },
+  "network": {
+    "link_capacity_mb_s": 1250.0,
+    "activation_mb": 2.0
+  },
+  "memory": {
+    "kv_gb_per_token_layer": 0.00003,
+    "activation_gb_per_prefill_layer": 0.05
+  },
+  "partitions": {
+    "min_layers_per_stage": 8,
+    "max_layers_per_stage": 12
+  },
+  "phase6": {
+    "profile_root": "data/helix_profiles/llama2_70b",
+    "reference_machine": "a100",
+    "machines": ["a100", "l4x2", "t4x4"],
+    "prefill_profile_points": [256, 512, 1024, 1536, 2051],
+    "decode_profile_points": [2, 4, 8, 12, 16, 20, 24],
+    "stage_machines": ["l4x2", "t4x4", "l4x2", "t4x4", "l4x2", "t4x4", "l4x2", "t4x4"]
+  },
+  "phase10": {
+    "candidate_shifts": [-2, -1, 0, 1, 2]
+  },
+  "phase11": {
+    "runtime_trace_root": "data/runtime_helix_trace",
+    "workload_seeds": [0, 1, 2, 3, 7, 19],
+    "duration_s": 120,
+    "target_request_rate": 1.5,
+    "interval_offset": 0,
+    "candidate_shifts": [-2, -1, 0, 1, 2],
+    "capacity_initial_intensity": 0.5,
+    "capacity_max_intensity": 16.0,
+    "capacity_relative_tolerance": 0.005,
+    "source_repo_commit": "297280c000e45ba6a8fa79135e4bfc4a9e17cb99",
+    "upstream_helix_commit": "8639497a4aaf1eb3b7594614cb0bbd376c1342b3",
+    "expected_sha256": {
+      "azure_conv_arrive_time.pkl": "1ae6dec376d39a7c9fa7ed8239cf5b10b5349b540697c94df8d1d1055b35f2a3",
+      "azure_conv_input.pkl": "090770d895fe96d733f4c1d2e0068b5d391f565f25d05841077063c0c344c92f",
+      "azure_conv_output.pkl": "4d42ec92d42a36cdf647af81fc5f7f8627ff4c21bddee24902f25d013dbadd82"
+    },
+    "regimes": {
+      "decode_constrained": {"ttft_s": 2.0, "tpot_s": 0.20},
+      "prefill_constrained": {"ttft_s": 0.28, "tpot_s": 1.0}
+    }
+  },
+  "phase13": {
+    "near_oracle_ratio": 0.98,
+    "minimum_near_oracle_trials": 10,
+    "minimum_not_worse_than_uniform": 12,
+    "minimum_not_worse_than_joint_compute": 11,
+    "maximum_candidate_probes": 4
+  }
+}
