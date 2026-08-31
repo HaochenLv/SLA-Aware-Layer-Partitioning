@@ -1,0 +1,456 @@
+{
+  "aggregate": [
+    {
+      "candidate_probe_count": {
+        "ci95_high": 6.0,
+        "ci95_low": 6.0,
+        "mean": 6.0,
+        "n": 20,
+        "std": 0.0
+      },
+      "condition": "expanded_20_seed",
+      "evaluator_call_reduction_pct": {
+        "ci95_high": 33.333333,
+        "ci95_low": 33.333333,
+        "mean": 33.333333,
+        "n": 20,
+        "std": 0.0
+      },
+      "exact_oracle_shift_matches": 20,
+      "exhaustive_evaluator_calls": {
+        "ci95_high": 72.0,
+        "ci95_low": 72.0,
+        "mean": 72.0,
+        "n": 20,
+        "std": 0.0
+      },
+      "exhaustive_runtime_s": {
+        "ci95_high": 1.145244,
+        "ci95_low": 1.031625,
+        "mean": 1.088435,
+        "n": 20,
+        "std": 0.129623
+      },
+      "gain_over_uniform_pct": {
+        "ci95_high": 82.845182,
+        "ci95_low": 58.931981,
+        "mean": 70.888581,
+        "n": 20,
+        "std": 27.281399
+      },
+      "method": "coarse_top1",
+      "method_evaluator_calls": {
+        "ci95_high": 48.0,
+        "ci95_low": 48.0,
+        "mean": 48.0,
+        "n": 20,
+        "std": 0.0
+      },
+      "method_runtime_s": {
+        "ci95_high": 0.798932,
+        "ci95_low": 0.720616,
+        "mean": 0.759774,
+        "n": 20,
+        "std": 0.089347
+      },
+      "near_oracle_trials": 20,
+      "not_worse_than_joint_compute": 20,
+      "not_worse_than_uniform": 20,
+      "oracle_gap_pct": {
+        "ci95_high": 0.0,
+        "ci95_low": 0.0,
+        "mean": 0.0,
+        "n": 20,
+        "std": 0.0
+      },
+      "oracle_ratio": {
+        "ci95_high": 1.0,
+        "ci95_low": 1.0,
+        "mean": 1.0,
+        "n": 20,
+        "std": 0.0
+      },
+      "regime": "decode_constrained",
+      "trials": 20
+    },
+    {
+      "candidate_probe_count": {
+        "ci95_high": 7.820285,
+        "ci95_low": 7.379715,
+        "mean": 7.6,
+        "n": 20,
+        "std": 0.502625
+      },
+      "condition": "expanded_20_seed",
+      "evaluator_call_reduction_pct": {
+        "ci95_high": 18.003166,
+        "ci95_low": 13.107945,
+        "mean": 15.555555,
+        "n": 20,
+        "std": 5.584719
+      },
+      "exact_oracle_shift_matches": 20,
+      "exhaustive_evaluator_calls": {
+        "ci95_high": 72.0,
+        "ci95_low": 72.0,
+        "mean": 72.0,
+        "n": 20,
+        "std": 0.0
+      },
+      "exhaustive_runtime_s": {
+        "ci95_high": 1.145244,
+        "ci95_low": 1.031625,
+        "mean": 1.088435,
+        "n": 20,
+        "std": 0.129623
+      },
+      "gain_over_uniform_pct": {
+        "ci95_high": 82.845182,
+        "ci95_low": 58.931981,
+        "mean": 70.888581,
+        "n": 20,
+        "std": 27.281399
+      },
+      "method": "coarse_top2",
+      "method_evaluator_calls": {
+        "ci95_high": 62.56228,
+        "ci95_low": 59.03772,
+        "mean": 60.8,
+        "n": 20,
+        "std": 4.020998
+      },
+      "method_runtime_s": {
+        "ci95_high": 1.00273,
+        "ci95_low": 0.890402,
+        "mean": 0.946566,
+        "n": 20,
+        "std": 0.128149
+      },
+      "near_oracle_trials": 20,
+      "not_worse_than_joint_compute": 20,
+      "not_worse_than_uniform": 20,
+      "oracle_gap_pct": {
+        "ci95_high": 0.0,
+        "ci95_low": 0.0,
+        "mean": 0.0,
+        "n": 20,
+        "std": 0.0
+      },
+      "oracle_ratio": {
+        "ci95_high": 1.0,
+        "ci95_low": 1.0,
+        "mean": 1.0,
+        "n": 20,
+        "std": 0.0
+      },
+      "regime": "decode_constrained",
+      "trials": 20
+    },
+    {
+      "candidate_probe_count": {
+        "ci95_high": 8.0,
+        "ci95_low": 8.0,
+        "mean": 8.0,
+        "n": 20,
+        "std": 0.0
+      },
+      "condition": "expanded_20_seed",
+      "evaluator_call_reduction_pct": {
+        "ci95_high": 11.111111,
+        "ci95_low": 11.111111,
+        "mean": 11.111111,
+        "n": 20,
+        "std": 0.0
+      },
+      "exact_oracle_shift_matches": 20,
+      "exhaustive_evaluator_calls": {
+        "ci95_high": 72.0,
+        "ci95_low": 72.0,
+        "mean": 72.0,
+        "n": 20,
+        "std": 0.0
+      },
+      "exhaustive_runtime_s": {
+        "ci95_high": 1.145244,
+        "ci95_low": 1.031625,
+        "mean": 1.088435,
+        "n": 20,
+        "std": 0.129623
+      },
+      "gain_over_uniform_pct": {
+        "ci95_high": 82.845182,
+        "ci95_low": 58.931981,
+        "mean": 70.888581,
+        "n": 20,
+        "std": 27.281399
+      },
+      "method": "coarse_top3",
+      "method_evaluator_calls": {
+        "ci95_high": 64.0,
+        "ci95_low": 64.0,
+        "mean": 64.0,
+        "n": 20,
+        "std": 0.0
+      },
+      "method_runtime_s": {
+        "ci95_high": 1.0411,
+        "ci95_low": 0.938939,
+        "mean": 0.990019,
+        "n": 20,
+        "std": 0.11655
+      },
+      "near_oracle_trials": 20,
+      "not_worse_than_joint_compute": 20,
+      "not_worse_than_uniform": 20,
+      "oracle_gap_pct": {
+        "ci95_high": 0.0,
+        "ci95_low": 0.0,
+        "mean": 0.0,
+        "n": 20,
+        "std": 0.0
+      },
+      "oracle_ratio": {
+        "ci95_high": 1.0,
+        "ci95_low": 1.0,
+        "mean": 1.0,
+        "n": 20,
+        "std": 0.0
+      },
+      "regime": "decode_constrained",
+      "trials": 20
+    },
+    {
+      "candidate_probe_count": {
+        "ci95_high": 6.820285,
+        "ci95_low": 6.379715,
+        "mean": 6.6,
+        "n": 20,
+        "std": 0.502625
+      },
+      "condition": "expanded_20_seed",
+      "evaluator_call_reduction_pct": {
+        "ci95_high": 29.18486,
+        "ci95_low": 24.427342,
+        "mean": 26.806101,
+        "n": 20,
+        "std": 5.427619
+      },
+      "exact_oracle_shift_matches": 16,
+      "exhaustive_evaluator_calls": {
+        "ci95_high": 77.449642,
+        "ci95_low": 74.050358,
+        "mean": 75.75,
+        "n": 20,
+        "std": 3.878076
+      },
+      "exhaustive_runtime_s": {
+        "ci95_high": 11.151407,
+        "ci95_low": 8.247349,
+        "mean": 9.699378,
+        "n": 20,
+        "std": 3.313097
+      },
+      "gain_over_uniform_pct": {
+        "ci95_high": 10.425095,
+        "ci95_low": 3.349219,
+        "mean": 6.887157,
+        "n": 20,
+        "std": 8.07252
+      },
+      "method": "coarse_top1",
+      "method_evaluator_calls": {
+        "ci95_high": 58.462999,
+        "ci95_low": 52.737001,
+        "mean": 55.6,
+        "n": 20,
+        "std": 6.53251
+      },
+      "method_runtime_s": {
+        "ci95_high": 8.742169,
+        "ci95_low": 6.072184,
+        "mean": 7.407177,
+        "n": 20,
+        "std": 3.046054
+      },
+      "near_oracle_trials": 19,
+      "not_worse_than_joint_compute": 20,
+      "not_worse_than_uniform": 20,
+      "oracle_gap_pct": {
+        "ci95_high": 0.787017,
+        "ci95_low": -0.013202,
+        "mean": 0.386908,
+        "n": 20,
+        "std": 0.912931
+      },
+      "oracle_ratio": {
+        "ci95_high": 1.000132,
+        "ci95_low": 0.99213,
+        "mean": 0.996131,
+        "n": 20,
+        "std": 0.009129
+      },
+      "regime": "prefill_constrained",
+      "trials": 20
+    },
+    {
+      "candidate_probe_count": {
+        "ci95_high": 8.201092,
+        "ci95_low": 7.798908,
+        "mean": 8.0,
+        "n": 20,
+        "std": 0.458831
+      },
+      "condition": "expanded_20_seed",
+      "evaluator_call_reduction_pct": {
+        "ci95_high": 13.388929,
+        "ci95_low": 8.915402,
+        "mean": 11.152166,
+        "n": 20,
+        "std": 5.103627
+      },
+      "exact_oracle_shift_matches": 19,
+      "exhaustive_evaluator_calls": {
+        "ci95_high": 77.449642,
+        "ci95_low": 74.050358,
+        "mean": 75.75,
+        "n": 20,
+        "std": 3.878076
+      },
+      "exhaustive_runtime_s": {
+        "ci95_high": 11.151407,
+        "ci95_low": 8.247349,
+        "mean": 9.699378,
+        "n": 20,
+        "std": 3.313097
+      },
+      "gain_over_uniform_pct": {
+        "ci95_high": 10.643725,
+        "ci95_low": 3.711236,
+        "mean": 7.17748,
+        "n": 20,
+        "std": 7.908937
+      },
+      "method": "coarse_top2",
+      "method_evaluator_calls": {
+        "ci95_high": 69.874783,
+        "ci95_low": 64.825217,
+        "mean": 67.35,
+        "n": 20,
+        "std": 5.760802
+      },
+      "method_runtime_s": {
+        "ci95_high": 10.240484,
+        "ci95_low": 7.389492,
+        "mean": 8.814988,
+        "n": 20,
+        "std": 3.252557
+      },
+      "near_oracle_trials": 19,
+      "not_worse_than_joint_compute": 20,
+      "not_worse_than_uniform": 20,
+      "oracle_gap_pct": {
+        "ci95_high": 0.319431,
+        "ci95_low": -0.103599,
+        "mean": 0.107916,
+        "n": 20,
+        "std": 0.482615
+      },
+      "oracle_ratio": {
+        "ci95_high": 1.001036,
+        "ci95_low": 0.996806,
+        "mean": 0.998921,
+        "n": 20,
+        "std": 0.004826
+      },
+      "regime": "prefill_constrained",
+      "trials": 20
+    },
+    {
+      "candidate_probe_count": {
+        "ci95_high": 8.906058,
+        "ci95_low": 8.493942,
+        "mean": 8.7,
+        "n": 20,
+        "std": 0.470162
+      },
+      "condition": "expanded_20_seed",
+      "evaluator_call_reduction_pct": {
+        "ci95_high": 5.622864,
+        "ci95_low": 1.043803,
+        "mean": 3.333333,
+        "n": 20,
+        "std": 5.224026
+      },
+      "exact_oracle_shift_matches": 20,
+      "exhaustive_evaluator_calls": {
+        "ci95_high": 77.449642,
+        "ci95_low": 74.050358,
+        "mean": 75.75,
+        "n": 20,
+        "std": 3.878076
+      },
+      "exhaustive_runtime_s": {
+        "ci95_high": 11.151407,
+        "ci95_low": 8.247349,
+        "mean": 9.699378,
+        "n": 20,
+        "std": 3.313097
+      },
+      "gain_over_uniform_pct": {
+        "ci95_high": 10.725357,
+        "ci95_low": 3.853488,
+        "mean": 7.289423,
+        "n": 20,
+        "std": 7.839778
+      },
+      "method": "coarse_top3",
+      "method_evaluator_calls": {
+        "ci95_high": 76.390661,
+        "ci95_low": 70.309339,
+        "mean": 73.35,
+        "n": 20,
+        "std": 6.937882
+      },
+      "method_runtime_s": {
+        "ci95_high": 10.984878,
+        "ci95_low": 7.98307,
+        "mean": 9.483974,
+        "n": 20,
+        "std": 3.424616
+      },
+      "near_oracle_trials": 20,
+      "not_worse_than_joint_compute": 20,
+      "not_worse_than_uniform": 20,
+      "oracle_gap_pct": {
+        "ci95_high": 0.0,
+        "ci95_low": 0.0,
+        "mean": 0.0,
+        "n": 20,
+        "std": 0.0
+      },
+      "oracle_ratio": {
+        "ci95_high": 1.0,
+        "ci95_low": 1.0,
+        "mean": 1.0,
+        "n": 20,
+        "std": 0.0
+      },
+      "regime": "prefill_constrained",
+      "trials": 20
+    }
+  ],
+  "capacity_profile_rows": 360,
+  "experiment_id": "phase16-coarse-to-fine-search-v1",
+  "method": "Evaluate the stride-2 coarse grid {-4,-2,0,2,4}, rank coarse candidates by sampled SLA-safe capacity, then evaluate odd neighbors of the best one, two, or three coarse candidates. The exhaustive nine-shift family is filled only after method decisions.",
+  "provenance": {
+    "artifact_sha256": {
+      "azure_conv_arrive_time.pkl": "1ae6dec376d39a7c9fa7ed8239cf5b10b5349b540697c94df8d1d1055b35f2a3",
+      "azure_conv_input.pkl": "090770d895fe96d733f4c1d2e0068b5d391f565f25d05841077063c0c344c92f",
+      "azure_conv_output.pkl": "4d42ec92d42a36cdf647af81fc5f7f8627ff4c21bddee24902f25d013dbadd82"
+    },
+    "source_repo_commit": "297280c000e45ba6a8fa79135e4bfc4a9e17cb99",
+    "upstream_helix_commit": "8639497a4aaf1eb3b7594614cb0bbd376c1342b3"
+  },
+  "reason": "Phase-15 showed that Decode capacity is directionally well behaved but Prefill can contain a valley followed by a better farther shift, invalidating a global unimodality assumption.",
+  "suite": "expanded"
+}
