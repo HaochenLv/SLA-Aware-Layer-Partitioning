@@ -27,7 +27,7 @@ jobs:
       matrix:
         suite: [expanded, bandwidth]
     runs-on: ubuntu-latest
-    timeout-minutes: 120
+    timeout-minutes: 180
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
