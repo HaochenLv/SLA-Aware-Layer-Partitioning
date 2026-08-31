@@ -1,0 +1,929 @@
+{
+  "aggregate": [
+    {
+      "candidate_count": 9,
+      "candidate_probe_count": {
+        "ci95_high": 6.0,
+        "ci95_low": 6.0,
+        "mean": 6.0,
+        "n": 6,
+        "std": 0.0
+      },
+      "candidate_radius": 4,
+      "condition": "bandwidth_0.5x",
+      "evaluator_call_reduction_pct": {
+        "ci95_high": 33.333333,
+        "ci95_low": 33.333333,
+        "mean": 33.333333,
+        "n": 6,
+        "std": 0.0
+      },
+      "exact_oracle_shift_matches": 6,
+      "exhaustive_evaluator_calls": {
+        "ci95_high": 72.0,
+        "ci95_low": 72.0,
+        "mean": 72.0,
+        "n": 6,
+        "std": 0.0
+      },
+      "exhaustive_runtime_s": {
+        "ci95_high": 0.539108,
+        "ci95_low": 0.429055,
+        "mean": 0.484082,
+        "n": 6,
+        "std": 0.068769
+      },
+      "gain_over_uniform_pct": {
+        "ci95_high": 28.886561,
+        "ci95_low": 1.666565,
+        "mean": 15.276563,
+        "n": 6,
+        "std": 17.008955
+      },
+      "method": "bidirectional_adaptive",
+      "method_evaluator_calls": {
+        "ci95_high": 48.0,
+        "ci95_low": 48.0,
+        "mean": 48.0,
+        "n": 6,
+        "std": 0.0
+      },
+      "method_runtime_s": {
+        "ci95_high": 0.40517,
+        "ci95_low": 0.317435,
+        "mean": 0.361303,
+        "n": 6,
+        "std": 0.054823
+      },
+      "near_oracle_trials": 6,
+      "not_worse_than_joint_compute": 6,
+      "not_worse_than_uniform": 6,
+      "oracle_gap_pct": {
+        "ci95_high": 0.0,
+        "ci95_low": 0.0,
+        "mean": 0.0,
+        "n": 6,
+        "std": 0.0
+      },
+      "oracle_ratio": {
+        "ci95_high": 1.0,
+        "ci95_low": 1.0,
+        "mean": 1.0,
+        "n": 6,
+        "std": 0.0
+      },
+      "regime": "decode_constrained",
+      "trials": 6
+    },
+    {
+      "candidate_count": 9,
+      "candidate_probe_count": {
+        "ci95_high": 5.908839,
+        "ci95_low": 3.091161,
+        "mean": 4.5,
+        "n": 6,
+        "std": 1.760682
+      },
+      "candidate_radius": 4,
+      "condition": "bandwidth_0.5x",
+      "evaluator_call_reduction_pct": {
+        "ci95_high": 65.653764,
+        "ci95_low": 34.346236,
+        "mean": 50.0,
+        "n": 6,
+        "std": 19.56313
+      },
+      "exact_oracle_shift_matches": 2,
+      "exhaustive_evaluator_calls": {
+        "ci95_high": 72.0,
+        "ci95_low": 72.0,
+        "mean": 72.0,
+        "n": 6,
+        "std": 0.0
+      },
+      "exhaustive_runtime_s": {
+        "ci95_high": 4.554508,
+        "ci95_low": 2.707032,
+        "mean": 3.63077,
+        "n": 6,
+        "std": 1.154432
+      },
+      "gain_over_uniform_pct": {
+        "ci95_high": 5.780874,
+        "ci95_low": 0.343601,
+        "mean": 3.062238,
+        "n": 6,
+        "std": 3.397588
+      },
+      "method": "bidirectional_adaptive",
+      "method_evaluator_calls": {
+        "ci95_high": 47.27071,
+        "ci95_low": 24.72929,
+        "mean": 36.0,
+        "n": 6,
+        "std": 14.085453
+      },
+      "method_runtime_s": {
+        "ci95_high": 2.29616,
+        "ci95_low": 1.265423,
+        "mean": 1.780791,
+        "n": 6,
+        "std": 0.644077
+      },
+      "near_oracle_trials": 2,
+      "not_worse_than_joint_compute": 6,
+      "not_worse_than_uniform": 6,
+      "oracle_gap_pct": {
+        "ci95_high": 22.921541,
+        "ci95_low": 3.115771,
+        "mean": 13.018656,
+        "n": 6,
+        "std": 12.376028
+      },
+      "oracle_ratio": {
+        "ci95_high": 0.968842,
+        "ci95_low": 0.770784,
+        "mean": 0.869813,
+        "n": 6,
+        "std": 0.12376
+      },
+      "regime": "prefill_constrained",
+      "trials": 6
+    },
+    {
+      "candidate_count": 9,
+      "candidate_probe_count": {
+        "ci95_high": 6.0,
+        "ci95_low": 6.0,
+        "mean": 6.0,
+        "n": 6,
+        "std": 0.0
+      },
+      "candidate_radius": 4,
+      "condition": "bandwidth_0.5x",
+      "evaluator_call_reduction_pct": {
+        "ci95_high": 33.333333,
+        "ci95_low": 33.333333,
+        "mean": 33.333333,
+        "n": 6,
+        "std": 0.0
+      },
+      "exact_oracle_shift_matches": 6,
+      "exhaustive_evaluator_calls": {
+        "ci95_high": 72.0,
+        "ci95_low": 72.0,
+        "mean": 72.0,
+        "n": 6,
+        "std": 0.0
+      },
+      "exhaustive_runtime_s": {
+        "ci95_high": 0.539108,
+        "ci95_low": 0.429055,
+        "mean": 0.484082,
+        "n": 6,
+        "std": 0.068769
+      },
+      "gain_over_uniform_pct": {
+        "ci95_high": 28.886561,
+        "ci95_low": 1.666565,
+        "mean": 15.276563,
+        "n": 6,
+        "std": 17.008955
+      },
+      "method": "single_direction_adaptive",
+      "method_evaluator_calls": {
+        "ci95_high": 48.0,
+        "ci95_low": 48.0,
+        "mean": 48.0,
+        "n": 6,
+        "std": 0.0
+      },
+      "method_runtime_s": {
+        "ci95_high": 0.40517,
+        "ci95_low": 0.317435,
+        "mean": 0.361303,
+        "n": 6,
+        "std": 0.054823
+      },
+      "near_oracle_trials": 6,
+      "not_worse_than_joint_compute": 6,
+      "not_worse_than_uniform": 6,
+      "oracle_gap_pct": {
+        "ci95_high": 0.0,
+        "ci95_low": 0.0,
+        "mean": 0.0,
+        "n": 6,
+        "std": 0.0
+      },
+      "oracle_ratio": {
+        "ci95_high": 1.0,
+        "ci95_low": 1.0,
+        "mean": 1.0,
+        "n": 6,
+        "std": 0.0
+      },
+      "regime": "decode_constrained",
+      "trials": 6
+    },
+    {
+      "candidate_count": 9,
+      "candidate_probe_count": {
+        "ci95_high": 3.938269,
+        "ci95_low": 3.061731,
+        "mean": 3.5,
+        "n": 6,
+        "std": 0.547723
+      },
+      "candidate_radius": 4,
+      "condition": "bandwidth_0.5x",
+      "evaluator_call_reduction_pct": {
+        "ci95_high": 65.980771,
+        "ci95_low": 56.241452,
+        "mean": 61.111112,
+        "n": 6,
+        "std": 6.085806
+      },
+      "exact_oracle_shift_matches": 2,
+      "exhaustive_evaluator_calls": {
+        "ci95_high": 72.0,
+        "ci95_low": 72.0,
+        "mean": 72.0,
+        "n": 6,
+        "std": 0.0
+      },
+      "exhaustive_runtime_s": {
+        "ci95_high": 4.554508,
+        "ci95_low": 2.707032,
+        "mean": 3.63077,
+        "n": 6,
+        "std": 1.154432
+      },
+      "gain_over_uniform_pct": {
+        "ci95_high": 5.780874,
+        "ci95_low": 0.343601,
+        "mean": 3.062238,
+        "n": 6,
+        "std": 3.397588
+      },
+      "method": "single_direction_adaptive",
+      "method_evaluator_calls": {
+        "ci95_high": 31.506155,
+        "ci95_low": 24.493845,
+        "mean": 28.0,
+        "n": 6,
+        "std": 4.38178
+      },
+      "method_runtime_s": {
+        "ci95_high": 1.761449,
+        "ci95_low": 1.095016,
+        "mean": 1.428233,
+        "n": 6,
+        "std": 0.416433
+      },
+      "near_oracle_trials": 2,
+      "not_worse_than_joint_compute": 6,
+      "not_worse_than_uniform": 6,
+      "oracle_gap_pct": {
+        "ci95_high": 22.921541,
+        "ci95_low": 3.115771,
+        "mean": 13.018656,
+        "n": 6,
+        "std": 12.376028
+      },
+      "oracle_ratio": {
+        "ci95_high": 0.968842,
+        "ci95_low": 0.770784,
+        "mean": 0.869813,
+        "n": 6,
+        "std": 0.12376
+      },
+      "regime": "prefill_constrained",
+      "trials": 6
+    },
+    {
+      "candidate_count": 9,
+      "candidate_probe_count": {
+        "ci95_high": 6.0,
+        "ci95_low": 6.0,
+        "mean": 6.0,
+        "n": 6,
+        "std": 0.0
+      },
+      "candidate_radius": 4,
+      "condition": "bandwidth_1x",
+      "evaluator_call_reduction_pct": {
+        "ci95_high": 33.333333,
+        "ci95_low": 33.333333,
+        "mean": 33.333333,
+        "n": 6,
+        "std": 0.0
+      },
+      "exact_oracle_shift_matches": 6,
+      "exhaustive_evaluator_calls": {
+        "ci95_high": 72.0,
+        "ci95_low": 72.0,
+        "mean": 72.0,
+        "n": 6,
+        "std": 0.0
+      },
+      "exhaustive_runtime_s": {
+        "ci95_high": 0.753931,
+        "ci95_low": 0.666247,
+        "mean": 0.710089,
+        "n": 6,
+        "std": 0.054791
+      },
+      "gain_over_uniform_pct": {
+        "ci95_high": 87.334897,
+        "ci95_low": 59.250727,
+        "mean": 73.292812,
+        "n": 6,
+        "std": 17.548951
+      },
+      "method": "bidirectional_adaptive",
+      "method_evaluator_calls": {
+        "ci95_high": 48.0,
+        "ci95_low": 48.0,
+        "mean": 48.0,
+        "n": 6,
+        "std": 0.0
+      },
+      "method_runtime_s": {
+        "ci95_high": 0.57011,
+        "ci95_low": 0.490123,
+        "mean": 0.530116,
+        "n": 6,
+        "std": 0.049982
+      },
+      "near_oracle_trials": 6,
+      "not_worse_than_joint_compute": 6,
+      "not_worse_than_uniform": 6,
+      "oracle_gap_pct": {
+        "ci95_high": 0.0,
+        "ci95_low": 0.0,
+        "mean": 0.0,
+        "n": 6,
+        "std": 0.0
+      },
+      "oracle_ratio": {
+        "ci95_high": 1.0,
+        "ci95_low": 1.0,
+        "mean": 1.0,
+        "n": 6,
+        "std": 0.0
+      },
+      "regime": "decode_constrained",
+      "trials": 6
+    },
+    {
+      "candidate_count": 9,
+      "candidate_probe_count": {
+        "ci95_high": 5.079871,
+        "ci95_low": 4.253462,
+        "mean": 4.666667,
+        "n": 6,
+        "std": 0.516398
+      },
+      "candidate_radius": 4,
+      "condition": "bandwidth_1x",
+      "evaluator_call_reduction_pct": {
+        "ci95_high": 52.15449,
+        "ci95_low": 42.781543,
+        "mean": 47.468017,
+        "n": 6,
+        "std": 5.856871
+      },
+      "exact_oracle_shift_matches": 5,
+      "exhaustive_evaluator_calls": {
+        "ci95_high": 79.603035,
+        "ci95_low": 73.730299,
+        "mean": 76.666667,
+        "n": 6,
+        "std": 3.669696
+      },
+      "exhaustive_runtime_s": {
+        "ci95_high": 8.29869,
+        "ci95_low": 5.596113,
+        "mean": 6.947402,
+        "n": 6,
+        "std": 1.688759
+      },
+      "gain_over_uniform_pct": {
+        "ci95_high": 4.111919,
+        "ci95_low": 2.313417,
+        "mean": 3.212668,
+        "n": 6,
+        "std": 1.12383
+      },
+      "method": "bidirectional_adaptive",
+      "method_evaluator_calls": {
+        "ci95_high": 44.647313,
+        "ci95_low": 36.019354,
+        "mean": 40.333333,
+        "n": 6,
+        "std": 5.391351
+      },
+      "method_runtime_s": {
+        "ci95_high": 4.977875,
+        "ci95_low": 2.863356,
+        "mean": 3.920616,
+        "n": 6,
+        "std": 1.3213
+      },
+      "near_oracle_trials": 5,
+      "not_worse_than_joint_compute": 6,
+      "not_worse_than_uniform": 6,
+      "oracle_gap_pct": {
+        "ci95_high": 9.077262,
+        "ci95_low": -2.943977,
+        "mean": 3.066643,
+        "n": 6,
+        "std": 7.51171
+      },
+      "oracle_ratio": {
+        "ci95_high": 1.02944,
+        "ci95_low": 0.909227,
+        "mean": 0.969333,
+        "n": 6,
+        "std": 0.075117
+      },
+      "regime": "prefill_constrained",
+      "trials": 6
+    },
+    {
+      "candidate_count": 9,
+      "candidate_probe_count": {
+        "ci95_high": 6.0,
+        "ci95_low": 6.0,
+        "mean": 6.0,
+        "n": 6,
+        "std": 0.0
+      },
+      "candidate_radius": 4,
+      "condition": "bandwidth_1x",
+      "evaluator_call_reduction_pct": {
+        "ci95_high": 33.333333,
+        "ci95_low": 33.333333,
+        "mean": 33.333333,
+        "n": 6,
+        "std": 0.0
+      },
+      "exact_oracle_shift_matches": 6,
+      "exhaustive_evaluator_calls": {
+        "ci95_high": 72.0,
+        "ci95_low": 72.0,
+        "mean": 72.0,
+        "n": 6,
+        "std": 0.0
+      },
+      "exhaustive_runtime_s": {
+        "ci95_high": 0.753931,
+        "ci95_low": 0.666247,
+        "mean": 0.710089,
+        "n": 6,
+        "std": 0.054791
+      },
+      "gain_over_uniform_pct": {
+        "ci95_high": 87.334897,
+        "ci95_low": 59.250727,
+        "mean": 73.292812,
+        "n": 6,
+        "std": 17.548951
+      },
+      "method": "single_direction_adaptive",
+      "method_evaluator_calls": {
+        "ci95_high": 48.0,
+        "ci95_low": 48.0,
+        "mean": 48.0,
+        "n": 6,
+        "std": 0.0
+      },
+      "method_runtime_s": {
+        "ci95_high": 0.57011,
+        "ci95_low": 0.490123,
+        "mean": 0.530116,
+        "n": 6,
+        "std": 0.049982
+      },
+      "near_oracle_trials": 6,
+      "not_worse_than_joint_compute": 6,
+      "not_worse_than_uniform": 6,
+      "oracle_gap_pct": {
+        "ci95_high": 0.0,
+        "ci95_low": 0.0,
+        "mean": 0.0,
+        "n": 6,
+        "std": 0.0
+      },
+      "oracle_ratio": {
+        "ci95_high": 1.0,
+        "ci95_low": 1.0,
+        "mean": 1.0,
+        "n": 6,
+        "std": 0.0
+      },
+      "regime": "decode_constrained",
+      "trials": 6
+    },
+    {
+      "candidate_count": 9,
+      "candidate_probe_count": {
+        "ci95_high": 4.938269,
+        "ci95_low": 4.061731,
+        "mean": 4.5,
+        "n": 6,
+        "std": 0.547723
+      },
+      "candidate_radius": 4,
+      "condition": "bandwidth_1x",
+      "evaluator_call_reduction_pct": {
+        "ci95_high": 54.150821,
+        "ci95_low": 44.58268,
+        "mean": 49.366751,
+        "n": 6,
+        "std": 5.978843
+      },
+      "exact_oracle_shift_matches": 5,
+      "exhaustive_evaluator_calls": {
+        "ci95_high": 79.603035,
+        "ci95_low": 73.730299,
+        "mean": 76.666667,
+        "n": 6,
+        "std": 3.669696
+      },
+      "exhaustive_runtime_s": {
+        "ci95_high": 8.29869,
+        "ci95_low": 5.596113,
+        "mean": 6.947402,
+        "n": 6,
+        "std": 1.688759
+      },
+      "gain_over_uniform_pct": {
+        "ci95_high": 4.111919,
+        "ci95_low": 2.313417,
+        "mean": 3.212668,
+        "n": 6,
+        "std": 1.12383
+      },
+      "method": "single_direction_adaptive",
+      "method_evaluator_calls": {
+        "ci95_high": 42.895049,
+        "ci95_low": 34.771617,
+        "mean": 38.833333,
+        "n": 6,
+        "std": 5.076088
+      },
+      "method_runtime_s": {
+        "ci95_high": 4.838169,
+        "ci95_low": 2.733141,
+        "mean": 3.785655,
+        "n": 6,
+        "std": 1.315368
+      },
+      "near_oracle_trials": 5,
+      "not_worse_than_joint_compute": 6,
+      "not_worse_than_uniform": 6,
+      "oracle_gap_pct": {
+        "ci95_high": 9.077262,
+        "ci95_low": -2.943977,
+        "mean": 3.066643,
+        "n": 6,
+        "std": 7.51171
+      },
+      "oracle_ratio": {
+        "ci95_high": 1.02944,
+        "ci95_low": 0.909227,
+        "mean": 0.969333,
+        "n": 6,
+        "std": 0.075117
+      },
+      "regime": "prefill_constrained",
+      "trials": 6
+    },
+    {
+      "candidate_count": 9,
+      "candidate_probe_count": {
+        "ci95_high": 7.16,
+        "ci95_low": 6.506667,
+        "mean": 6.833333,
+        "n": 6,
+        "std": 0.408248
+      },
+      "candidate_radius": 4,
+      "condition": "bandwidth_2x",
+      "evaluator_call_reduction_pct": {
+        "ci95_high": 27.703703,
+        "ci95_low": 20.444444,
+        "mean": 24.074074,
+        "n": 6,
+        "std": 4.536092
+      },
+      "exact_oracle_shift_matches": 6,
+      "exhaustive_evaluator_calls": {
+        "ci95_high": 72.0,
+        "ci95_low": 72.0,
+        "mean": 72.0,
+        "n": 6,
+        "std": 0.0
+      },
+      "exhaustive_runtime_s": {
+        "ci95_high": 1.170274,
+        "ci95_low": 0.94365,
+        "mean": 1.056962,
+        "n": 6,
+        "std": 0.141611
+      },
+      "gain_over_uniform_pct": {
+        "ci95_high": 139.442457,
+        "ci95_low": 84.739198,
+        "mean": 112.090828,
+        "n": 6,
+        "std": 34.182416
+      },
+      "method": "bidirectional_adaptive",
+      "method_evaluator_calls": {
+        "ci95_high": 57.28,
+        "ci95_low": 52.053333,
+        "mean": 54.666667,
+        "n": 6,
+        "std": 3.265986
+      },
+      "method_runtime_s": {
+        "ci95_high": 0.972915,
+        "ci95_low": 0.780705,
+        "mean": 0.87681,
+        "n": 6,
+        "std": 0.120106
+      },
+      "near_oracle_trials": 6,
+      "not_worse_than_joint_compute": 6,
+      "not_worse_than_uniform": 6,
+      "oracle_gap_pct": {
+        "ci95_high": 0.0,
+        "ci95_low": 0.0,
+        "mean": 0.0,
+        "n": 6,
+        "std": 0.0
+      },
+      "oracle_ratio": {
+        "ci95_high": 1.0,
+        "ci95_low": 1.0,
+        "mean": 1.0,
+        "n": 6,
+        "std": 0.0
+      },
+      "regime": "decode_constrained",
+      "trials": 6
+    },
+    {
+      "candidate_count": 9,
+      "candidate_probe_count": {
+        "ci95_high": 4.079871,
+        "ci95_low": 3.253462,
+        "mean": 3.666667,
+        "n": 6,
+        "std": 0.516398
+      },
+      "candidate_radius": 4,
+      "condition": "bandwidth_2x",
+      "evaluator_call_reduction_pct": {
+        "ci95_high": 63.17258,
+        "ci95_low": 53.805268,
+        "mean": 58.488924,
+        "n": 6,
+        "std": 5.85335
+      },
+      "exact_oracle_shift_matches": 6,
+      "exhaustive_evaluator_calls": {
+        "ci95_high": 79.938269,
+        "ci95_low": 79.061731,
+        "mean": 79.5,
+        "n": 6,
+        "std": 0.547723
+      },
+      "exhaustive_runtime_s": {
+        "ci95_high": 9.761728,
+        "ci95_low": 7.66899,
+        "mean": 8.715359,
+        "n": 6,
+        "std": 1.307689
+      },
+      "gain_over_uniform_pct": {
+        "ci95_high": 2.135436,
+        "ci95_low": 0.138148,
+        "mean": 1.136792,
+        "n": 6,
+        "std": 1.248045
+      },
+      "method": "bidirectional_adaptive",
+      "method_evaluator_calls": {
+        "ci95_high": 36.718839,
+        "ci95_low": 29.281161,
+        "mean": 33.0,
+        "n": 6,
+        "std": 4.64758
+      },
+      "method_runtime_s": {
+        "ci95_high": 5.179634,
+        "ci95_low": 3.334678,
+        "mean": 4.257156,
+        "n": 6,
+        "std": 1.152857
+      },
+      "near_oracle_trials": 6,
+      "not_worse_than_joint_compute": 6,
+      "not_worse_than_uniform": 6,
+      "oracle_gap_pct": {
+        "ci95_high": 0.0,
+        "ci95_low": 0.0,
+        "mean": 0.0,
+        "n": 6,
+        "std": 0.0
+      },
+      "oracle_ratio": {
+        "ci95_high": 1.0,
+        "ci95_low": 1.0,
+        "mean": 1.0,
+        "n": 6,
+        "std": 0.0
+      },
+      "regime": "prefill_constrained",
+      "trials": 6
+    },
+    {
+      "candidate_count": 9,
+      "candidate_probe_count": {
+        "ci95_high": 6.0,
+        "ci95_low": 6.0,
+        "mean": 6.0,
+        "n": 6,
+        "std": 0.0
+      },
+      "candidate_radius": 4,
+      "condition": "bandwidth_2x",
+      "evaluator_call_reduction_pct": {
+        "ci95_high": 33.333333,
+        "ci95_low": 33.333333,
+        "mean": 33.333333,
+        "n": 6,
+        "std": 0.0
+      },
+      "exact_oracle_shift_matches": 6,
+      "exhaustive_evaluator_calls": {
+        "ci95_high": 72.0,
+        "ci95_low": 72.0,
+        "mean": 72.0,
+        "n": 6,
+        "std": 0.0
+      },
+      "exhaustive_runtime_s": {
+        "ci95_high": 1.170274,
+        "ci95_low": 0.94365,
+        "mean": 1.056962,
+        "n": 6,
+        "std": 0.141611
+      },
+      "gain_over_uniform_pct": {
+        "ci95_high": 139.442457,
+        "ci95_low": 84.739198,
+        "mean": 112.090828,
+        "n": 6,
+        "std": 34.182416
+      },
+      "method": "single_direction_adaptive",
+      "method_evaluator_calls": {
+        "ci95_high": 48.0,
+        "ci95_low": 48.0,
+        "mean": 48.0,
+        "n": 6,
+        "std": 0.0
+      },
+      "method_runtime_s": {
+        "ci95_high": 0.908355,
+        "ci95_low": 0.703397,
+        "mean": 0.805876,
+        "n": 6,
+        "std": 0.128072
+      },
+      "near_oracle_trials": 6,
+      "not_worse_than_joint_compute": 6,
+      "not_worse_than_uniform": 6,
+      "oracle_gap_pct": {
+        "ci95_high": 0.0,
+        "ci95_low": 0.0,
+        "mean": 0.0,
+        "n": 6,
+        "std": 0.0
+      },
+      "oracle_ratio": {
+        "ci95_high": 1.0,
+        "ci95_low": 1.0,
+        "mean": 1.0,
+        "n": 6,
+        "std": 0.0
+      },
+      "regime": "decode_constrained",
+      "trials": 6
+    },
+    {
+      "candidate_count": 9,
+      "candidate_probe_count": {
+        "ci95_high": 4.079871,
+        "ci95_low": 3.253462,
+        "mean": 3.666667,
+        "n": 6,
+        "std": 0.516398
+      },
+      "candidate_radius": 4,
+      "condition": "bandwidth_2x",
+      "evaluator_call_reduction_pct": {
+        "ci95_high": 63.17258,
+        "ci95_low": 53.805268,
+        "mean": 58.488924,
+        "n": 6,
+        "std": 5.85335
+      },
+      "exact_oracle_shift_matches": 6,
+      "exhaustive_evaluator_calls": {
+        "ci95_high": 79.938269,
+        "ci95_low": 79.061731,
+        "mean": 79.5,
+        "n": 6,
+        "std": 0.547723
+      },
+      "exhaustive_runtime_s": {
+        "ci95_high": 9.761728,
+        "ci95_low": 7.66899,
+        "mean": 8.715359,
+        "n": 6,
+        "std": 1.307689
+      },
+      "gain_over_uniform_pct": {
+        "ci95_high": 2.135436,
+        "ci95_low": 0.138148,
+        "mean": 1.136792,
+        "n": 6,
+        "std": 1.248045
+      },
+      "method": "single_direction_adaptive",
+      "method_evaluator_calls": {
+        "ci95_high": 36.718839,
+        "ci95_low": 29.281161,
+        "mean": 33.0,
+        "n": 6,
+        "std": 4.64758
+      },
+      "method_runtime_s": {
+        "ci95_high": 5.179634,
+        "ci95_low": 3.334678,
+        "mean": 4.257156,
+        "n": 6,
+        "std": 1.152857
+      },
+      "near_oracle_trials": 6,
+      "not_worse_than_joint_compute": 6,
+      "not_worse_than_uniform": 6,
+      "oracle_gap_pct": {
+        "ci95_high": 0.0,
+        "ci95_low": 0.0,
+        "mean": 0.0,
+        "n": 6,
+        "std": 0.0
+      },
+      "oracle_ratio": {
+        "ci95_high": 1.0,
+        "ci95_low": 1.0,
+        "mean": 1.0,
+        "n": 6,
+        "std": 0.0
+      },
+      "regime": "prefill_constrained",
+      "trials": 6
+    }
+  ],
+  "all_sampled_monotonic": true,
+  "experiment_id": "phase15-adaptive-directional-search-v1",
+  "interpretation": "The exhaustive candidate family is filled only after the search decisions. Search cost is reported as candidate probes, underlying evaluator calls, and measured candidate-evaluation wall time. This experiment tests whether the submitted fixed-radius rule has a natural scalable extension; it does not change evaluator equations or claim new hardware validation.",
+  "no_right_censoring": true,
+  "provenance": {
+    "artifact_sha256": {
+      "azure_conv_arrive_time.pkl": "1ae6dec376d39a7c9fa7ed8239cf5b10b5349b540697c94df8d1d1055b35f2a3",
+      "azure_conv_input.pkl": "090770d895fe96d733f4c1d2e0068b5d391f565f25d05841077063c0c344c92f",
+      "azure_conv_output.pkl": "4d42ec92d42a36cdf647af81fc5f7f8627ff4c21bddee24902f25d013dbadd82"
+    },
+    "source_repo_commit": "297280c000e45ba6a8fa79135e4bfc4a9e17cb99",
+    "upstream_helix_commit": "8639497a4aaf1eb3b7594614cb0bbd376c1342b3"
+  },
+  "search_variants": {
+    "bidirectional_adaptive": "Starting from {-1,0,+1}, continue each direction whose adjacent candidate is not worse than uniform, stopping that direction at the first capacity decrease or boundary.",
+    "single_direction_adaptive": "Exact Phase-13 behavior for radius 2; for larger radii, continue along the chosen nondecreasing direction until the first capacity decrease or boundary."
+  },
+  "suite": "bandwidth",
+  "unchanged": [
+    "event-driven SLA-safe capacity evaluator",
+    "HELIX-derived phase-specific speed factors",
+    "Azure-derived finite workload construction",
+    "TTFT/TPOT SLA regimes",
+    "contiguous one-dimensional alternating-stage shift family"
+  ]
+}

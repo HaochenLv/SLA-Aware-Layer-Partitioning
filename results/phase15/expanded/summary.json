@@ -1,0 +1,929 @@
+{
+  "aggregate": [
+    {
+      "candidate_count": 5,
+      "candidate_probe_count": {
+        "ci95_high": 4.0,
+        "ci95_low": 4.0,
+        "mean": 4.0,
+        "n": 20,
+        "std": 0.0
+      },
+      "candidate_radius": 2,
+      "condition": "expanded_20_seed",
+      "evaluator_call_reduction_pct": {
+        "ci95_high": 20.0,
+        "ci95_low": 20.0,
+        "mean": 20.0,
+        "n": 20,
+        "std": 0.0
+      },
+      "exact_oracle_shift_matches": 20,
+      "exhaustive_evaluator_calls": {
+        "ci95_high": 40.0,
+        "ci95_low": 40.0,
+        "mean": 40.0,
+        "n": 20,
+        "std": 0.0
+      },
+      "exhaustive_runtime_s": {
+        "ci95_high": 0.791953,
+        "ci95_low": 0.700694,
+        "mean": 0.746323,
+        "n": 20,
+        "std": 0.104113
+      },
+      "gain_over_uniform_pct": {
+        "ci95_high": 9.92538,
+        "ci95_low": 2.670885,
+        "mean": 6.298132,
+        "n": 20,
+        "std": 8.276298
+      },
+      "method": "bidirectional_adaptive",
+      "method_evaluator_calls": {
+        "ci95_high": 32.0,
+        "ci95_low": 32.0,
+        "mean": 32.0,
+        "n": 20,
+        "std": 0.0
+      },
+      "method_runtime_s": {
+        "ci95_high": 0.658077,
+        "ci95_low": 0.581888,
+        "mean": 0.619982,
+        "n": 20,
+        "std": 0.08692
+      },
+      "near_oracle_trials": 20,
+      "not_worse_than_joint_compute": 20,
+      "not_worse_than_uniform": 20,
+      "oracle_gap_pct": {
+        "ci95_high": 0.0,
+        "ci95_low": 0.0,
+        "mean": 0.0,
+        "n": 20,
+        "std": 0.0
+      },
+      "oracle_ratio": {
+        "ci95_high": 1.0,
+        "ci95_low": 1.0,
+        "mean": 1.0,
+        "n": 20,
+        "std": 0.0
+      },
+      "regime": "decode_constrained",
+      "trials": 20
+    },
+    {
+      "candidate_count": 5,
+      "candidate_probe_count": {
+        "ci95_high": 4.348301,
+        "ci95_low": 3.651699,
+        "mean": 4.0,
+        "n": 20,
+        "std": 0.794719
+      },
+      "candidate_radius": 2,
+      "condition": "expanded_20_seed",
+      "evaluator_call_reduction_pct": {
+        "ci95_high": 26.856274,
+        "ci95_low": 13.018968,
+        "mean": 19.937621,
+        "n": 20,
+        "std": 15.786305
+      },
+      "exact_oracle_shift_matches": 18,
+      "exhaustive_evaluator_calls": {
+        "ci95_high": 43.718021,
+        "ci95_low": 41.381979,
+        "mean": 42.55,
+        "n": 20,
+        "std": 2.665076
+      },
+      "exhaustive_runtime_s": {
+        "ci95_high": 9.19047,
+        "ci95_low": 6.214457,
+        "mean": 7.702464,
+        "n": 20,
+        "std": 3.395188
+      },
+      "gain_over_uniform_pct": {
+        "ci95_high": 4.0264,
+        "ci95_low": 1.393045,
+        "mean": 2.709723,
+        "n": 20,
+        "std": 3.004265
+      },
+      "method": "bidirectional_adaptive",
+      "method_evaluator_calls": {
+        "ci95_high": 36.910625,
+        "ci95_low": 31.089375,
+        "mean": 34.0,
+        "n": 20,
+        "std": 6.641179
+      },
+      "method_runtime_s": {
+        "ci95_high": 7.386899,
+        "ci95_low": 5.064533,
+        "mean": 6.225716,
+        "n": 20,
+        "std": 2.649473
+      },
+      "near_oracle_trials": 20,
+      "not_worse_than_joint_compute": 18,
+      "not_worse_than_uniform": 20,
+      "oracle_gap_pct": {
+        "ci95_high": 0.326099,
+        "ci95_low": -0.052132,
+        "mean": 0.136984,
+        "n": 20,
+        "std": 0.431505
+      },
+      "oracle_ratio": {
+        "ci95_high": 1.000521,
+        "ci95_low": 0.996739,
+        "mean": 0.99863,
+        "n": 20,
+        "std": 0.004315
+      },
+      "regime": "prefill_constrained",
+      "trials": 20
+    },
+    {
+      "candidate_count": 5,
+      "candidate_probe_count": {
+        "ci95_high": 4.0,
+        "ci95_low": 4.0,
+        "mean": 4.0,
+        "n": 20,
+        "std": 0.0
+      },
+      "candidate_radius": 2,
+      "condition": "expanded_20_seed",
+      "evaluator_call_reduction_pct": {
+        "ci95_high": 20.0,
+        "ci95_low": 20.0,
+        "mean": 20.0,
+        "n": 20,
+        "std": 0.0
+      },
+      "exact_oracle_shift_matches": 20,
+      "exhaustive_evaluator_calls": {
+        "ci95_high": 40.0,
+        "ci95_low": 40.0,
+        "mean": 40.0,
+        "n": 20,
+        "std": 0.0
+      },
+      "exhaustive_runtime_s": {
+        "ci95_high": 0.791953,
+        "ci95_low": 0.700694,
+        "mean": 0.746323,
+        "n": 20,
+        "std": 0.104113
+      },
+      "gain_over_uniform_pct": {
+        "ci95_high": 9.92538,
+        "ci95_low": 2.670885,
+        "mean": 6.298132,
+        "n": 20,
+        "std": 8.276298
+      },
+      "method": "single_direction_adaptive",
+      "method_evaluator_calls": {
+        "ci95_high": 32.0,
+        "ci95_low": 32.0,
+        "mean": 32.0,
+        "n": 20,
+        "std": 0.0
+      },
+      "method_runtime_s": {
+        "ci95_high": 0.658077,
+        "ci95_low": 0.581888,
+        "mean": 0.619982,
+        "n": 20,
+        "std": 0.08692
+      },
+      "near_oracle_trials": 20,
+      "not_worse_than_joint_compute": 20,
+      "not_worse_than_uniform": 20,
+      "oracle_gap_pct": {
+        "ci95_high": 0.0,
+        "ci95_low": 0.0,
+        "mean": 0.0,
+        "n": 20,
+        "std": 0.0
+      },
+      "oracle_ratio": {
+        "ci95_high": 1.0,
+        "ci95_low": 1.0,
+        "mean": 1.0,
+        "n": 20,
+        "std": 0.0
+      },
+      "regime": "decode_constrained",
+      "trials": 20
+    },
+    {
+      "candidate_count": 5,
+      "candidate_probe_count": {
+        "ci95_high": 3.906058,
+        "ci95_low": 3.493942,
+        "mean": 3.7,
+        "n": 20,
+        "std": 0.470162
+      },
+      "candidate_radius": 2,
+      "condition": "expanded_20_seed",
+      "evaluator_call_reduction_pct": {
+        "ci95_high": 29.996876,
+        "ci95_low": 21.878366,
+        "mean": 25.937621,
+        "n": 20,
+        "std": 9.26201
+      },
+      "exact_oracle_shift_matches": 17,
+      "exhaustive_evaluator_calls": {
+        "ci95_high": 43.718021,
+        "ci95_low": 41.381979,
+        "mean": 42.55,
+        "n": 20,
+        "std": 2.665076
+      },
+      "exhaustive_runtime_s": {
+        "ci95_high": 9.19047,
+        "ci95_low": 6.214457,
+        "mean": 7.702464,
+        "n": 20,
+        "std": 3.395188
+      },
+      "gain_over_uniform_pct": {
+        "ci95_high": 3.971764,
+        "ci95_low": 1.338993,
+        "mean": 2.655378,
+        "n": 20,
+        "std": 3.0036
+      },
+      "method": "single_direction_adaptive",
+      "method_evaluator_calls": {
+        "ci95_high": 33.383726,
+        "ci95_low": 29.616274,
+        "mean": 31.5,
+        "n": 20,
+        "std": 4.298102
+      },
+      "method_runtime_s": {
+        "ci95_high": 6.971282,
+        "ci95_low": 4.704007,
+        "mean": 5.837644,
+        "n": 20,
+        "std": 2.586623
+      },
+      "near_oracle_trials": 20,
+      "not_worse_than_joint_compute": 18,
+      "not_worse_than_uniform": 20,
+      "oracle_gap_pct": {
+        "ci95_high": 0.398154,
+        "ci95_low": -0.01893,
+        "mean": 0.189612,
+        "n": 20,
+        "std": 0.47583
+      },
+      "oracle_ratio": {
+        "ci95_high": 1.000189,
+        "ci95_low": 0.996018,
+        "mean": 0.998104,
+        "n": 20,
+        "std": 0.004758
+      },
+      "regime": "prefill_constrained",
+      "trials": 20
+    },
+    {
+      "candidate_count": 7,
+      "candidate_probe_count": {
+        "ci95_high": 5.0,
+        "ci95_low": 5.0,
+        "mean": 5.0,
+        "n": 20,
+        "std": 0.0
+      },
+      "candidate_radius": 3,
+      "condition": "expanded_20_seed",
+      "evaluator_call_reduction_pct": {
+        "ci95_high": 28.571429,
+        "ci95_low": 28.571429,
+        "mean": 28.571429,
+        "n": 20,
+        "std": 0.0
+      },
+      "exact_oracle_shift_matches": 20,
+      "exhaustive_evaluator_calls": {
+        "ci95_high": 56.0,
+        "ci95_low": 56.0,
+        "mean": 56.0,
+        "n": 20,
+        "std": 0.0
+      },
+      "exhaustive_runtime_s": {
+        "ci95_high": 1.12518,
+        "ci95_low": 0.998786,
+        "mean": 1.061983,
+        "n": 20,
+        "std": 0.144197
+      },
+      "gain_over_uniform_pct": {
+        "ci95_high": 35.433878,
+        "ci95_low": 17.407114,
+        "mean": 26.420496,
+        "n": 20,
+        "std": 20.565852
+      },
+      "method": "bidirectional_adaptive",
+      "method_evaluator_calls": {
+        "ci95_high": 40.0,
+        "ci95_low": 40.0,
+        "mean": 40.0,
+        "n": 20,
+        "std": 0.0
+      },
+      "method_runtime_s": {
+        "ci95_high": 0.861069,
+        "ci95_low": 0.765174,
+        "mean": 0.813122,
+        "n": 20,
+        "std": 0.109402
+      },
+      "near_oracle_trials": 20,
+      "not_worse_than_joint_compute": 20,
+      "not_worse_than_uniform": 20,
+      "oracle_gap_pct": {
+        "ci95_high": 0.0,
+        "ci95_low": 0.0,
+        "mean": 0.0,
+        "n": 20,
+        "std": 0.0
+      },
+      "oracle_ratio": {
+        "ci95_high": 1.0,
+        "ci95_low": 1.0,
+        "mean": 1.0,
+        "n": 20,
+        "std": 0.0
+      },
+      "regime": "decode_constrained",
+      "trials": 20
+    },
+    {
+      "candidate_count": 7,
+      "candidate_probe_count": {
+        "ci95_high": 4.939586,
+        "ci95_low": 3.860414,
+        "mean": 4.4,
+        "n": 20,
+        "std": 1.231174
+      },
+      "candidate_radius": 3,
+      "condition": "expanded_20_seed",
+      "evaluator_call_reduction_pct": {
+        "ci95_high": 44.781963,
+        "ci95_low": 29.450841,
+        "mean": 37.116402,
+        "n": 20,
+        "std": 17.490526
+      },
+      "exact_oracle_shift_matches": 13,
+      "exhaustive_evaluator_calls": {
+        "ci95_high": 61.060892,
+        "ci95_low": 57.939108,
+        "mean": 59.5,
+        "n": 20,
+        "std": 3.56149
+      },
+      "exhaustive_runtime_s": {
+        "ci95_high": 12.14026,
+        "ci95_low": 8.598541,
+        "mean": 10.3694,
+        "n": 20,
+        "std": 4.040573
+      },
+      "gain_over_uniform_pct": {
+        "ci95_high": 4.0264,
+        "ci95_low": 1.393045,
+        "mean": 2.709723,
+        "n": 20,
+        "std": 3.004265
+      },
+      "method": "bidirectional_adaptive",
+      "method_evaluator_calls": {
+        "ci95_high": 41.696741,
+        "ci95_low": 32.903259,
+        "mean": 37.3,
+        "n": 20,
+        "std": 10.032054
+      },
+      "method_runtime_s": {
+        "ci95_high": 7.972153,
+        "ci95_low": 5.530082,
+        "mean": 6.751117,
+        "n": 20,
+        "std": 2.786039
+      },
+      "near_oracle_trials": 14,
+      "not_worse_than_joint_compute": 18,
+      "not_worse_than_uniform": 20,
+      "oracle_gap_pct": {
+        "ci95_high": 5.679887,
+        "ci95_low": 0.51696,
+        "mean": 3.098423,
+        "n": 20,
+        "std": 5.89013
+      },
+      "oracle_ratio": {
+        "ci95_high": 0.99483,
+        "ci95_low": 0.943201,
+        "mean": 0.969016,
+        "n": 20,
+        "std": 0.058901
+      },
+      "regime": "prefill_constrained",
+      "trials": 20
+    },
+    {
+      "candidate_count": 7,
+      "candidate_probe_count": {
+        "ci95_high": 5.0,
+        "ci95_low": 5.0,
+        "mean": 5.0,
+        "n": 20,
+        "std": 0.0
+      },
+      "candidate_radius": 3,
+      "condition": "expanded_20_seed",
+      "evaluator_call_reduction_pct": {
+        "ci95_high": 28.571429,
+        "ci95_low": 28.571429,
+        "mean": 28.571429,
+        "n": 20,
+        "std": 0.0
+      },
+      "exact_oracle_shift_matches": 20,
+      "exhaustive_evaluator_calls": {
+        "ci95_high": 56.0,
+        "ci95_low": 56.0,
+        "mean": 56.0,
+        "n": 20,
+        "std": 0.0
+      },
+      "exhaustive_runtime_s": {
+        "ci95_high": 1.12518,
+        "ci95_low": 0.998786,
+        "mean": 1.061983,
+        "n": 20,
+        "std": 0.144197
+      },
+      "gain_over_uniform_pct": {
+        "ci95_high": 35.433878,
+        "ci95_low": 17.407114,
+        "mean": 26.420496,
+        "n": 20,
+        "std": 20.565852
+      },
+      "method": "single_direction_adaptive",
+      "method_evaluator_calls": {
+        "ci95_high": 40.0,
+        "ci95_low": 40.0,
+        "mean": 40.0,
+        "n": 20,
+        "std": 0.0
+      },
+      "method_runtime_s": {
+        "ci95_high": 0.861069,
+        "ci95_low": 0.765174,
+        "mean": 0.813122,
+        "n": 20,
+        "std": 0.109402
+      },
+      "near_oracle_trials": 20,
+      "not_worse_than_joint_compute": 20,
+      "not_worse_than_uniform": 20,
+      "oracle_gap_pct": {
+        "ci95_high": 0.0,
+        "ci95_low": 0.0,
+        "mean": 0.0,
+        "n": 20,
+        "std": 0.0
+      },
+      "oracle_ratio": {
+        "ci95_high": 1.0,
+        "ci95_low": 1.0,
+        "mean": 1.0,
+        "n": 20,
+        "std": 0.0
+      },
+      "regime": "decode_constrained",
+      "trials": 20
+    },
+    {
+      "candidate_count": 7,
+      "candidate_probe_count": {
+        "ci95_high": 4.214758,
+        "ci95_low": 3.585242,
+        "mean": 3.9,
+        "n": 20,
+        "std": 0.718185
+      },
+      "candidate_radius": 3,
+      "condition": "expanded_20_seed",
+      "evaluator_call_reduction_pct": {
+        "ci95_high": 48.690652,
+        "ci95_low": 39.827867,
+        "mean": 44.259259,
+        "n": 20,
+        "std": 10.111118
+      },
+      "exact_oracle_shift_matches": 12,
+      "exhaustive_evaluator_calls": {
+        "ci95_high": 61.060892,
+        "ci95_low": 57.939108,
+        "mean": 59.5,
+        "n": 20,
+        "std": 3.56149
+      },
+      "exhaustive_runtime_s": {
+        "ci95_high": 12.14026,
+        "ci95_low": 8.598541,
+        "mean": 10.3694,
+        "n": 20,
+        "std": 4.040573
+      },
+      "gain_over_uniform_pct": {
+        "ci95_high": 3.971764,
+        "ci95_low": 1.338993,
+        "mean": 2.655378,
+        "n": 20,
+        "std": 3.0036
+      },
+      "method": "single_direction_adaptive",
+      "method_evaluator_calls": {
+        "ci95_high": 35.882463,
+        "ci95_low": 30.417537,
+        "mean": 33.15,
+        "n": 20,
+        "std": 6.234665
+      },
+      "method_runtime_s": {
+        "ci95_high": 7.35299,
+        "ci95_low": 4.945828,
+        "mean": 6.149409,
+        "n": 20,
+        "std": 2.746213
+      },
+      "near_oracle_trials": 14,
+      "not_worse_than_joint_compute": 18,
+      "not_worse_than_uniform": 20,
+      "oracle_gap_pct": {
+        "ci95_high": 5.721782,
+        "ci95_low": 0.580322,
+        "mean": 3.151052,
+        "n": 20,
+        "std": 5.86564
+      },
+      "oracle_ratio": {
+        "ci95_high": 0.994197,
+        "ci95_low": 0.942782,
+        "mean": 0.968489,
+        "n": 20,
+        "std": 0.058657
+      },
+      "regime": "prefill_constrained",
+      "trials": 20
+    },
+    {
+      "candidate_count": 9,
+      "candidate_probe_count": {
+        "ci95_high": 6.0,
+        "ci95_low": 6.0,
+        "mean": 6.0,
+        "n": 20,
+        "std": 0.0
+      },
+      "candidate_radius": 4,
+      "condition": "expanded_20_seed",
+      "evaluator_call_reduction_pct": {
+        "ci95_high": 33.333333,
+        "ci95_low": 33.333333,
+        "mean": 33.333333,
+        "n": 20,
+        "std": 0.0
+      },
+      "exact_oracle_shift_matches": 20,
+      "exhaustive_evaluator_calls": {
+        "ci95_high": 72.0,
+        "ci95_low": 72.0,
+        "mean": 72.0,
+        "n": 20,
+        "std": 0.0
+      },
+      "exhaustive_runtime_s": {
+        "ci95_high": 1.430542,
+        "ci95_low": 1.280342,
+        "mean": 1.355442,
+        "n": 20,
+        "std": 0.171356
+      },
+      "gain_over_uniform_pct": {
+        "ci95_high": 82.845182,
+        "ci95_low": 58.931981,
+        "mean": 70.888581,
+        "n": 20,
+        "std": 27.281399
+      },
+      "method": "bidirectional_adaptive",
+      "method_evaluator_calls": {
+        "ci95_high": 48.0,
+        "ci95_low": 48.0,
+        "mean": 48.0,
+        "n": 20,
+        "std": 0.0
+      },
+      "method_runtime_s": {
+        "ci95_high": 1.087338,
+        "ci95_low": 0.967463,
+        "mean": 1.0274,
+        "n": 20,
+        "std": 0.136761
+      },
+      "near_oracle_trials": 20,
+      "not_worse_than_joint_compute": 20,
+      "not_worse_than_uniform": 20,
+      "oracle_gap_pct": {
+        "ci95_high": 0.0,
+        "ci95_low": 0.0,
+        "mean": 0.0,
+        "n": 20,
+        "std": 0.0
+      },
+      "oracle_ratio": {
+        "ci95_high": 1.0,
+        "ci95_low": 1.0,
+        "mean": 1.0,
+        "n": 20,
+        "std": 0.0
+      },
+      "regime": "decode_constrained",
+      "trials": 20
+    },
+    {
+      "candidate_count": 9,
+      "candidate_probe_count": {
+        "ci95_high": 5.159323,
+        "ci95_low": 3.840677,
+        "mean": 4.5,
+        "n": 20,
+        "std": 1.50438
+      },
+      "candidate_radius": 4,
+      "condition": "expanded_20_seed",
+      "evaluator_call_reduction_pct": {
+        "ci95_high": 56.812712,
+        "ci95_low": 42.297257,
+        "mean": 49.554985,
+        "n": 20,
+        "std": 16.559972
+      },
+      "exact_oracle_shift_matches": 11,
+      "exhaustive_evaluator_calls": {
+        "ci95_high": 77.449642,
+        "ci95_low": 74.050358,
+        "mean": 75.75,
+        "n": 20,
+        "std": 3.878076
+      },
+      "exhaustive_runtime_s": {
+        "ci95_high": 14.735857,
+        "ci95_low": 10.829661,
+        "mean": 12.782759,
+        "n": 20,
+        "std": 4.456388
+      },
+      "gain_over_uniform_pct": {
+        "ci95_high": 4.283494,
+        "ci95_low": 1.385935,
+        "mean": 2.834715,
+        "n": 20,
+        "std": 3.305682
+      },
+      "method": "bidirectional_adaptive",
+      "method_evaluator_calls": {
+        "ci95_high": 43.376312,
+        "ci95_low": 32.823688,
+        "mean": 38.1,
+        "n": 20,
+        "std": 12.038972
+      },
+      "method_runtime_s": {
+        "ci95_high": 8.059194,
+        "ci95_low": 5.619598,
+        "mean": 6.839396,
+        "n": 20,
+        "std": 2.783215
+      },
+      "near_oracle_trials": 13,
+      "not_worse_than_joint_compute": 18,
+      "not_worse_than_uniform": 20,
+      "oracle_gap_pct": {
+        "ci95_high": 6.632883,
+        "ci95_low": 0.837266,
+        "mean": 3.735075,
+        "n": 20,
+        "std": 6.611936
+      },
+      "oracle_ratio": {
+        "ci95_high": 0.991627,
+        "ci95_low": 0.933671,
+        "mean": 0.962649,
+        "n": 20,
+        "std": 0.06612
+      },
+      "regime": "prefill_constrained",
+      "trials": 20
+    },
+    {
+      "candidate_count": 9,
+      "candidate_probe_count": {
+        "ci95_high": 6.0,
+        "ci95_low": 6.0,
+        "mean": 6.0,
+        "n": 20,
+        "std": 0.0
+      },
+      "candidate_radius": 4,
+      "condition": "expanded_20_seed",
+      "evaluator_call_reduction_pct": {
+        "ci95_high": 33.333333,
+        "ci95_low": 33.333333,
+        "mean": 33.333333,
+        "n": 20,
+        "std": 0.0
+      },
+      "exact_oracle_shift_matches": 20,
+      "exhaustive_evaluator_calls": {
+        "ci95_high": 72.0,
+        "ci95_low": 72.0,
+        "mean": 72.0,
+        "n": 20,
+        "std": 0.0
+      },
+      "exhaustive_runtime_s": {
+        "ci95_high": 1.430542,
+        "ci95_low": 1.280342,
+        "mean": 1.355442,
+        "n": 20,
+        "std": 0.171356
+      },
+      "gain_over_uniform_pct": {
+        "ci95_high": 82.845182,
+        "ci95_low": 58.931981,
+        "mean": 70.888581,
+        "n": 20,
+        "std": 27.281399
+      },
+      "method": "single_direction_adaptive",
+      "method_evaluator_calls": {
+        "ci95_high": 48.0,
+        "ci95_low": 48.0,
+        "mean": 48.0,
+        "n": 20,
+        "std": 0.0
+      },
+      "method_runtime_s": {
+        "ci95_high": 1.087338,
+        "ci95_low": 0.967463,
+        "mean": 1.0274,
+        "n": 20,
+        "std": 0.136761
+      },
+      "near_oracle_trials": 20,
+      "not_worse_than_joint_compute": 20,
+      "not_worse_than_uniform": 20,
+      "oracle_gap_pct": {
+        "ci95_high": 0.0,
+        "ci95_low": 0.0,
+        "mean": 0.0,
+        "n": 20,
+        "std": 0.0
+      },
+      "oracle_ratio": {
+        "ci95_high": 1.0,
+        "ci95_low": 1.0,
+        "mean": 1.0,
+        "n": 20,
+        "std": 0.0
+      },
+      "regime": "decode_constrained",
+      "trials": 20
+    },
+    {
+      "candidate_count": 9,
+      "candidate_probe_count": {
+        "ci95_high": 4.311825,
+        "ci95_low": 3.588175,
+        "mean": 3.95,
+        "n": 20,
+        "std": 0.825578
+      },
+      "candidate_radius": 4,
+      "condition": "expanded_20_seed",
+      "evaluator_call_reduction_pct": {
+        "ci95_high": 59.673355,
+        "ci95_low": 51.686967,
+        "mean": 55.680161,
+        "n": 20,
+        "std": 9.111279
+      },
+      "exact_oracle_shift_matches": 11,
+      "exhaustive_evaluator_calls": {
+        "ci95_high": 77.449642,
+        "ci95_low": 74.050358,
+        "mean": 75.75,
+        "n": 20,
+        "std": 3.878076
+      },
+      "exhaustive_runtime_s": {
+        "ci95_high": 14.735857,
+        "ci95_low": 10.829661,
+        "mean": 12.782759,
+        "n": 20,
+        "std": 4.456388
+      },
+      "gain_over_uniform_pct": {
+        "ci95_high": 4.229832,
+        "ci95_low": 1.330908,
+        "mean": 2.78037,
+        "n": 20,
+        "std": 3.30724
+      },
+      "method": "single_direction_adaptive",
+      "method_evaluator_calls": {
+        "ci95_high": 36.581337,
+        "ci95_low": 30.518663,
+        "mean": 33.55,
+        "n": 20,
+        "std": 6.916609
+      },
+      "method_runtime_s": {
+        "ci95_high": 7.391399,
+        "ci95_low": 5.005674,
+        "mean": 6.198536,
+        "n": 20,
+        "std": 2.721757
+      },
+      "near_oracle_trials": 13,
+      "not_worse_than_joint_compute": 18,
+      "not_worse_than_uniform": 20,
+      "oracle_gap_pct": {
+        "ci95_high": 6.691612,
+        "ci95_low": 0.877541,
+        "mean": 3.784577,
+        "n": 20,
+        "std": 6.632989
+      },
+      "oracle_ratio": {
+        "ci95_high": 0.991225,
+        "ci95_low": 0.933084,
+        "mean": 0.962154,
+        "n": 20,
+        "std": 0.06633
+      },
+      "regime": "prefill_constrained",
+      "trials": 20
+    }
+  ],
+  "all_sampled_monotonic": true,
+  "experiment_id": "phase15-adaptive-directional-search-v1",
+  "interpretation": "The exhaustive candidate family is filled only after the search decisions. Search cost is reported as candidate probes, underlying evaluator calls, and measured candidate-evaluation wall time. This experiment tests whether the submitted fixed-radius rule has a natural scalable extension; it does not change evaluator equations or claim new hardware validation.",
+  "no_right_censoring": true,
+  "provenance": {
+    "artifact_sha256": {
+      "azure_conv_arrive_time.pkl": "1ae6dec376d39a7c9fa7ed8239cf5b10b5349b540697c94df8d1d1055b35f2a3",
+      "azure_conv_input.pkl": "090770d895fe96d733f4c1d2e0068b5d391f565f25d05841077063c0c344c92f",
+      "azure_conv_output.pkl": "4d42ec92d42a36cdf647af81fc5f7f8627ff4c21bddee24902f25d013dbadd82"
+    },
+    "source_repo_commit": "297280c000e45ba6a8fa79135e4bfc4a9e17cb99",
+    "upstream_helix_commit": "8639497a4aaf1eb3b7594614cb0bbd376c1342b3"
+  },
+  "search_variants": {
+    "bidirectional_adaptive": "Starting from {-1,0,+1}, continue each direction whose adjacent candidate is not worse than uniform, stopping that direction at the first capacity decrease or boundary.",
+    "single_direction_adaptive": "Exact Phase-13 behavior for radius 2; for larger radii, continue along the chosen nondecreasing direction until the first capacity decrease or boundary."
+  },
+  "suite": "expanded",
+  "unchanged": [
+    "event-driven SLA-safe capacity evaluator",
+    "HELIX-derived phase-specific speed factors",
+    "Azure-derived finite workload construction",
+    "TTFT/TPOT SLA regimes",
+    "contiguous one-dimensional alternating-stage shift family"
+  ]
+}
